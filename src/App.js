@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import { HomePage } from './homepage-component.jsx';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App bigLow">
       <h1> E-shop S62 CRA init </h1>
+      <HomePage />
     </div>
   );
 }
