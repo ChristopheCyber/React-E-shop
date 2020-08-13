@@ -1,12 +1,16 @@
 import React from 'react';
 import './menu-item.styles.scss';
 
-const MenuItem = () => {
+const MenuItem = (item) => {
     return (
         <div className="menu-item">
             <div className="content">
-                <h1 className="title">ITEM 1 Hats</h1>
-                <span className="subtitle">Shop Now</span>
+                <h1 className="title">
+                    {item.ItemProp1}
+                </h1>
+                <span className="subtitle">
+                    {item.ItemProp2}
+                </span>
             </div>
         </div>    
         );
