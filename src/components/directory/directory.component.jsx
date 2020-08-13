@@ -1,23 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './directory.styles.scss';
-import MenuItem  from '../menu-item/menu-item.component.jsx';
+import MenuItem from '../menu-item/menu-item.component.jsx';
 
-// export const DirectoryMenu = () => {
-const DirectoryMenu = () => {
-    return (
-        <div className="directory-menu">
-            <MenuItem ItemProp1="Item 1: Hats" 
-                      ItemProp2="Shop Now"/>
-            <MenuItem ItemProp1="Item 2: Jackets" 
-                      ItemProp2="Shop Now"/>
-            <MenuItem ItemProp1="Item 3: Sneakers" 
-                      ItemProp2="Shop Now"/>
-            <MenuItem ItemProp1="Item 4: WOMEN" 
-                      ItemProp2="Shop Now"/>
-            <MenuItem ItemProp1="Item 5: MEN" 
-                      ItemProp2="Shop Now"/>
-        </div>        );
+class Directory extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { 
+            sections : [
+                {
+                  title: 'Hats',
+                  imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                  id: 1,
+                  linkUrl: 'Shop Hats'
+                },
+                {
+                  title: 'jackets',
+                  imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+                  id: 2,
+                  linkUrl: 'shop/jackets'
+                },
+                {
+                  title: 'sneakers',
+                  imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                  id: 3,
+                  linkUrl: 'shop/sneakers'
+                },
+                {
+                  title: 'womens',
+                  imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+                  size: 'large',
+                  id: 4,
+                  linkUrl: 'shop/womens'
+                },
+                {
+                  title: 'mens',
+                  imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+                  size: 'large',
+                  id: 5,
+                  linkUrl: 'shop/mens'
+                }
+              ]
+                    };
+    }
+    
+    render() {
+        return (
+            <div className="directory-menu">
+                {
+                    this.state.sections.map( element => (
+                        <MenuItem ItemProp1={element.title} 
+                                ItemProp2={element.linkUrl} 
+                                ItemProp3={element.imageUrl}
+                            /> )
+                    )
+                }
+            </div>        
+        );
+    }
 }
 
-export default DirectoryMenu;
+export default Directory;
 
