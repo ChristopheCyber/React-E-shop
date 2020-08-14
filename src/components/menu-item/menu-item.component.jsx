@@ -5,9 +5,8 @@ const MenuItem = (item) => {
     return (
         <div className="menu-item"
         style={
-            {
-                backgroundImage: `url(${item.ItemProp3})`,
-                border: `4px solid red`
+            { backgroundImage: `url(${item.ItemProp3})`
+             ,border: `4px solid red`
             }
         }        >
             <div className="content">
