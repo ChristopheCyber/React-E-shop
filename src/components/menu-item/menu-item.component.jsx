@@ -4,9 +4,9 @@ import './menu-item.styles.scss';
 const MenuItem = (item) => {
     return (
         <div className="menu-item"
-        style={
+        style={ //dynamic CSS
             { backgroundImage: `url(${item.ItemProp3})`
-             ,border: `4px solid red`
+             ,border: `3px solid pink`
             }
         }>
             <div className="content">
