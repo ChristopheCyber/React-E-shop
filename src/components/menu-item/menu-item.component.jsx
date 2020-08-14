@@ -8,7 +8,7 @@ const MenuItem = (item) => {
             { backgroundImage: `url(${item.ItemProp3})`
              ,border: `4px solid red`
             }
-        }        >
+        }>
             <div className="content">
                 <h1 className="title">
                     {item.ItemProp1}
