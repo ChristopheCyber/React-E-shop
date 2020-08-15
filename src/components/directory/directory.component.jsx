@@ -8,36 +8,41 @@ class Directory extends Component {
         this.state = { 
             sections : [
                 {
-                  title: 'Hats',
+                  title: 'Paintings',
                   imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                  imageLocal: 'Paintings.jpg',
                   id: 1,
-                  linkUrl: 'Shop Hats'
+                  linkUrl: 'Shop Paintings'
                 },
                 {
-                  title: 'jackets',
+                  title: 'Jewerly',
                   imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+                  imageLocal: 'DiamondGif.gif',
                   id: 2,
-                  linkUrl: 'shop/jackets'
+                  linkUrl: 'Shop Jewerly'
                 },
                 {
-                  title: 'sneakers',
+                  title: 'Fashion',
                   imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                  imageLocal: 'Fashion.jpg',
                   id: 3,
-                  linkUrl: 'shop/sneakers'
+                  linkUrl: 'Shop Fashion'
                 },
                 {
-                  title: 'womens',
+                  title: 'WOMEN',
                   imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-                  size: 'large',
+                  imageLocal: 'WOMEN.jpg',
+                  size: '200px',
                   id: 4,
-                  linkUrl: 'shop/womens'
+                  linkUrl: 'Shop WOMEN'
                 },
                 {
-                  title: 'mens',
+                  title: 'MEN',
                   imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-                  size: 'large',
+                  imageLocal: 'MEN.jpg',
+                  size: '200px',
                   id: 5,
-                  linkUrl: 'shop/mens'
+                  linkUrl: 'Shop MEN'
                 }
               ]
                     };
@@ -48,13 +53,16 @@ class Directory extends Component {
             <div className="directory-menu">
                 {
                     this.state.sections.map( 
-                      ({linkUrl,id,title,imageUrl}) => (
+                      ({id,title,imageUrl,imageLocal,
+                                          linkUrl,size}) => (
                         <MenuItem 
                             //don't forget the key
                                 key={id} 
                                 ItemProp1={title} 
                                 ItemProp2={linkUrl} 
                                 ItemProp3={imageUrl}
+                                ItemProp4={imageLocal}
+                                ItemProp5={size}
                             /> )
                     )
                 }
