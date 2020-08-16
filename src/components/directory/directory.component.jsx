@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import './directory.styles.scss';
 import MenuItem from '../menu-item/menu-item.component.jsx';
+import SECTIONS_DATA from './json-local-datas.js';
 
 class Directory extends Component {
     constructor(props) {
         super(props);
         this.state = { 
+            section2: SECTIONS_DATA,
+            section3: [],
             sections : [
                 {
                   title: 'Paintings',
@@ -47,12 +50,53 @@ class Directory extends Component {
               ]
                     };
     }
-    
-    render() {
+  //*** Life Cycle method componentDidMount() {}
+  componentDidMount() {
+    // fetch('./local-datas/json-local-datas.js')
+      //.then(resp1 => resp1.json())
+
+      //Fetch in public folder
+    fetch('./local-datas/json-local-datas.json')
+      .then(resp1 => resp1.json())
+
+      // response status local message
+      // .then( response => {
+      //   if (!response.ok) {
+      //     throw new Error('Network response was not ok');
+      //   }
+      //   return response.blob();
+      // } )
+      // .then(
+      //   function(response) {
+      //     if (response.status !== 200) {
+      //       console.log('Looks like there was a problem. Status Code: ' +
+      //         response.status);
+      //       return;
+      //     }
+      //     // Examine the text in the response
+      //     response.json().then(function(data) {
+      //       console.log("data =",data);
+      //     });
+      //   }
+      // )
+
+      // my promise
+      .then(products1 => this.setState({ section3: products1 }))
+      // local error message
+      .catch(error => {
+        console.error('There has been a problem with your fetch operation:'
+          , error);
+      });
+  }
+  
+  render() {
+    console.log("sections=",this.state.sections);
+    console.log("section2=",this.state.section2);
+    console.log("section3=",this.state.section3);
         return (
             <div className="directory-menu">
                 {
-                    this.state.sections.map( 
+                    this.state.section3.map( 
                       ({id,title,imageUrl,imageLocal,
                                           linkUrl,size}) => (
                         <MenuItem 
