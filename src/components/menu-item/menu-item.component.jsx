@@ -14,6 +14,7 @@ const MenuItem = (item) => {
         }>
             <div className="content">
                 <h1 className="title">
+                    {/*item.ItemProp1.toLowerCase()*/}
                     {item.ItemProp1}
                 </h1>
                 <span className="subtitle">
