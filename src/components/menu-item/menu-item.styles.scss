@@ -27,24 +27,28 @@
     }
   
     .content {
-      height: 90px;
-      padding: 0 25px;
+      height: 70px;
+      padding: 0 10px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      border: 1px solid yellow;
+      border: 1px solid rgba(255, 0, 191, 0.363);
+      background-color: rgba(222, 152, 236, 0.158);
+      opacity: .95;
   
-      .title {
+      .title , .subtitle {
         font-weight: bold;
-        margin-bottom: 6px;
+        margin-bottom: 3px;
         font-size: 27px;
-        color: #fbff00;
+        color: rgba(80, 240, 16, 0.911);
+        text-shadow: 2px 3px 2px #ff00d4;
       }
-  
+      
       .subtitle {
-        font-weight: bold;
-        font-size: 26px;
+        color: rgba(80, 240, 16, 0.911);
+        text-shadow: 2px 4px 3px #326dda;
+        font-size: 25px;
       }
     }
   }

@@ -4,6 +4,8 @@
 }
 .bigLow{
   font-family: 'Bigelow Rules';
+  /*font-family: 'Open Sans Condensed' 'Bigelow Rules' sans-serif;
+  */
   font-size: 40px;
   text-shadow: 2px 3px 2px rgb(223, 8, 8);
   font-style: normal;
@@ -12,7 +14,8 @@
   color: #f1d039;
 }
 h1 {
-  font-family: 'Bigelow Rules';
+  font-family: 'Parisienne', cursive;
+  /*font-family: 'Bigelow Rules';*/
   font-size: 40px;
   /*text-shadow: 2px 8px 6px #06047a;*/
   text-shadow: 2px 4px 3px #1a72c4;
