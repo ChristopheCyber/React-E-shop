@@ -12,6 +12,11 @@
     background-size: contain;
     //background-size: 100% 100%; cover ; contain; auto;
   
+    &.large1 {
+      height: 300px;
+      //width: 300px;
+    }
+  
     &:first-child {
       margin-right: 7.5px;
     }
