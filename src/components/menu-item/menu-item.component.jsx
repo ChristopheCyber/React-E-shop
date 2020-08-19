@@ -10,7 +10,6 @@ const MenuItem = (item) => {
             // title={`Image ${prop1.cardProp2.id}`}
              { backgroundImage: 
                 `url(${require(`./img/${item.ItemProp4}`)})`
-                ,border: `3px solid pink`
              }
         }>
             <div className="content">

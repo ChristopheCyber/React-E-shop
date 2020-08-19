@@ -9,16 +9,16 @@
   font-style: normal;
   /*text-decoration: underline;*/
   text-decoration-thickness: 2px;
-  color: #fcff3e;
+  color: #f1d039;
 }
 h1 {
   font-family: 'Bigelow Rules';
   font-size: 40px;
   /*text-shadow: 2px 8px 6px #06047a;*/
-  text-shadow: 2px 4px 3px #44d6fa;
+  text-shadow: 2px 4px 3px #1a72c4;
   font-style: lighter;
   font-weight: 300;
-  color: rgb(21, 19, 185);
+  color: rgb(80, 240, 16);
   /*margin-top: 10px;
   margin-bottom: 0px;*/
   margin: auto;
