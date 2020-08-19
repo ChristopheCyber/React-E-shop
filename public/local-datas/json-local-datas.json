@@ -24,7 +24,7 @@
       "title": "WOMEN",
       "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png",
       "imageLocal": "WOMEN.jpg",
-      "size": "200px",
+      "size": "250px",
       "id": 4,
       "linkUrl": "Shop WOMEN"
     },
@@ -32,7 +32,7 @@
       "title": "MEN",
       "imageUrl": "https://i.ibb.co/R70vBrQ/men.png",
       "imageLocal": "MEN.jpg",
-      "size": "200px",
+      "size": "250px",
       "id": 5,
       "linkUrl": "Shop MEN"
     }
