@@ -49,16 +49,18 @@ class Directory extends Component {
       <div className="directory-menu">
         {
           this.state.sections.map(
-            ({ id, title, imageUrl, imageLocal,
-              linkUrl, size }) => (
+            ({ id, title, imageUrl, imageBack, 
+              linkUrl, size, image, imageBackOn}) => (
                 <MenuItem
                   //warning=>necessary key
                   key={id}
                   ItemProp1={title}
                   ItemProp2={linkUrl}
                   ItemProp3={imageUrl}
-                  ItemProp4={imageLocal}
+                  ItemProp6={imageBack}
                   ItemProp5={size}
+                  ItemProp4={image}
+                  ItemProp7={imageBackOn}
                 />)
           )
         }

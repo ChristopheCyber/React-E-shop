@@ -17,11 +17,11 @@ h1 {
   font-family: 'Parisienne', cursive;
   /*font-family: 'Bigelow Rules';*/
   font-size: 40px;
-  /*text-shadow: 2px 8px 6px #06047a;*/
+  color: rgb(80, 240, 16);
   text-shadow: 2px 4px 3px #1a72c4;
+  /*text-shadow: 2px 8px 6px #06047a;*/
   font-style: lighter;
   font-weight: 300;
-  color: rgb(80, 240, 16);
   /*margin-top: 10px;
   margin-bottom: 0px;*/
   margin: auto;

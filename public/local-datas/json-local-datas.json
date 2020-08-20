@@ -2,38 +2,44 @@
     {
       "title": "Paintings",
       "imageUrl": "https://i.ibb.co/cvpntL1/hats.png",
-      "imageLocal": "Paintings.jpg",
+      "imageBack": "Paintings.jpg",
       "id": 1,
       "linkUrl": "Shop Paintings"
+      ,"image": "Paintings.jpg"
     },
     {
       "title": "Jewerly",
       "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png",
-      "imageLocal": "DiamondGif.gif",
+      "imageBack": "DiamondGif.gif",
+      "imageBackOn": "imageBackOn",
       "id": 2,
       "linkUrl": "Shop Jewerly"
+      ,"image": "DiamondGif.gif"
     },
     {
       "title": "Fashion",
       "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png",
-      "imageLocal": "Fashion.jpg",
+      "imageBack": "Fashion.jpg",
       "id": 3,
       "linkUrl": "Shop Fashion"
+      ,"image": "Fashion.jpg"
     },
     {
       "title": "Women",
       "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png",
-      "imageLocal": "WOMEN.jpg",
+      "imageBack": "WOMEN.jpg",
       "size": "large1",
       "id": 4,
       "linkUrl": "Shop WOMEN"
+      ,"image": "WOMEN.jpg"
     },
     {
       "title": "Men",
       "imageUrl": "https://i.ibb.co/R70vBrQ/men.png",
-      "imageLocal": "MEN.jpg",
+      "imageBack": "MEN.jpg",
       "size": "large1",
       "id": 5,
       "linkUrl": "Shop MEN"
+      ,"image": "MEN.jpg"
     }
   ]
