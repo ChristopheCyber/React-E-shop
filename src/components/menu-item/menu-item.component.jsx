@@ -14,8 +14,7 @@ const MenuItem = (item) => {
             >
                 <img className="image"
                     src={require(`./img/${item.ItemProp4}`)}
-                    alt={`Pic ${item.ItemProp4}`}
-                    title={`Image ${item.ItemProp4}`} />
+                    alt={`Pic ${item.ItemProp4}`}/>
             </div>
             <div className="content">
                 <h1 className="title">
