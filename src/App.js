@@ -1,60 +1,62 @@
 import React from 'react';
 import './App.css';
-import { HomePage } from './pages/homepage/homepage.component.jsx';
 import { Route, Switch, Link } from 'react-router-dom';
+import { HomePage } from './pages/homepage/homepage.component.jsx';
+import AppComponent from './pages/MenuHeaderPages/App-component';
 
-const FashionNextPage1 = () => (
+const FashionPage1 = () => (
   <div>
     <h1>Fashion Page 1</h1>
-    <h2>Fashion elt 1</h2>
+    <h2>Fashion elements:</h2>
+    !!! Unavailable for now !!!
   </div>
 )
-
+/*
 function Paintings() {
   return <h2>Paintings</h2>;
 }
-
 function Jewerly() {
   return <h2>Jewerly</h2>;
 }
+*/
 
 function App() {
   return (
     <div className="App bigLow">
       {/** '/' means http://localhost:3000/ 
-      exact means exacty this path*/}
-      <h1> E-shop S67 Styling </h1>
+        ;'exact' means 'exacty this path'*/}
+      <h1> E-shop S69 Routing </h1>
       <div className="DflexRow">
         <nav className="MenuNav">
           <ul>
             <li>Links :</li>
             <li> <Link to="/">Home Page</Link> </li>
-            <li> <Link to="/Paintings">Paintings</Link> </li>
-            <li> <Link to="/Jewerly">Jewerly</Link> </li>
+            <li> <Link to="/paintings">Paintings</Link> </li>
+            <li> <Link to="/jewerly">Jewerly</Link> </li>
             <li> <Link to="/fashion">Fashion</Link> </li>
           </ul>
         </nav>
       </div>
       {/*<Switch>
         <Route exact={true} path='/' component={HomePage} />
-        <Route path='/fashion' component={FashionNextPage1} />
+        <Route path='/fashion' component={FashionPage1} />
       </Switch>*/}
 
       {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/Paintings">
-          <Paintings />
+
+        <Route path="/paintings">
+          <AppComponent />
         </Route>
-        <Route path="/Jewerly">
-          <Jewerly />
-        </Route>
-        <Route path='/fashion' component={FashionNextPage1} />
+        <Route path="/jewerly" component={AppComponent}/>
+        <Route path='/fashion' component={FashionPage1} />
         <Route exact={true} path='/' component={HomePage} />
+
       </Switch>
       {/*<Route exact={true} path='/' component={HomePage}/>
-      <Route exact={true} path='/fashion' component={FashionNextPage1}/>
-      <FashionNextPage1></FashionNextPage1>
+      <Route exact={true} path='/fashion' component={FashionPage1}/>
+      <FashionPage1></FashionPage1>
 
       <HomePage />*/}
     </div>

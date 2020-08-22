@@ -8,8 +8,8 @@ body {
   background-color: blue;
   background: linear-gradient(
     to left,
-    rgb(75, 1, 109) 0%,
-    rgb(230, 97, 9) 100%
+    rgb(0, 85, 85) 0%,
+    rgb(75, 1, 109) 100%
   );
 }
 

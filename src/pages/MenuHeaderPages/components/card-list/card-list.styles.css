@@ -1,0 +1,25 @@
+.card-list-divStyle {
+  /*border: 5px solid pink;
+  background-color: lightgreen;
+  /*width: auto;*/
+  width: 85vw;
+  margin: auto;
+  justify-content: center;
+  /*margin-left: 10px;
+  margin-right: 0px;*/
+  display: grid;
+  /*grid-template-columns: 1fr 1fr 1fr 1fr;*/
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  grid-column-start: 1;
+  grid-gap: 20px;
+  transition: all 3s;
+}
+.card-list-filtered-list {
+  grid-gap: 10px;
+  background: linear-gradient(
+    to bottom left,
+    rgba(7, 27, 82, 1) 0%,
+    rgb(93, 241, 105) 100%
+  );
+  transition: all 3s;
+}
