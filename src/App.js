@@ -8,7 +8,9 @@ const FashionPage1 = () => (
   <div>
     <h1>Fashion Page 1</h1>
     <h2>Fashion elements:</h2>
-    !!! Unavailable for now !!!
+    <em>
+       Unavailable ! <br/> =&gt; Under construction . . .
+    </em>
   </div>
 )
 /*
