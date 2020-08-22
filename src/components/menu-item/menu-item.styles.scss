@@ -5,7 +5,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid rgb(218, 23, 185);
+    /*border: 1px solid rgb(218, 23, 185);
+    border: 1px solid rgba(218, 23, 186, 0);*/
     border-radius: 20px;
     margin: 0 7.5px 15px;
     overflow: hidden;
@@ -13,7 +14,7 @@
     &.large1 {
       height: 270px;
       //width: 150px;
-      border: 1px solid rgb(169, 29, 182);
+      //border: 1px solid rgb(169, 29, 182);
     }
 
     &:hover {
@@ -45,16 +46,35 @@
       //background-repeat: no-repeat;
       background-size: 0 0;
 
-      &.imageBackOn{
-        //background-size: contain;
-        background-size: 100px 100px;
-        background-position: top center;
-        //background-repeat: repeat-y;
+      &.imageBackOn {
+        background-size: contain;
+        background-position: top left;
+        background-repeat: repeat;
         .image{
           //opacity: 0;
+          height: 100%;
+          width: auto;
+          //margin-top: 3%;
+        }
+      }
+      &.imageBackOn1{
+        background-size: contain;
+        background-position: top right;
+        background-repeat: repeat;
+        .image{
+          //opacity: 0;
+          height: 100%;
+          width: auto;
+          //margin-top: 3%;
+        }
+      }
+      &.imageBackOn2{
+        background-size: 50% 100%;
+        background-position: left center;
+        background-repeat: repeat;
+        .image{
           height: 70%;
-          //width: 50%;
-          margin-top: 3%;
+          margin-top: 40%;
         }
       }
   

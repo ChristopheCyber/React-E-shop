@@ -2,7 +2,8 @@
     {
       "title": "Paintings",
       "imageUrl": "https://i.ibb.co/cvpntL1/hats.png",
-      "imageBack": "Paintings.jpg",
+      "imageBack": "PaintingsBack.jpg",
+      "imageBackOn": "imageBackOn",
       "id": 1,
       "linkUrl": "Shop Paintings"
       ,"image": "Paintings.jpg"
@@ -11,7 +12,7 @@
       "title": "Jewerly",
       "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png",
       "imageBack": "DiamondGif.gif",
-      "imageBackOn": "imageBackOn",
+      "imageBackOn": "imageBackOn2",
       "id": 2,
       "linkUrl": "Shop Jewerly"
       ,"image": "DiamondGif.gif"
@@ -19,7 +20,8 @@
     {
       "title": "Fashion",
       "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png",
-      "imageBack": "Fashion.jpg",
+      "imageBack": "FashionBack.jpg",
+      "imageBackOn": "imageBackOn1",
       "id": 3,
       "linkUrl": "Shop Fashion"
       ,"image": "Fashion.jpg"
@@ -27,7 +29,8 @@
     {
       "title": "Women",
       "imageUrl": "https://i.ibb.co/GCCdy8t/womens.png",
-      "imageBack": "WOMEN.jpg",
+      "imageBack": "WomenBack.jpg",
+      "imageBackOn": "imageBackOn1",
       "size": "large1",
       "id": 4,
       "linkUrl": "Shop WOMEN"
@@ -36,7 +39,8 @@
     {
       "title": "Men",
       "imageUrl": "https://i.ibb.co/R70vBrQ/men.png",
-      "imageBack": "MEN.jpg",
+      "imageBack": "MenBack.jpg",
+      "imageBackOn": "imageBackOn",
       "size": "large1",
       "id": 5,
       "linkUrl": "Shop MEN"

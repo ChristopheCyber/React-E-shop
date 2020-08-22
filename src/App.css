@@ -24,8 +24,8 @@
   margin-bottom: 1%;
   height: 30px;
   width: 50%;
-  border: 2px solid rgba(125, 24, 207, 0.6);
-  border-radius: 10px;
+  /*border: 2px solid rgba(125, 24, 207, 0.6);
+  border-radius: 10px;*/
 }
 .MenuNav ul {
   display: flex;
