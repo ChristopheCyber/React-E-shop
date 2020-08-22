@@ -2,8 +2,54 @@
   text-align: center;
   justify-content: center;
 }
-.bigLow{
-  font-family: 'Bigelow Rules';
+
+.DflexRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/*-----------------------------------------------------*/
+/* Header Nav
+/*-----------------------------------------------------*/
+.MenuNav {
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-top: 2px;
+  margin-right: 5%;
+  margin-bottom: 1%;
+  height: 30px;
+  width: 50%;
+  border: 2px solid rgba(125, 24, 207, 0.6);
+  border-radius: 10px;
+}
+.MenuNav ul {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: row;
+	justify-content: space-around;	
+	list-style: none;
+}
+.MenuNav ul li {
+  color: rgb(0, 247, 255);
+}
+.MenuNav>ul>li:nth-child(1){
+	border-bottom: 2px solid;
+}
+.MenuNav>ul>li>a{
+  text-decoration: none;
+	color: rgb(43, 202, 51);
+}
+.MenuNav>ul>li:nth-child(2)>a{  
+  text-decoration: underline;
+}
+.bigLow {
+  font-family: "Bigelow Rules";
   /*font-family: 'Open Sans Condensed' 'Bigelow Rules' sans-serif;
   */
   font-size: 40px;
@@ -14,7 +60,7 @@
   color: #f1d039;
 }
 h1 {
-  font-family: 'Parisienne', cursive;
+  font-family: "Parisienne", cursive;
   /*font-family: 'Bigelow Rules';*/
   font-size: 40px;
   color: rgb(80, 240, 16);
@@ -28,16 +74,16 @@ h1 {
   margin-top: 10px;
   padding-bottom: 0px;
 }
-div {
-  text-align: center;
-  justify-content: center;
-}
 /*FONT FACE*/
 /* latin BigeLow */
 @font-face {
-  font-family: 'Bigelow Rules';
+  font-family: "Bigelow Rules";
   font-style: normal;
   font-weight: 400;
-  src: local('Bigelow Rules Regular'), local('BigelowRules-Regular'), url(https://fonts.gstatic.com/s/bigelowrules/v8/RrQWboly8iR_I3KWSzeRuN0zf4AIHg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: local("Bigelow Rules Regular"), local("BigelowRules-Regular"),
+    url(https://fonts.gstatic.com/s/bigelowrules/v8/RrQWboly8iR_I3KWSzeRuN0zf4AIHg.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }

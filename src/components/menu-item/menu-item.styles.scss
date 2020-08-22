@@ -6,7 +6,7 @@
     align-items: center;
     justify-content: center;
     border: 1px solid rgb(218, 23, 185);
-    border-radius: 10px;
+    border-radius: 20px;
     margin: 0 7.5px 15px;
     overflow: hidden;
   
@@ -21,7 +21,7 @@
     
       & .background-image {
         transform: scale(1.25);
-        transition: transform 5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+        transition: transform 7s cubic-bezier(0.25, 0.45, 0.45, 0.95);
       }
     
       & .content {
@@ -52,7 +52,7 @@
         //background-repeat: repeat-y;
         .image{
           //opacity: 0;
-          height: 120%;
+          height: 70%;
           //width: 50%;
           margin-top: 3%;
         }
