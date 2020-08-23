@@ -6,13 +6,32 @@ import AppComponent from './pages/MenuHeaderPages/App-component';
 //
 const FashionPage1 = () => (
   <div>
-    <h1>Fashion Page 1</h1>
+    <h1>Fashion Page</h1>
     <h2>Fashion elements:</h2>
     <em>
       Unavailable ! <br /> =&gt; Under construction . . .
     </em>
   </div>
 )
+const WomenPage1 = () => (
+  <div>
+    <h1>Women Page</h1>
+    <h2>Women elements:</h2>
+    <em>
+      Unavailable ! <br /> =&gt; Under construction . . .
+    </em>
+  </div>
+)
+const MenPage1 = () => (
+  <div>
+    <h1>Men Page</h1>
+    <h2>Men elements:</h2>
+    <em>
+      Unavailable ! <br /> =&gt; Under construction . . .
+    </em>
+  </div>
+)
+
 /* other way to write the fct:
 function Paintings() {
   return <h2>Paintings</h2>;
@@ -31,6 +50,8 @@ function App() {
             <li> <Link to="/paintings">Paintings</Link> </li>
             <li> <Link to="/jewerly">Jewerly</Link> </li>
             <li> <Link to="/fashion">Fashion</Link> </li>
+            <li> <Link to="/women">Women</Link> </li>
+            <li> <Link to="/men">Men</Link> </li>
           </ul>
         </nav>
       </div>
@@ -56,7 +77,7 @@ function App() {
              (<AppComponent propPageCat={`jewerly`} />) } />
         {/* Method 0 => if no parameters passed necessary
         <Route path="/jewerly" component={AppComponent}/>
-        
+
         {/* Method 1 => but no updating componentDidMount/Fetch
         <Route path="/jewerly">
           <AppComponent propPageCat="jewerly"/>
@@ -71,6 +92,8 @@ function App() {
             <AppComponent {...props} propPageCat={`jewerly`} /> ) }
         />*/}
         <Route path='/fashion' component={FashionPage1} />
+        <Route path='/women' component={WomenPage1} />
+        <Route path='/men' component={MenPage1} />
         <Route exact={true} path='/' component={HomePage} />
       </Switch>
       {/*<Route exact={true} path='/' component={HomePage}/>

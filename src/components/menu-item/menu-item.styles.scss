@@ -108,9 +108,20 @@
       }
       
       .subtitle {
-        color: rgba(255, 251, 31, 0.911);
-        text-shadow: 2px 3px 2px #ff0062;
+        color: rgba(83, 255, 31, 0.911);
+        text-shadow: 2px 3px 2px #ff1100;
         font-size: 25px;
+      }
+      .link {
+        color: rgba(83, 255, 31, 0.911);
+        text-shadow: 2px 3px 2px #ff1100;
+        font-size: 25px;
+        text-decoration: none;
+      }
+      .link:hover {
+        color:#ff0062 ;
+        font-size: 28px;
+        text-shadow: 2px 3px 2px black;
       }
     }
   }

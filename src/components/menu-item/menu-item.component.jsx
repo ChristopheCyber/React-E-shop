@@ -1,6 +1,9 @@
 import React from 'react';
 import './menu-item.styles.scss';
 
+import AppComponent from '../../pages/MenuHeaderPages/App-component';
+import { Route, Link } from 'react-router-dom';
+
 const MenuItem = (item) => {
     return (
         <div className={`menu-item ${item.ItemProp5}`} >
@@ -22,9 +25,15 @@ const MenuItem = (item) => {
                     {item.ItemProp1}
                 </h1>
                 <span className="subtitle">
-                    {item.ItemProp2}
+                    {/*<Link to="/paintings">{item.ItemProp2}</Link>*/}
+                    <Link to={`./${item.ItemProp1.toLowerCase()}`} className="link">
+                        {item.ItemProp2}
+                    </Link>
                 </span>
             </div>
+            <Route exact path="/paintings"
+                    component={ () => 
+                 (<AppComponent propPageCat={`paintings`} />) } />
         </div>
     );
 }
