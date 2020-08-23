@@ -14,7 +14,9 @@ class AppComponent extends React.Component {
   }
   //*** Life Cycle method componentDidMount() {}
   componentDidMount() {
-    fetch('./local-datas/json-data-items.json')
+    console.log("this.props.propPageCat=",this.props.propPageCat);
+    // fetch(`./local-datas/jewerly/json-data-items-jewerly.json`)
+    fetch(`./local-datas/${this.props.propPageCat}/json-data-items-${this.props.propPageCat}.json`)
       .then(resp1 => resp1.json())
       .then(users1 => this.setState({ cards: users1 }))
   }
