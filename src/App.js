@@ -42,19 +42,34 @@ function App() {
       {/* <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
       <Switch>
-        <Route path="/paintings">
+        {/*<Route path="/paintings">
           <AppComponent propPageCat="paintings" />
-        </Route>
-        {/*<Route path="/jewerly" component={AppComponent}/>*/}
-        <Route
-          path="/jewerly"
-          render={ (props) => (
-            <AppComponent {...props} propPageCat={`jewerly`} />
-          ) }
-        />
-        {/*<Route path="/jewerly">
-          <AppComponent propPageCat="jewerly"/>
         </Route>*/}
+        <Route path="/paintings"
+                component={ () => 
+             (<AppComponent propPageCat={`paintings`} />) } />
+        {/* Method 3; passing a fct as COMPONENT PROP 
+            => recreating the component 
+            => updating componentDidMount/Fetch :) */}
+        <Route path="/jewerly"
+                component={ () => 
+             (<AppComponent propPageCat={`jewerly`} />) } />
+        {/* Method 0 => if no parameters passed necessary
+        <Route path="/jewerly" component={AppComponent}/>
+        
+        {/* Method 1 => but no updating componentDidMount/Fetch
+        <Route path="/jewerly">
+          <AppComponent propPageCat="jewerly"/>
+        </Route>
+
+        {/* Method 2; passing a fct as RENDER PROP 
+            => just updating component without receeating it 
+            => better performance 
+            => but no updating componentDidMount/Fetch
+        <Route path="/jewerly"
+          render={ (props) => (
+            <AppComponent {...props} propPageCat={`jewerly`} /> ) }
+        />*/}
         <Route path='/fashion' component={FashionPage1} />
         <Route exact={true} path='/' component={HomePage} />
       </Switch>
