@@ -7,7 +7,7 @@ import { Route, Link } from 'react-router-dom';
 const MenuItem = (item) => {
     return (
         <div className={`menu-item ${item.ItemProp5}`} >
-            <div className= {`background-image ${item.ItemProp7}`}
+            <div className={`background-image ${item.ItemProp7}`}
                 style={{ //dynamic CSS
                     // <img src={ require(`./img/img${prop1.cardProp2.id}.jpg`)} 
                     // alt={`Pic ${prop1.cardProp2.id}`} 
@@ -17,7 +17,7 @@ const MenuItem = (item) => {
             >
                 <img className="image"
                     src={require(`./img/${item.ItemProp4}`)}
-                    alt={`Pic ${item.ItemProp4}`}/>
+                    alt={`Pic ${item.ItemProp4}`} />
             </div>
             <div className="content">
                 <h1 className="title">
@@ -32,8 +32,8 @@ const MenuItem = (item) => {
                 </span>
             </div>
             <Route exact path="/paintings"
-                    component={ () => 
-                 (<AppComponent propPageCat={`paintings`} />) } />
+                component={() =>
+                    (<AppComponent propPageCat={`paintings`} />)} />
         </div>
     );
 }
