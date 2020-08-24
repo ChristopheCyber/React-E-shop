@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "name": "Treasure 01",
+    "name": "Diamond ring Swam 01",
     "category": "jewerly",
     "username": "Bret",
     "email": "ChrisCyb01@bla.biz",
@@ -26,7 +26,7 @@
   {
     "id": 2,
     "category": "jewerly",
-    "name": "Fabergé ballet 02",
+    "name": "Bracelet saphir 02",
     "username": "Antonette",
     "email": "ChrisCyb01@bla.tv",
     "address": {
@@ -50,7 +50,7 @@
   {
     "id": 3,
     "category": "jewerly",
-    "name": "Fabergé elephants 03",
+    "name": "Boat gold ruby 03",
     "username": "Samantha",
     "email": "ChrisCyb01@bla.net",
     "address": {
@@ -98,7 +98,7 @@
   {
     "id": 5,
     "category": "jewerly",
-    "name": "Fabergé egg crystal 05",
+    "name": "Fabergé egg blue gold 05",
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {
@@ -122,7 +122,7 @@
   {
     "id": 6,
     "category": "jewerly",
-    "name": "Fabergé egg gold malachite 06",
+    "name": "Fabergé gold eagle 06",
     "username": "Leopoldo_Corkery",
     "email": "ChrisCyb01@bla.info",
     "address": {
@@ -146,7 +146,7 @@
   {
     "id": 7,
     "category": "jewerly",
-    "name": "Fabergé mini-books 07",
+    "name": "Fabergé egg gold malachite 07",
     "username": "Elwyn.Skiles",
     "email": "ChrisCyb01@bla.biz",
     "address": {
@@ -170,7 +170,7 @@
   {
     "id": 8,
     "category": "jewerly",
-    "name": "Fabergé egg bird 08",
+    "name": "Fabergé egg clock 08",
     "username": "Maxime_Nienow",
     "email": "ChrisCyb01@bla.me",
     "address": {
@@ -194,7 +194,7 @@
   {
     "id": 9,
     "category": "jewerly",
-    "name": "Fabergé egg gold 09",
+    "name": "Fabergé elephants 09",
     "username": "Delphine",
     "email": "ChrisCyb01@bla.io",
     "address": {
@@ -218,7 +218,55 @@
   {
     "id": 10,
     "category": "jewerly",
-    "name": "Fabergé egg boat 10",
+    "name": "Fabergé crystal egg 10",
+    "username": "Moriah.Stanton",
+    "email": "ChrisCyb01@bla.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "e-business app web01"
+    }
+  },
+  {
+    "id": 11,
+    "category": "jewerly",
+    "name": "Precious broch diamonds 11",
+    "username": "Moriah.Stanton",
+    "email": "ChrisCyb01@bla.biz",
+    "address": {
+      "street": "Kattie Turnpike",
+      "suite": "Suite 198",
+      "city": "Lebsackbury",
+      "zipcode": "31428-2261",
+      "geo": {
+        "lat": "-38.2386",
+        "lng": "57.2232"
+      }
+    },
+    "phone": "024-648-3804",
+    "website": "ambrose.net",
+    "company": {
+      "name": "Hoeger LLC",
+      "catchPhrase": "Centralized empowering task-force",
+      "bs": "e-business app web01"
+    }
+  },
+  {
+    "id": 12,
+    "category": "jewerly",
+    "name": "Treasure gold 12",
     "username": "Moriah.Stanton",
     "email": "ChrisCyb01@bla.biz",
     "address": {

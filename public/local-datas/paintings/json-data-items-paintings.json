@@ -214,5 +214,77 @@
       "catchPhrase": "User-centric fault-tolerant solution",
       "bs": "e-business app web01"
     }
+  },
+  {
+    "id": 10,
+    "category": "paintings",
+    "name": "Painting bonus",
+    "username": "Kamren",
+    "email": "ChrisCyb01@bla.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "e-business app web01"
+    }
+  },
+  {
+    "id": 11,
+    "category": "paintings",
+    "name": "Painting bonus",
+    "username": "Kamren",
+    "email": "ChrisCyb01@bla.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "e-business app web01"
+    }
+  },
+  {
+    "id": 12,
+    "category": "paintings",
+    "name": "Painting bonus",
+    "username": "Kamren",
+    "email": "ChrisCyb01@bla.ca",
+    "address": {
+      "street": "Skiles Walks",
+      "suite": "Suite 351",
+      "city": "Roscoeview",
+      "zipcode": "33263",
+      "geo": {
+        "lat": "-31.8129",
+        "lng": "62.5342"
+      }
+    },
+    "phone": "(254)954-1289",
+    "website": "demarco.info",
+    "company": {
+      "name": "Keebler LLC",
+      "catchPhrase": "User-centric fault-tolerant solution",
+      "bs": "e-business app web01"
+    }
   }
 ]
