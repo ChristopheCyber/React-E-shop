@@ -10,7 +10,8 @@ export const Card = (prop1) => (
             , '=>', prop1.cardProp2.name
             , 'prop1.cardProp3=>', prop1.cardProp3)}
         {/* ---my pics--- */}
-        <a href={require(`./img/${prop1.cardProp2.category}/img${prop1.cardProp2.id}.jpg`)}>
+        <a href={require(`./img/${prop1.cardProp2.category}/img${prop1.cardProp2.id}.jpg`)}
+        target="_blank" rel="noopener noreferrer">
             <img src={require(`./img/${prop1.cardProp2.category}/img${prop1.cardProp2.id}.jpg`)}
                 alt={`Pic ${prop1.cardProp2.id}`}
                 title={`Image ${prop1.cardProp2.id}`}
