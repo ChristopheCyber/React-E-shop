@@ -14,8 +14,8 @@ export const Card = (prop1) => (
         target="_blank" rel="noopener noreferrer">
             <img src={require(`./img/${prop1.cardProp2.category}/img${prop1.cardProp2.id}.jpg`)}
                 alt={`Pic ${prop1.cardProp2.id}`}
-                title={`Image ${prop1.cardProp2.id}`}
-            /*className={`${prop1.cardProp3}`}*/
+                /* title={`Image ${prop1.cardProp2.id}`} */
+                /* className={`${prop1.cardProp3}`} */
             />
         </a>
         <strong> email: </strong>
