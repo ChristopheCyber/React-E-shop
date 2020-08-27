@@ -54,13 +54,13 @@ class Directory extends Component {
                 <MenuItem
                   //warning=>necessary key
                   key={id}
-                  ItemProp1={title}
-                  ItemProp2={linkUrl}
-                  ItemProp3={imageUrl}
-                  ItemProp6={imageBack}
-                  ItemProp5={size}
-                  ItemProp4={image}
-                  ItemProp7={imageBackOn}
+                  title={title}
+                  linkUrl={linkUrl}
+                  imageUrl={imageUrl}
+                  imageBack={imageBack}
+                  size={size}
+                  image={image}
+                  imageBackOn={imageBackOn}
                 />)
           )
         }

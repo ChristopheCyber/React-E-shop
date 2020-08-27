@@ -61,10 +61,10 @@ class AppComponent extends React.Component {
     //counting filtered cards + according text
     var nbrCards;
     if (filteredCards.length > 1) {
-      nbrCards = " ( " + filteredCards.length + " cards in list now ) ";
+      nbrCards = " ( " + filteredCards.length + " items in list now ) ";
     }
     else {
-      nbrCards = " ( " + filteredCards.length + " card in list now ) ";
+      nbrCards = " ( " + filteredCards.length + " item in list now ) ";
     }
     //coloring text number filtered cards 
     var filterBigLowNumber = "bigLow-search";
@@ -73,9 +73,9 @@ class AppComponent extends React.Component {
     }
     return (
       <div className="App-Component img-class">
-        <h1> Cards Selection Board </h1>
+        <h1> Items Selection Board </h1>
         <label>
-          <i className="bigLow js-grid">Search in cards titles -&gt;</i>
+          <i className="bigLow js-grid">Search in items titles -&gt;</i>
         </label>
         <SearchBox
           propPlaceHolder="Type text for Searching"
