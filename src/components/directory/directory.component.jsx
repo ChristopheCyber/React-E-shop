@@ -49,19 +49,27 @@ class Directory extends Component {
       <div className="directory-menu">
         {
           this.state.sections.map(
-            ({ id, title, imageUrl, imageBack, 
-              linkUrl, size, image, imageBackOn}) => (
+            //using the REST '...' SPREAD SYNTAX
+            ({ id, ...restOtherParams}) => (
                 <MenuItem
                   //warning=>necessary key
                   key={id}
-                  title={title}
-                  linkUrl={linkUrl}
-                  imageUrl={imageUrl}
-                  imageBack={imageBack}
-                  size={size}
-                  image={image}
-                  imageBackOn={imageBackOn}
+                  {...restOtherParams}
                 />)
+            // SAME AS:
+            // ({ id, title, imageUrl, imageBack, 
+            //   linkUrl, size, image, imageBackOn}) => (
+            //     <MenuItem
+            //       //warning=>necessary key
+            //       key={id}
+            //       title={title}
+            //       linkUrl={linkUrl}
+            //       imageUrl={imageUrl}
+            //       imageBack={imageBack}
+            //       size={size}
+            //       image={image}
+            //       imageBackOn={imageBackOn}
+            //     />)
           )
         }
       </div>
