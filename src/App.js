@@ -4,7 +4,46 @@ import { Route, Switch, Link } from 'react-router-dom';
 import { HomePage } from './pages/homepage/homepage.component.jsx';
 import AppComponent from './pages/MenuHeaderPages/App-component';
 //
-/*
+const HomePageT = props => {
+  console.log("HomePageT PROPS=", props);
+  return (
+    <div>
+      <button onClick={() => props.history.push('/topics')}>Topics List</button>
+      <h3>HOME PAGE</h3>
+    </div>
+  );
+};
+
+const TopicsList = props => {
+  console.log("TopicsList PROPS=", props);
+  return (
+    <div>
+      <h3>TOPIC LIST PAGE</h3>
+      <Link to='/topics/13'>LINK TO /topics/13</Link>
+      <br />
+      <button onClick={() => props.history.push('/topics/13')}>
+        BUTTON TO /topics/13 Topic Detail
+      </button>
+      <br />
+      <Link to={`${props.match.url}/13`}>TO TOPIC 13</Link>
+      {/*
+      <br/>
+      <Link to={`${props.match.url}/17`}>TO TOPIC 17</Link>
+      <br/>
+      <Link to={`${props.match.url}/21`}>TO TOPIC 21</Link>
+         */}
+    </div>
+  );
+};
+
+const TopicDetail = props => {
+  console.log("TopicDetail PROPS=", props);
+  return (
+    <div>
+      <h3>TOPIC DETAIL PAGE: {props.match.params.topic_Number}</h3>
+    </div>
+  );
+};/*
 const FashionPage1 = () => (
   <div>
     <h1>Fashion Page</h1>
@@ -24,6 +63,21 @@ function App() {
   return (
     <div className="App bigLow">
       <h1> E-shop S69 Routing </h1>
+
+      {/** for testing */}
+      <div>
+        <Route exact path='/' component={HomePageT} />
+        <Route exact path='/topics' component={TopicsList} />
+        <Route exact path='/topics/:topic_Number' component={TopicDetail} />
+        {/*
+        <Route exact path='/blog/asdqw/topics' component={TopicsList} />
+        <Route path='/blog/asdqw/topics/:topicId' component={TopicDetail} />
+        <Route exact path='/blog/topics' component={TopicsList} />
+        <Route path='/blog/topics/:topicId' component={TopicDetail} />
+        */}
+      </div>
+      {/** for testing */}
+
       <div className="DflexRow">
         <nav className="MenuNav">
           <ul>
@@ -48,7 +102,7 @@ function App() {
       <Switch>
         {/* Method 1=> if no parameters passed necessary
         <Route path="/paintings" component={AppComponent}/> */}
-        
+
         {/* Method 2a=>passing params with a fct as a RENDER PROP 
           => just updating component without re-creating/re-MOUNTing it 
           => better PERFORMANCE 

@@ -64,11 +64,7 @@ class Directory extends Component {
             //       key={id}
             //       title={title}
             //       linkUrl={linkUrl}
-            //       imageUrl={imageUrl}
-            //       imageBack={imageBack}
-            //       size={size}
-            //       image={image}
-            //       imageBackOn={imageBackOn}
+            //       etc...
             //     />)
           )
         }
