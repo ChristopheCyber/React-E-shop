@@ -1,9 +1,10 @@
 import React from 'react';
 import './menu-item.styles.scss';
 
-import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 const MenuItem = (item) => {
+    console.log("MenuItem =>item.history=",item.history);
     return (
         <div className={`menu-item ${item.size}`} >
             <div className={`background-image ${item.imageBackOn}`}
@@ -23,16 +24,23 @@ const MenuItem = (item) => {
                     {/*item.title.toLowerCase()*/}
                     {item.title}
                 </h1>
-                <span className="subtitle">
-                    {/*<Link to="/paintings">{item.linkUrl}</Link>*/}
+                <span className="subtitle link" 
+                    onClick={()=>(
+                        item.history.push(`${item.match.url}${item.title.toLowerCase()}`)
+                        )}
+                >
+                    {item.linkUrl}
+                    {/*if using Link instead of HOC withRouter :
+                    <Link to="/paintings">{item.linkUrl}</Link>
                     <Link to={`./${item.title.toLowerCase()}`} className="link">
                         {item.linkUrl}
-                    </Link>
+                    </Link>*/}
                 </span>
             </div>
         </div>
     );
 }
 
-export default MenuItem;
+//export default withRouter(MenuItem);
+export default withRouter(MenuItem);
 
