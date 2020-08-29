@@ -4,7 +4,6 @@ import './menu-item.styles.scss';
 import { withRouter } from 'react-router-dom';
 
 const MenuItem = (item) => {
-    console.log("MenuItem =>item.history=",item.history);
     return (
         <div className={`menu-item ${item.size}`} >
             <div className={`background-image ${item.imageBackOn}`}
