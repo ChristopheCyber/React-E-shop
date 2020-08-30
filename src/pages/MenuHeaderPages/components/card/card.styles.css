@@ -36,7 +36,6 @@
   font-weight: lighter;
   color:  rgb(62, 216, 82);  
   text-shadow: 3px 6px 8px rgb(13, 11, 119);
-
 }
 
 .card-list-filtered-card strong:first-of-type{
@@ -66,9 +65,20 @@
   );
 }
 
-.card-container img:hover {
-  transform: scale(1.05);
-  transition: transform 0.5s ease-out;
+.PriceLib {
+  font-family: 'Bigelow Rules';
+  font-size: 26px;
+  font-weight: lighter;
+  color:  rgb(62, 216, 82);  
+  text-shadow: 3px 6px 8px rgb(13, 11, 119);
+}
+
+.PriceVal {
+  font-family: 'Bigelow Rules';
+  font-size: 26px;
+  font-weight: bold;
+  color:  rgba(248, 58, 10, 0.829);  
+  text-shadow: 3px 6px 8px rgb(93, 253, 30);
 }
 
 /* latin BigeLow */

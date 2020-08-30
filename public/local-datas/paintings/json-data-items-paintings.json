@@ -3,6 +3,7 @@
     "id": 1,
     "category": "paintings",
     "name": "Painting 01",
+    "price": 110,
     "username": "Bret",
     "email": "ChrisCyb01@bla.biz",
     "address": {
@@ -27,6 +28,7 @@
     "id": 2,
     "category": "paintings",
     "name": "Painting 02",
+    "price": 120,
     "username": "Antonette",
     "email": "ChrisCyb01@bla.tv",
     "address": {
@@ -51,6 +53,7 @@
     "id": 3,
     "category": "paintings",
     "name": "Painting 03",
+    "price": 130,
     "username": "Samantha",
     "email": "ChrisCyb01@bla.net",
     "address": {
@@ -75,6 +78,7 @@
     "id": 4,
     "category": "paintings",
     "name": "Painting bonus",
+    "price": 140,
     "username": "Karianne",
     "email": "ChrisCyb01@bla.org",
     "address": {
@@ -99,6 +103,7 @@
     "id": 5,
     "category": "paintings",
     "name": "Painting bonus",
+    "price": 150,
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {
@@ -123,6 +128,7 @@
     "id": 6,
     "category": "paintings",
     "name": "Painting bonus",
+    "price": 160,
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {
@@ -147,6 +153,7 @@
     "id": 7,
     "category": "paintings",
     "name": "Painting bonus",
+    "price": 170,
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {
@@ -171,6 +178,7 @@
     "id": 8,
     "category": "paintings",
     "name": "Painting bonus",
+    "price": 180,
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {
@@ -195,6 +203,7 @@
     "id": 9,
     "category": "paintings",
     "name": "Painting bonus",
+    "price": 190,
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {
@@ -219,6 +228,7 @@
     "id": 10,
     "category": "paintings",
     "name": "Painting bonus",
+    "price": 200,
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {
@@ -243,6 +253,7 @@
     "id": 11,
     "category": "paintings",
     "name": "Painting bonus",
+    "price": 210,
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {
@@ -267,6 +278,7 @@
     "id": 12,
     "category": "paintings",
     "name": "Painting bonus",
+    "price": 220,
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {

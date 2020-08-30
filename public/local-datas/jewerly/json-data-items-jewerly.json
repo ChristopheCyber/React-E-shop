@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Diamond ring Swam 01",
+    "price": 100,
     "category": "jewerly",
     "username": "Bret",
     "email": "ChrisCyb01@bla.biz",
@@ -27,6 +28,7 @@
     "id": 2,
     "category": "jewerly",
     "name": "Bracelet saphir 02",
+    "price": 100,
     "username": "Antonette",
     "email": "ChrisCyb01@bla.tv",
     "address": {
@@ -51,6 +53,7 @@
     "id": 3,
     "category": "jewerly",
     "name": "Boat gold ruby 03",
+    "price": 100,
     "username": "Samantha",
     "email": "ChrisCyb01@bla.net",
     "address": {
@@ -75,6 +78,7 @@
     "id": 4,
     "category": "jewerly",
     "name": "Fabergé egg gold 04",
+    "price": 100,
     "username": "Karianne",
     "email": "ChrisCyb01@bla.org",
     "address": {
@@ -99,6 +103,7 @@
     "id": 5,
     "category": "jewerly",
     "name": "Fabergé egg blue gold 05",
+    "price": 100,
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {
@@ -123,6 +128,7 @@
     "id": 6,
     "category": "jewerly",
     "name": "Fabergé gold eagle 06",
+    "price": 100,
     "username": "Leopoldo_Corkery",
     "email": "ChrisCyb01@bla.info",
     "address": {
@@ -147,6 +153,7 @@
     "id": 7,
     "category": "jewerly",
     "name": "Fabergé egg gold malachite 07",
+    "price": 100,
     "username": "Elwyn.Skiles",
     "email": "ChrisCyb01@bla.biz",
     "address": {
@@ -171,6 +178,7 @@
     "id": 8,
     "category": "jewerly",
     "name": "Fabergé egg clock 08",
+    "price": 100,
     "username": "Maxime_Nienow",
     "email": "ChrisCyb01@bla.me",
     "address": {
@@ -195,6 +203,7 @@
     "id": 9,
     "category": "jewerly",
     "name": "Fabergé elephants 09",
+    "price": 100,
     "username": "Delphine",
     "email": "ChrisCyb01@bla.io",
     "address": {
@@ -219,6 +228,7 @@
     "id": 10,
     "category": "jewerly",
     "name": "Fabergé crystal egg 10",
+    "price": 100,
     "username": "Moriah.Stanton",
     "email": "ChrisCyb01@bla.biz",
     "address": {
@@ -243,6 +253,7 @@
     "id": 11,
     "category": "jewerly",
     "name": "Precious broch diamonds 11",
+    "price": 100,
     "username": "Moriah.Stanton",
     "email": "ChrisCyb01@bla.biz",
     "address": {
@@ -267,6 +278,7 @@
     "id": 12,
     "category": "jewerly",
     "name": "Treasure gold 12",
+    "price": 100,
     "username": "Moriah.Stanton",
     "email": "ChrisCyb01@bla.biz",
     "address": {

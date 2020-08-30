@@ -20,8 +20,12 @@ export const Card = (prop1) => (
         </a>
         <strong> email: </strong>
         <span>{prop1.cardProp2.email}</span>
-        <strong> cardProp3: </strong>
-        <span>Pic size=&gt;{prop1.cardProp3}</span>
+        <span className="PriceLib">
+            Price : 
+            <span className="PriceVal"> 
+                {' '}{prop1.cardProp2.price}{' $'}
+            </span>
+        </span>
         {/* 
         {/*---origin pics---
         <img src={ require(`./img/img${prop1.cardProp2.id}.jpg`)} 

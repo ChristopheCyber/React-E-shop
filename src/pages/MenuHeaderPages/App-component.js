@@ -55,7 +55,8 @@ class AppComponent extends React.Component {
   render() {
     /*destructuring object state, doing same as:*/
     /* const tabCards = this.state.cards; const constSearchTxt1 = this.state.searchTxt1; */
-    const { cards: tabCards, searchTxt1: constSearchTxt1, imgSize1: constImgSize1 } = this.state;
+    const { cards: tabCards, searchTxt1: constSearchTxt1, 
+        imgSize1: constImgSize1 } = this.state;
     const filteredCards = tabCards.filter(eltTab =>
       eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()));
     //counting filtered cards + according text
@@ -85,7 +86,8 @@ class AppComponent extends React.Component {
           <i className={"bigLow " + filterBigLowNumber}>&nbsp; {nbrCards}</i>
         </label>
         {/*<CardList cardsProp1={this.state.cards} />*/}
-        <CardList cardsProp1={filteredCards} cardsPropImg={constImgSize1} />
+        <CardList cardsProp1={filteredCards} cardsPropImg={constImgSize1} 
+        />
         {/*1 children of CardList component 
           <h2>CardList children here </h2>
           {  this.state.cards.map( cardElt => 

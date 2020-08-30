@@ -1,8 +1,9 @@
 [
   {
     "id": 1,
-    "name": "Men 01",
     "category": "men",
+    "name": "Men 01",
+    "price": 100,
     "username": "Bret",
     "email": "ChrisCyb01@bla.biz",
     "address": {
@@ -27,6 +28,7 @@
     "id": 2,
     "category": "men",
     "name": "Men 02",
+    "price": 100,
     "username": "Antonette",
     "email": "ChrisCyb01@bla.tv",
     "address": {
@@ -51,6 +53,7 @@
     "id": 3,
     "category": "men",
     "name": "Men 03",
+    "price": 100,
     "username": "Samantha",
     "email": "ChrisCyb01@bla.net",
     "address": {
@@ -75,6 +78,7 @@
     "id": 4,
     "category": "men",
     "name": "Men 04",
+    "price": 100,
     "username": "Karianne",
     "email": "ChrisCyb01@bla.org",
     "address": {
@@ -99,6 +103,7 @@
     "id": 5,
     "category": "men",
     "name": "Men 05",
+    "price": 100,
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
     "address": {
@@ -123,6 +128,7 @@
     "id": 6,
     "category": "men",
     "name": "Men 06",
+    "price": 100,
     "username": "Leopoldo_Corkery",
     "email": "ChrisCyb01@bla.info",
     "address": {
@@ -147,6 +153,7 @@
     "id": 7,
     "category": "men",
     "name": "Men 07",
+    "price": 100,
     "username": "Elwyn.Skiles",
     "email": "ChrisCyb01@bla.biz",
     "address": {
@@ -171,6 +178,7 @@
     "id": 8,
     "category": "men",
     "name": "Men 08",
+    "price": 100,
     "username": "Maxime_Nienow",
     "email": "ChrisCyb01@bla.me",
     "address": {
@@ -195,6 +203,7 @@
     "id": 9,
     "category": "men",
     "name": "Men 09",
+    "price": 100,
     "username": "Delphine",
     "email": "ChrisCyb01@bla.io",
     "address": {

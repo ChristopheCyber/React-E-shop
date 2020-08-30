@@ -2,6 +2,7 @@
   {
     "id": 1,
     "name": "Fahion 01",
+    "price": 100,
     "category": "fashion",
     "username": "Bret",
     "email": "ChrisCyb01@bla.biz",
@@ -26,6 +27,7 @@
   {
     "id": 2,
     "name": "Fahion 02",
+    "price": 100,
     "category": "fashion",
     "username": "Antonette",
     "email": "ChrisCyb01@bla.tv",
@@ -50,6 +52,7 @@
   {
     "id": 3,
     "name": "Fahion 03",
+    "price": 100,
     "category": "fashion",
     "username": "Samantha",
     "email": "ChrisCyb01@bla.net",
@@ -74,6 +77,7 @@
   {
     "id": 4,
     "name": "Fahion 04",
+    "price": 100,
     "category": "fashion",
     "username": "Karianne",
     "email": "ChrisCyb01@bla.org",
@@ -98,6 +102,7 @@
   {
     "id": 5,
     "name": "Fahion 05",
+    "price": 100,
     "category": "fashion",
     "username": "Kamren",
     "email": "ChrisCyb01@bla.ca",
@@ -122,6 +127,7 @@
   {
     "id": 6,
     "name": "Fahion 06",
+    "price": 100,
     "category": "fashion",
     "username": "Leopoldo_Corkery",
     "email": "ChrisCyb01@bla.info",
@@ -146,6 +152,7 @@
   {
     "id": 7,
     "name": "Fahion 07",
+    "price": 100,
     "category": "fashion",
     "username": "Elwyn.Skiles",
     "email": "ChrisCyb01@bla.biz",
@@ -170,6 +177,7 @@
   {
     "id": 8,
     "name": "Fahion 08",
+    "price": 100,
     "category": "fashion",
     "username": "Maxime_Nienow",
     "email": "ChrisCyb01@bla.me",
@@ -194,6 +202,7 @@
   {
     "id": 9,
     "name": "Fahion 09",
+    "price": 100,
     "category": "fashion",
     "username": "Delphine",
     "email": "ChrisCyb01@bla.io",
@@ -218,6 +227,7 @@
   {
     "id": 10,
     "name": "Fahion 10",
+    "price": 100,
     "category": "fashion",
     "username": "Moriah.Stanton",
     "email": "ChrisCyb01@bla.biz",
