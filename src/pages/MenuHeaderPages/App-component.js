@@ -15,6 +15,7 @@ class AppComponent extends React.Component {
   //*** Life Cycle method componentDidMount() {}
   componentDidMount() {
     console.log("this.props.propPageCat=",this.props.propPageCat);
+    console.log("this.props.propSbox=",this.props.propSbox);
     // fetch(`./local-datas/jewerly/json-data-items-jewerly.json`)
     fetch(`./local-datas/${this.props.propPageCat}/json-data-items-${this.props.propPageCat}.json`)
       .then(resp1 => resp1.json())
@@ -73,20 +74,26 @@ class AppComponent extends React.Component {
       filterBigLowNumber = "bigLow-search-filtered";
     }
     return (
-      <div className="App-Component img-class">
-        <h1> Items Selection Board </h1>
-        <label>
-          <i className="bigLow js-grid">Search in items titles -&gt;</i>
-        </label>
-        <SearchBox
-          propPlaceHolder="Type text for Searching"
-          handleChangeFct={this.methodHandleChange}
-        />
-        <label>
+      <div>
+      <h1> {this.props.propPageCat.toUpperCase()} :</h1>
+        <div className={this.props.propSbox}>
+          <h1> Items Selection Board </h1>
+          <label>
+            <i className={"bigLow js-grid " + this.props.propSbox}>
+            Search in items titles -&gt;
+            </i>
+          </label>
+          <SearchBox
+            propPlaceHolder="Type text for Searching"
+            handleChangeFct={this.methodHandleChange}
+          />
+          <label>
           <i className={"bigLow " + filterBigLowNumber}>&nbsp; {nbrCards}</i>
-        </label>
+          </label>
+        </div>
         {/*<CardList cardsProp1={this.state.cards} />*/}
         <CardList cardsProp1={filteredCards} cardsPropImg={constImgSize1} 
+                  cardsListLength={this.props.propListLength}
         />
         {/*1 children of CardList component 
           <h2>CardList children here </h2>

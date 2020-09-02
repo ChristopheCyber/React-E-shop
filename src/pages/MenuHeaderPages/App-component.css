@@ -75,6 +75,13 @@ h1 {
 .App-link {
   color: #61dafb;
 }
+
+.hideSearchBox{
+  /*visibility: hidden;
+  visibility: collapse;*/
+  display: none;
+}
+
 /**/
 @keyframes App-logo-spin {
   from {

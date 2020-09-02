@@ -3,6 +3,7 @@ import './App.css';
 import { Route, Switch, Link } from 'react-router-dom';
 import { HomePage } from './pages/homepage/homepage.component.jsx';
 import AppComponent from './pages/MenuHeaderPages/App-component';
+import ShopComponent from './pages/shop/shop.component.jsx';
 //
 /*
 const FashionPage1 = () => (
@@ -30,6 +31,7 @@ function App() {
             <li>Links :</li>
             {/** '/' means http://localhost:3000/ ;'exact' means 'exacty this path'*/}
             <li> <Link to="/">Home Page</Link> </li>
+            <li> <Link to="/shop">Shop Page</Link> </li>
             <li> <Link to="/paintings">Paintings</Link> </li>
             <li> <Link to="/jewerly">Jewerly</Link> </li>
             <li> <Link to="/fashion">Fashion</Link> </li>
@@ -84,6 +86,10 @@ function App() {
         <Route path="/men"
           component={() =>
             (<AppComponent propPageCat={`men`} />)} />
+        {/*<Route exact={true} path='/shop'  
+          component={() =>
+            (<ShopComponent />)} />*/}
+        <Route exact={true} path='/shop' component={ShopComponent} />
         <Route exact={true} path='/' component={HomePage} />
         {/* same as:
         <Route exact path='/'>
