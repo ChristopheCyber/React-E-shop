@@ -24,19 +24,18 @@ function Paintings() {
 function App() {
   return (
     <div className="App bigLow">
-      <h1> E-shop S69 Routing </h1>
+      <h1>&lt; E-Shop &gt;</h1>
       <div className="DflexRow">
         <nav className="MenuNav">
           <ul>
-            <li>Links :</li>
             {/** '/' means http://localhost:3000/ ;'exact' means 'exacty this path'*/}
-            <li> <Link to="/">Home Page</Link> </li>
-            <li> <Link to="/shop">Shop Page</Link> </li>
-            <li> <Link to="/paintings">Paintings</Link> </li>
-            <li> <Link to="/jewerly">Jewerly</Link> </li>
-            <li> <Link to="/fashion">Fashion</Link> </li>
-            <li> <Link to="/women">Women</Link> </li>
-            <li> <Link to="/men">Men</Link> </li>
+            <li> <Link to="/" className="link">Home Page</Link> </li>
+            <li> <Link to="/shop" className="link">Preview all</Link> </li>
+            <li> <Link to="/paintings" className="link">Paintings</Link> </li>
+            <li> <Link to="/jewerly" className="link">Jewerly</Link> </li>
+            <li> <Link to="/fashion" className="link">Fashion</Link> </li>
+            <li> <Link to="/women" className="link">For Women</Link> </li>
+            <li> <Link to="/men" className="link">For Men</Link> </li>
           </ul>
         </nav>
       </div>

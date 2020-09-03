@@ -14,7 +14,7 @@ class shopComponent extends React.Component {
     render() {
         return (
             <div className="App-Component img-class">
-                Shop Page !
+                Shop Page Previews ( 4 samples by category )
                 <AppComponent propPageCat={`paintings`} propSbox={`hideSearchBox`}
                 propListLength={4}/>
                 <AppComponent propPageCat={`jewerly`} propSbox={`hideSearchBox`}

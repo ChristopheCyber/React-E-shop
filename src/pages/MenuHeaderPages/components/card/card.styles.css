@@ -14,7 +14,7 @@
   border-radius: 5px;
   padding: 10px;
   box-shadow: 4px 4px 4px rgba(47, 221, 221, 0.61);
-  margin: 10px  10px 10px 10px;
+  margin: 10px 10px 10px 10px;
   cursor: pointer;
   -moz-osx-font-smoothing: grayscale;
   backface-visibility: hidden;
@@ -31,25 +31,25 @@
 }
 
 .card-container strong:first-of-type {
-  font-family: 'Bigelow Rules';
+  font-family: "Bigelow Rules";
   font-size: 26px;
   font-weight: lighter;
-  color:  rgb(62, 216, 82);  
+  color: rgb(62, 216, 82);
   text-shadow: 3px 6px 8px rgb(13, 11, 119);
 }
 
-.card-list-filtered-card strong:first-of-type{
-  color:  rgb(120, 245, 37);  
+.card-list-filtered-card strong:first-of-type {
+  color: rgb(120, 245, 37);
   text-shadow: 6px 6px 6px rgb(228, 43, 43);
   font-weight: lighter;
   transition: all 1s;
 }
 
 .card-container strong:nth-last-of-type(1) {
-  font-family: 'Bigelow Rules';
+  font-family: "Bigelow Rules";
   font-size: 20px;
-  color:  rgb(124, 25, 124);
-  text-shadow: 2px 2px 8px rgb(43, 228, 52); 
+  color: rgb(124, 25, 124);
+  text-shadow: 2px 2px 8px rgb(43, 228, 52);
   text-decoration: underline 1px;
 }
 
@@ -57,35 +57,49 @@
   height: 246px;
   /*width: 226px;*/
   width: 98%;
-  margin : auto;
+  margin: auto;
+  border-radius: 8px;
   background: linear-gradient(
     to bottom left,
     rgb(22, 82, 7) 0%,
     rgb(96, 196, 30) 100%
   );
 }
+.card-container img:hover {
+  border-radius: 8px;
+  cursor: pointer;
+  transform: scale(1.04);
+  transition: transform 1.2s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 
 .PriceLib {
-  font-family: 'Bigelow Rules';
+  font-family: "Bigelow Rules";
   font-size: 26px;
   font-weight: lighter;
-  color:  rgb(62, 216, 82);  
+  color: rgb(62, 216, 82);
   text-shadow: 3px 6px 8px rgb(13, 11, 119);
 }
 
 .PriceVal {
-  font-family: 'Bigelow Rules';
+  font-family: "Bigelow Rules";
   font-size: 26px;
   font-weight: bold;
-  color:  rgba(248, 58, 10, 0.829);  
+  color: rgba(248, 58, 10, 0.829);
   text-shadow: 3px 6px 8px rgb(93, 253, 30);
 }
 
 /* latin BigeLow */
 @font-face {
-  font-family: 'Bigelow Rules';
+  font-family: "Bigelow Rules";
   font-style: normal;
   font-weight: 400;
-  src: local('Bigelow Rules Regular'), local('BigelowRules-Regular'), url(https://fonts.gstatic.com/s/bigelowrules/v8/RrQWboly8iR_I3KWSzeRuN0zf4AIHg.woff2) format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  src: local("Bigelow Rules Regular"), local("BigelowRules-Regular"),
+    url(https://fonts.gstatic.com/s/bigelowrules/v8/RrQWboly8iR_I3KWSzeRuN0zf4AIHg.woff2)
+      format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215,
+    U+FEFF, U+FFFD;
 }

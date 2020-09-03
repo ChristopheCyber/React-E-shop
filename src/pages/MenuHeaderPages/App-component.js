@@ -1,4 +1,6 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
+
 import './App-component.css';
 import { CardList } from './components/card-list/card-list.component.jsx';
 import { SearchBox } from './components/search-box/search-box.component.jsx';
@@ -14,8 +16,7 @@ class AppComponent extends React.Component {
   }
   //*** Life Cycle method componentDidMount() {}
   componentDidMount() {
-    console.log("this.props.propPageCat=",this.props.propPageCat);
-    console.log("this.props.propSbox=",this.props.propSbox);
+    console.log("this.props.propPageCat=", this.props.propPageCat);
     // fetch(`./local-datas/jewerly/json-data-items-jewerly.json`)
     fetch(`./local-datas/${this.props.propPageCat}/json-data-items-${this.props.propPageCat}.json`)
       .then(resp1 => resp1.json())
@@ -56,8 +57,8 @@ class AppComponent extends React.Component {
   render() {
     /*destructuring object state, doing same as:*/
     /* const tabCards = this.state.cards; const constSearchTxt1 = this.state.searchTxt1; */
-    const { cards: tabCards, searchTxt1: constSearchTxt1, 
-        imgSize1: constImgSize1 } = this.state;
+    const { cards: tabCards, searchTxt1: constSearchTxt1,
+      imgSize1: constImgSize1 } = this.state;
     const filteredCards = tabCards.filter(eltTab =>
       eltTab.name.toLowerCase().includes(constSearchTxt1.toLowerCase()));
     //counting filtered cards + according text
@@ -75,12 +76,26 @@ class AppComponent extends React.Component {
     }
     return (
       <div>
-      <h1> {this.props.propPageCat.toUpperCase()} :</h1>
+        <h1>
+          <span className={'link2'}
+            onClick={() => (
+              /*console.log("this.props.history=",this.props.history,`\n`,
+                      "; this.props.match.url=",this.props.match.url,`\n`,
+                      "; this.props.propPageCat=",this.props.propPageCat)*/
+              this.props.history.push(`../${this.props.propPageCat.toLowerCase()}`)
+              /*doesn't trigger rendering :
+              item.history.push(`${this.props.match.url}/../${this.props.title.toLowerCase()}`)
+              */
+            )}
+          >
+           {this.props.propPageCat.toUpperCase()}{'  collection '}
+          </span>
+        </h1>
         <div className={this.props.propSbox}>
           <h1> Items Selection Board </h1>
           <label>
             <i className={"bigLow js-grid " + this.props.propSbox}>
-            Search in items titles -&gt;
+              Search in items titles -&gt;
             </i>
           </label>
           <SearchBox
@@ -88,12 +103,12 @@ class AppComponent extends React.Component {
             handleChangeFct={this.methodHandleChange}
           />
           <label>
-          <i className={"bigLow " + filterBigLowNumber}>&nbsp; {nbrCards}</i>
+            <i className={"bigLow " + filterBigLowNumber}>&nbsp; {nbrCards}</i>
           </label>
         </div>
         {/*<CardList cardsProp1={this.state.cards} />*/}
-        <CardList cardsProp1={filteredCards} cardsPropImg={constImgSize1} 
-                  cardsListLength={this.props.propListLength}
+        <CardList cardsProp1={filteredCards} cardsPropImg={constImgSize1}
+          cardsListLength={this.props.propListLength}
         />
         {/*1 children of CardList component 
           <h2>CardList children here </h2>
@@ -105,4 +120,4 @@ class AppComponent extends React.Component {
     );
   }
 }
-export default AppComponent;
+export default withRouter(AppComponent);

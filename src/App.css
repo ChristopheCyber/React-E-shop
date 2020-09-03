@@ -40,23 +40,35 @@ em{
 	justify-content: space-around;	
 	list-style: none;
 }
-.MenuNav ul li {
-  color: rgb(0, 247, 255);
-}
-.MenuNav>ul>li:nth-child(1){
-	border-bottom: 2px solid;
-}
+
 .MenuNav>ul>li>a{
   text-decoration: none;
 	color: rgb(43, 202, 51);
 }
-.MenuNav>ul>li:nth-child(2)>a{  
+.MenuNav>ul>li:nth-child(1)>a, .MenuNav>ul>li:nth-child(2)>a{  
   text-decoration: underline;
+}
+.link:hover{
+  font-size: 28px;
+  color:rgb(43, 202, 51) ;
+  text-shadow: 2px 4px 2px rgb(253, 30, 14);
+  cursor: pointer;
+  margin: auto;
+}
+.link2:hover {
+  font-size: 33px;
+  color:#48ff00 ;
+  text-shadow: 2px 3px 2px rgb(243, 25, 25);
+  cursor: pointer;
+  margin: auto;
+}
+h1 > span{
+  color:#15ff00 ;
+  text-shadow: 2px 4px 2px rgb(253, 129, 14);
 }
 .bigLow {
   font-family: "Bigelow Rules";
-  /*font-family: 'Open Sans Condensed' 'Bigelow Rules' sans-serif;
-  */
+  /*font-family: 'Open Sans Condensed' 'Bigelow Rules' sans-serif;*/
   font-size: 40px;
   text-shadow: 2px 3px 2px rgb(223, 8, 8);
   font-style: normal;
