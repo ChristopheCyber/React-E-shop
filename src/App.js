@@ -30,7 +30,7 @@ function App() {
           <ul>
             {/** '/' means http://localhost:3000/ ;'exact' means 'exacty this path'*/}
             <li> <Link to="/" className="link">Home Page</Link> </li>
-            <li> <Link to="/shop" className="link">Preview all</Link> </li>
+            <li> <Link to="/shop" className="link">Preview all Collections</Link> </li>
             <li> <Link to="/paintings" className="link">Paintings</Link> </li>
             <li> <Link to="/jewerly" className="link">Jewerly</Link> </li>
             <li> <Link to="/fashion" className="link">Fashion</Link> </li>
