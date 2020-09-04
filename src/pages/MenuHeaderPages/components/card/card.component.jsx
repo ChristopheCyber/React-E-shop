@@ -23,7 +23,7 @@ export const Card = (prop1) => (
         <span className="PriceLib">
             Price : 
             <span className="PriceVal"> 
-                {' '}{prop1.cardProp2.price}{' $'}
+                {' $ '}{prop1.cardProp2.price}
             </span>
         </span>
         {/* 

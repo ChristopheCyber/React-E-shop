@@ -6,7 +6,7 @@
 .DflexRow {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
 }
 em{
   color: rgb(255, 222, 35);
@@ -21,44 +21,57 @@ em{
   font-size: 25px;
   font-weight: bold;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  justify-content: space-around;
   text-align: center;
-  margin-top: 2px;
-  margin-right: 5%;
-  margin-bottom: 5px;
-  height: 34px;
-  width: 80%;
-  border: 2px solid rgba(125, 24, 207, 0.6);
-  border-radius: 10px;
+  /*margin-top: 2px;
+  margin-bottom: 10px;*/
+  height: auto;
+  width: 90%;
+  padding: 0 10px 0 10px;
 }
-.MenuNav ul {
+.MenuNav ul{
   display: flex;
-  text-align: center;
-  justify-content: center;
   flex-direction: row;
 	justify-content: space-around;	
-	list-style: none;
+  padding-left: 0em;
+  margin: 5px 0px 15px 0px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.MenuNav>ul>li{
+  display: flex;
+  flex-direction: column;
+	justify-content: space-around;	
+  list-style: none;
+  margin: 3px;
+  border: 0px solid rgba(47, 221, 221, 0.61);
+  border-radius: 10px;
+  padding: 0px 9px 6px 9px;
+  box-shadow: 2px 4px 4px rgba(43, 202, 51, 0.61);
 }
 
 .MenuNav>ul>li>a{
   text-decoration: none;
 	color: rgb(43, 202, 51);
 }
+
 .MenuNav>ul>li:nth-child(1)>a, .MenuNav>ul>li:nth-child(2)>a{  
   text-decoration: underline;
 }
+
 .link:hover{
   font-size: 28px;
   color:rgb(43, 202, 51) ;
-  text-shadow: 2px 4px 2px rgb(253, 30, 14);
+  text-shadow: 2px 4px 1px rgb(253, 30, 14);
   cursor: pointer;
   margin: auto;
 }
 .link2:hover {
   font-size: 33px;
   color:#48ff00 ;
-  text-shadow: 2px 3px 2px rgb(243, 25, 25);
+  text-shadow: 2px 3px 1px rgb(243, 25, 25);
   cursor: pointer;
   margin: auto;
 }
@@ -66,14 +79,14 @@ h1 > span{
   color:#15ff00 ;
   text-shadow: 2px 4px 2px rgb(253, 129, 14);
 }
-.bigLow {
+.bigLow{
   font-family: "Bigelow Rules";
   /*font-family: 'Open Sans Condensed' 'Bigelow Rules' sans-serif;*/
   font-size: 40px;
-  text-shadow: 2px 3px 2px rgb(223, 8, 8);
+  text-shadow: 2px 5px 4px rgba(223, 8, 8, 0.884);
   font-style: normal;
-  /*text-decoration: underline;*/
-  text-decoration-thickness: 2px;
+  /*text-decoration: underline;
+  text-decoration-thickness: 1px;*/
   color: #f1d039;
 }
 h1 {
