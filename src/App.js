@@ -4,6 +4,7 @@ import { Route, Switch, Link } from 'react-router-dom';
 import { HomePage } from './pages/homepage/homepage.component.jsx';
 import AppComponent from './pages/MenuHeaderPages/App-component';
 import ShopComponent from './pages/shop/shop.component.jsx';
+import HeaderComponent from './components/MainHeader/header.component';
 //
 /*
 const FashionPage1 = () => (
@@ -25,12 +26,12 @@ function App() {
   return (
     <div className="App bigLow">
       <h1>&lt; E-Shop &gt;</h1>
+      <HeaderComponent />
       <div className="DflexRow">
         <nav className="MenuNav">
           <ul>
             {/** '/' means http://localhost:3000/ ;'exact' means 'exacty this path'*/}
-            <li> <Link to="/" className="link">Home Page</Link> </li>
-            <li> <Link to="/shop" className="link">Preview all Collections</Link> </li>
+            <li> <Link to="/shop" className="link">Preview Collections</Link> </li>
             <li> <Link to="/paintings" className="link">Paintings</Link> </li>
             <li> <Link to="/jewerly" className="link">Jewerly</Link> </li>
             <li> <Link to="/fashion" className="link">Fashion</Link> </li>
@@ -49,7 +50,7 @@ function App() {
       <Switch>
         {/* Method 1=> if no parameters passed necessary
         <Route path="/paintings" component={AppComponent}/> */}
-        
+
         {/* Method 2a=>passing params with a fct as a RENDER PROP 
           => just updating component without re-creating/re-MOUNTing it 
           => better PERFORMANCE 

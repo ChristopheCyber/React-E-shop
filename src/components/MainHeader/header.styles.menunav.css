@@ -1,0 +1,87 @@
+.logo-container {
+  height: 100%;
+  width: 70px;
+  padding: 25px;
+}
+
+.options {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.option {
+  padding: 10px 15px;
+}
+/*-----------------------------------------------------*/
+/* Header Nav
+/*-----------------------------------------------------*/
+.MenuNav {
+  font-size: 25px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  text-align: center;
+  /*margin-top: 2px;
+    margin-bottom: 10px;*/
+  height: auto;
+  width: 90%;
+  padding: 0 10px 0 10px;
+}
+.MenuNav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 0em;
+  margin: 5px 0px 15px 0px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.MenuNav > ul > li {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  margin: 3px;
+  border: 0px solid rgba(47, 221, 221, 0.61);
+  border-radius: 10px;
+  padding: 0px 9px 6px 9px;
+  box-shadow: 2px 4px 4px rgba(43, 202, 51, 0.61);
+}
+
+.MenuNav > ul > li > a {
+  text-decoration: none;
+  color: rgb(43, 202, 51);
+}
+
+.MenuNav > ul > li:nth-child(1) > a,
+.MenuNav > ul > li:nth-child(2) > a {
+  text-decoration: underline;
+}
+
+.link:hover {
+  font-size: 28px;
+  color: rgb(43, 202, 51);
+  text-shadow: 2px 4px 1px rgb(253, 30, 14);
+  cursor: pointer;
+  margin: auto;
+}
+
+.link3 {
+  font-size: 20px;
+  color: rgb(43, 202, 51);
+  text-shadow: 2px 4px 1px rgb(253, 30, 14);
+  cursor: pointer;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;}
+
+h1 > span {
+  color: #15ff00;
+  text-shadow: 2px 4px 2px rgb(253, 129, 14);
+}
