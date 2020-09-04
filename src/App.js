@@ -25,7 +25,8 @@ function Paintings() {
 function App() {
   return (
     <div className="App bigLow">
-      <h1>&lt; E-Shop &gt;</h1>
+      {/*<h1>&lt; E-Shop &gt;</h1>*/}
+      <h1> E-Shop demo </h1>
       <HeaderComponent />
       <div className="DflexRow">
         <nav className="MenuNav">
