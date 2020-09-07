@@ -1,66 +1,45 @@
-.logo-container {
-  height: 100%;
-  width: 70px;
-  padding: 25px;
-}
 
-.options {
-  width: 50%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.option {
-  padding: 10px 15px;
-}
 /*-----------------------------------------------------*/
 /* Header Nav
 /*-----------------------------------------------------*/
-.MenuNav {
+.MenuNavHeader {
   font-size: 25px;
   font-weight: bold;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  flex-wrap: wrap;
+  justify-content: space-between;
   text-align: center;
   /*margin-top: 2px;
     margin-bottom: 10px;*/
   height: auto;
-  width: 90%;
+  /* width: 90%; */
   padding: 0 10px 0 10px;
 }
-.MenuNav ul {
+.MenuNavHeader ul {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   padding-left: 0em;
-  margin: 5px 0px 15px 0px;
-  width: 100%;
+  margin: 8px 0px 15px 0px;
   flex-wrap: wrap;
 }
 
-.MenuNav > ul > li {
+.MenuNavHeader > ul > li {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   list-style: none;
   margin: 3px;
-  border: 0px solid rgba(47, 221, 221, 0.61);
+  border: 1.7px solid rgba(19, 16, 211, 0.788);
   border-radius: 10px;
+  box-shadow: 2px 4px 4px rgba(47, 102, 221, 0.61);
   padding: 0px 9px 6px 9px;
-  box-shadow: 2px 4px 4px rgba(43, 202, 51, 0.61);
 }
 
-.MenuNav > ul > li > a {
+.MenuNavHeader > ul > li > a {
   text-decoration: none;
   color: rgb(43, 202, 51);
-}
-
-.MenuNav > ul > li:nth-child(1) > a,
-.MenuNav > ul > li:nth-child(2) > a {
-  text-decoration: underline;
 }
 
 .link:hover {
@@ -76,10 +55,14 @@
   color: rgb(43, 202, 51);
   text-shadow: 2px 4px 1px rgb(253, 30, 14);
   cursor: pointer;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: left;
+  margin-left: 10px;
+  border: 0px solid rgba(47, 221, 221, 0.61);
+  box-shadow: 2px 4px 4px rgba(47, 221, 221, 0.61);
+  border-radius: 10px;
+  padding: 0px 9px 6px 9px;
 }
 
 .link3:hover {
@@ -87,7 +70,6 @@
   color: rgb(43, 202, 51);
   text-shadow: 2px 4px 1px rgb(253, 30, 14);
   cursor: pointer;
-  margin: auto;
 }
 
 h1 > span {

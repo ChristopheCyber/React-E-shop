@@ -57,7 +57,7 @@ em{
 	color: rgb(43, 202, 51);
 }
 
-.MenuNav>ul>li:nth-child(1)>a, .MenuNav>ul>li:nth-child(2)>a{  
+.MenuNav>ul>li:nth-child(1)>a{  
   text-decoration: underline;
 }
 
