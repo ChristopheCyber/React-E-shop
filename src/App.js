@@ -5,6 +5,8 @@ import { HomePage } from './pages/homepage/homepage.component.jsx';
 import AppComponent from './pages/MenuHeaderPages/App-component';
 import ShopComponent from './pages/shop/shop.component.jsx';
 import HeaderComponent from './components/MainHeader/header.component';
+import signInAndUpComponent from './pages/sign-in-and-up/sign-in-and-up.component.jsx';
+import contactComponent from './pages/contact/contact.component.jsx';
 //
 /*
 const FashionPage1 = () => (
@@ -91,6 +93,8 @@ function App() {
           component={() =>
             (<ShopComponent />)} />*/}
         <Route exact={true} path='/shop' component={ShopComponent} />
+        <Route exact={true} path='/signinandup' component={signInAndUpComponent} />
+        <Route exact={true} path='/contact' component={contactComponent} />
         <Route exact={true} path='/' component={HomePage} />
         {/* same as:
         <Route exact path='/'>
