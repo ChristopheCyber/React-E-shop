@@ -1,0 +1,24 @@
+.sign-in-and-up {
+  display: flex;
+  flex-direction: column;
+  //   width: 50%;
+  //   justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  text-align: left;
+
+  .link {
+    font-size: 34px;
+    // text-decoration: none;
+    color: rgba(20, 245, 31, 0.829);
+    text-shadow: 2px 2px 2px rgba(19, 17, 17, 0.658);
+
+    &:hover {
+      font-size: 36px;
+      color: rgb(43, 245, 31);
+      text-shadow: 3px 1px 4px rgb(53, 157, 255);
+      cursor: pointer;
+      margin: auto;
+    }
+  }
+}

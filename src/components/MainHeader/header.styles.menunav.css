@@ -31,15 +31,18 @@
   justify-content: space-around;
   list-style: none;
   margin: 3px;
-  border: 1.7px solid rgba(19, 16, 211, 0.788);
+  border: 2px solid rgba(19, 16, 211, 0.788);
+  border-left-width: 0px;
+  border-top-width: 0px;
   border-radius: 10px;
-  box-shadow: 2px 4px 4px rgba(47, 102, 221, 0.61);
+  box-shadow: 2px 4px 4px rgba(47, 221, 221, 0.61);
   padding: 0px 9px 6px 9px;
 }
 
 .MenuNavHeader > ul > li > a {
   text-decoration: none;
-  color: rgb(43, 202, 51);
+  text-shadow: 2px 4px 1px rgb(243, 44, 44);
+  color: rgb(255, 235, 53);
 }
 
 .link:hover {
