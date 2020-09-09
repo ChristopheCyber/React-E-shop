@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './sign-in.styles.scss'
+import FormInput from "../form-input/form-input.component";
 
 class signInComponent extends Component {
     constructor(props) {
@@ -12,16 +13,16 @@ class signInComponent extends Component {
 
     fctHandleSubmit = (e) => {
         e.preventDefault();
-        this.setState({ email: 'myemail@foo.bar', password: '123' })
+        this.setState({ email: 'valid-email@foo.bar', password: '123' })
     }
 
     fctHandleChange = (e) => {
-        // destructuring event
+        // destructuring some event's props
         const { value, name } = e.target;
-        console.log("fctHandleChange => name =",name,"; value=",value);
-        console.log("this.state before = ",this.state);
+        // console.log("handleChange => name =",name,"; value=",value);
+        // console.log("this.state before = ",this.state);
         this.setState({ [name]: value }
-             ,()=>{console.log("this.state after = ", this.state);}            
+            //  ,()=>{console.log("this.state after = ", this.state);}            
             );
     }
     render() {
@@ -29,35 +30,29 @@ class signInComponent extends Component {
             <div className="sign-in">
                 <span>Sign In:</span>
                 <h1>I already have an account</h1>
-                <span>Sign In with your Email &amp; Password</span>
-                <br />
+                <span>Sign In with your Email &amp; Password :</span>
                 <form onSubmit={this.fctHandleSubmit} className="sign-in-form">
-                    <label htmlFor="email" className="sign-in-form-label">
-                        Email &gt;
-                    </label>
-                    <input type="email" id=""
-                        placeholder="email@web.ext"
+                    <FormInput type="email" id=""
+                        // placeholder="email@web.ext"
                         name="email"
+                        label="email"
                         value={this.state.email}
-                        onChange={this.fctHandleChange}
+                        handleChange={this.fctHandleChange}
                         required
                     />
-                    <br />
-                    <label htmlFor="password" className="sign-in-form-label">
-                        Password &gt;
-                    </label>
-                    <input type="password" id=""
-                        placeholder="password"
+                    <FormInput type="password" id=""
+                        // placeholder="password"
                         name="password"
+                        label="password"
                         value={this.state.password}
-                        onChange={this.fctHandleChange}
+                        handleChange={this.fctHandleChange}
                         required
                     />
-                    <br />
                     <label htmlFor="Submit" className="sign-in-form-label">
                         Validation &gt;
                     </label>
                     <input type="submit" value="OK" name="Submit" />
+                    <br />
                 </form>
             </div>
         );
