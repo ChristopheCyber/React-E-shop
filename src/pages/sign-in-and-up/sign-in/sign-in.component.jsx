@@ -48,10 +48,13 @@ class signInComponent extends Component {
                         handleChange={this.fctHandleChange}
                         required
                     />
-                    <label htmlFor="Submit" className="sign-in-form-label">
-                        Validation &gt;
-                    </label>
-                    <input type="submit" value="OK" name="Submit" />
+{/*
+                     <label htmlFor="Submit" className="sign-in-form-label">
+                         Validation &gt;
+                     </label>
+  */}
+                    <br />
+                    <input type="submit" value="Validation" name="Submit" />
                     <br />
                 </form>
             </div>

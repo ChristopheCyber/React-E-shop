@@ -15,7 +15,7 @@ $text-shadow-color: rgb(0, 0, 0);
 
   .form-input {
     background: none;
-    background-color: white;
+    background-color: rgb(189, 189, 189);
     color: $sub-color;
     font-size: 18px;
     padding: 5px 2px 5px 2px;
@@ -41,8 +41,8 @@ $text-shadow-color: rgb(0, 0, 0);
 
   .form-input-label {
     color: $sub-color;
-    font-size: 30px;
-    text-shadow: 2px 2px 2px rgb(94, 238, 248);
+    font-size: 28px;
+    text-shadow: 2px 2px 2px rgb(239, 243, 237);
     font-weight: bold;
     position: absolute;
     pointer-events: none;
