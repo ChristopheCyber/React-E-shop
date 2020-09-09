@@ -6,14 +6,14 @@ const signInAndUpComponent = () => {
     return (
         <div className="sign-in-and-up">
             <h4>SIGN IN:</h4>
-            <span>If I already have an account</span>       
-            <span>Or I want to sign with my Google account :</span>       
+            <span>I already have an account</span>       
+            <span>Or I want to sign in with my Google account :</span>       
             <Link to="./signin" className="link">
-            Sign-In
+                Sign-In
             </Link>
-            <br />or <br /><br />
-            <span>If I need to create an account :</span>       
-            <h1>Sign Up</h1>
+            <br />
+            <span>I need to create an account :</span>       
+            <h1>Sign-Up</h1>
         </div>
     );
 }

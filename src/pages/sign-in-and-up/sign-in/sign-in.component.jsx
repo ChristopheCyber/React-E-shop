@@ -9,17 +9,21 @@ class signInComponent extends Component {
             password: ''
         };
     }
-    
+
     fctHandleSubmit = (e) => {
         e.preventDefault();
-        this.setState({email:'myemail@foo.bar',password:'123'})
+        this.setState({ email: 'myemail@foo.bar', password: '123' })
     }
 
     fctHandleChange = (e) => {
-        const {value,name} = e.target;
-        this.setState({[name]:value})
+        // destructuring event
+        const { value, name } = e.target;
+        console.log("fctHandleChange => name =",name,"; value=",value);
+        console.log("this.state before = ",this.state);
+        this.setState({ [name]: value }
+             ,()=>{console.log("this.state after = ", this.state);}            
+            );
     }
-
     render() {
         return (
             <div className="sign-in">
@@ -31,9 +35,9 @@ class signInComponent extends Component {
                     <label htmlFor="email" className="sign-in-form-label">
                         Email &gt;
                     </label>
-                    <input type="email" id="" 
+                    <input type="email" id=""
                         placeholder="email@web.ext"
-                        name="email" 
+                        name="email"
                         value={this.state.email}
                         onChange={this.fctHandleChange}
                         required
@@ -42,9 +46,9 @@ class signInComponent extends Component {
                     <label htmlFor="password" className="sign-in-form-label">
                         Password &gt;
                     </label>
-                    <input type="password" id="" 
-                        placeholder="password" 
-                        name="password" 
+                    <input type="password" id=""
+                        placeholder="password"
+                        name="password"
                         value={this.state.password}
                         onChange={this.fctHandleChange}
                         required
