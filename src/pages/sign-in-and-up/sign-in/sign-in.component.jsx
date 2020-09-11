@@ -24,7 +24,7 @@ class signInComponent extends Component {
         // console.log("this.state before = ",this.state);
         this.setState({ [name]: value }
             //  ,()=>{console.log("this.state after = ", this.state);}            
-            );
+        );
     }
     render() {
         return (
@@ -49,15 +49,16 @@ class signInComponent extends Component {
                         handleChange={this.fctHandleChange}
                         required
                     />
-{/*
+                    {/*
                      <label htmlFor="Submit" className="sign-in-form-label">
                          Validation &gt;
                      </label>
-  */}
+                    */}
                     <br />
-                    <CustomButton/>
-                    <br />
-                    <input type="submit" value="Validation" name="Submit" />
+                    <CustomButton type="submit" value="Validation" name="Submit">
+                        Validation
+                     </CustomButton>
+                    {/*<input type="submit" value="Validation" name="Submit" />*/}
                     <br />
                 </form>
             </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import './custom-button..styles.scss'
 
-const CustomButton = () => {
+const CustomButton = ({children,...restProps}) => {
     return (
-        <div className="custom-button">
-            Validation
-        </div>
+        <button className="custom-button" {...restProps}>
+            {children}
+        </button>
     );
 }
 
