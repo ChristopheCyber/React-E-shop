@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './sign-in.styles.scss'
-import FormInput from "../form-input/form-input.component";
+import FormInput from "../../../components/reusable-components/form-input/form-input.component";
+import CustomButton from '../../../components/reusable-components/custom-button/custom-button.component'
 
 class signInComponent extends Component {
     constructor(props) {
@@ -30,7 +31,7 @@ class signInComponent extends Component {
             <div className="sign-in">
                 <span>Sign In:</span>
                 <h1>I already have an account</h1>
-                <span>Sign In with your Email &amp; Password :</span>
+                <span>Sign In with my Email &amp; Password :</span>
                 <form onSubmit={this.fctHandleSubmit} className="sign-in-form">
                     <FormInput type="email" id=""
                         // placeholder="email@web.ext"
@@ -53,6 +54,8 @@ class signInComponent extends Component {
                          Validation &gt;
                      </label>
   */}
+                    <br />
+                    <CustomButton/>
                     <br />
                     <input type="submit" value="Validation" name="Submit" />
                     <br />
