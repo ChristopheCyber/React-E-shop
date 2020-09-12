@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './sign-in.styles.scss'
 import FormInput from "../../../components/reusable-components/form-input/form-input.component";
 import CustomButton from '../../../components/reusable-components/custom-button/custom-button.component'
+// Google auth Sign-In
+import { signInWithGoogle } from '../../../firebase/firebase.utils.js';
 
 class signInComponent extends Component {
     constructor(props) {
@@ -30,8 +32,8 @@ class signInComponent extends Component {
         return (
             <div className="sign-in">
                 <span>Sign In:</span>
-                <h1>I already have an account</h1>
-                <span>Sign In with my Email &amp; Password :</span>
+                <h1>I already have an account :</h1>
+                <span>Sign-In with my Email &amp; Password :</span>
                 <form onSubmit={this.fctHandleSubmit} className="sign-in-form">
                     <FormInput type="email" id=""
                         // placeholder="email@web.ext"
@@ -54,11 +56,20 @@ class signInComponent extends Component {
                          Validation &gt;
                      </label>
                     */}
-                    <br />
+                    {/*<input type="submit" value="Validation" name="Submit" />*/}
                     <CustomButton type="submit" value="Validation" name="Submit">
                         Validation
-                     </CustomButton>
-                    {/*<input type="submit" value="Validation" name="Submit" />*/}
+                    </CustomButton>
+                    <br />
+{/*
+                     <span> Or :</span>
+  */}
+                    {/* Google Sign-In with Pop-up : */}
+                    <h1>Or Sign-In with my Google account :</h1>
+                    <br />
+                        <CustomButton onClick={signInWithGoogle} value="Validation" name="Submit">
+                        Google Sign-In
+                    </CustomButton>
                     <br />
                 </form>
             </div>
