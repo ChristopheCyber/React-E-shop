@@ -31,10 +31,9 @@ class signInComponent extends Component {
     render() {
         return (
             <div className="sign-in">
-                <span>Sign In:</span>
-                <h1>I already have an account :</h1>
-                <span>Sign-In with my Email &amp; Password :</span>
                 <form onSubmit={this.fctHandleSubmit} className="sign-in-form">
+                    <h1><span>Sign In:</span></h1>
+                    <h1>I already have an <span> account </span>:</h1>
                     <FormInput type="email" id=""
                         // placeholder="email@web.ext"
                         name="email"
@@ -61,13 +60,10 @@ class signInComponent extends Component {
                         Validation
                     </CustomButton>
                     <br />
-{/*
-                     <span> Or :</span>
-  */}
                     {/* Google Sign-In with Pop-up : */}
-                    <h1>Or Sign-In with my Google account :</h1>
+                    <h1>Or Sign-In with my <span> Google account </span>:</h1>
                     <br />
-                        <CustomButton onClick={signInWithGoogle} value="Validation" name="Submit">
+                    <CustomButton onClick={signInWithGoogle} value="Validation" name="Submit">
                         Google Sign-In
                     </CustomButton>
                     <br />

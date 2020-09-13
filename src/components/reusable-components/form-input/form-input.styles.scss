@@ -1,5 +1,5 @@
 $sub-color: black;
-$main-color: rgb(94, 230, 248);
+$main-color: rgb(187, 187, 187);
 $text-shadow-color: rgb(0, 0, 0);
 
 @mixin shrinkLabel {
@@ -11,7 +11,7 @@ $text-shadow-color: rgb(0, 0, 0);
 
 .group {
   position: relative;
-  margin: 12px 0px 15px 0px;
+  margin: 0px 0px 15px 0px;
 
   .form-input {
     background: none;

@@ -11,5 +11,16 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background: linear-gradient( 
+      to bottom left, 
+      rgba(5, 22, 68, 0.808) 0%, 
+      rgba(151, 25, 151, 0.829) 100% 
+      );
+    h1{
+      padding: 0 8px 0 8px;
+    }
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgb(0, 0, 0);
   }
 }

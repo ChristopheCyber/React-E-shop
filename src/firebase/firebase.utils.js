@@ -21,7 +21,7 @@ export const firestore = firebase.firestore();
 //Google Authentication:
 var provider = new firebase.auth.GoogleAuthProvider();
 
-//Add param customized (optional):
+//? Add param customized (optional):
 provider.setCustomParameters({
     // 'login_hint': 'user@example.com',
     prompt: 'select_account'
