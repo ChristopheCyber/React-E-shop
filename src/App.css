@@ -2,7 +2,9 @@
   text-align: center;
   justify-content: center;
 }
-
+*{
+  box-sizing: border-box;
+}
 .DflexRow {
   display: flex;
   flex-direction: row;

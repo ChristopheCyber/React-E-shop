@@ -34,7 +34,7 @@ class signInComponent extends Component {
                 <form onSubmit={this.fctHandleSubmit} className="sign-in-form">
                     <h1><span>Sign In:</span></h1>
                     <h1>I already have an <span> account </span>:</h1>
-                    <FormInput type="email" id=""
+                    <FormInput type="email" id="i1"
                         // placeholder="email@web.ext"
                         name="email"
                         label="email"
@@ -42,7 +42,7 @@ class signInComponent extends Component {
                         handleChange={this.fctHandleChange}
                         required
                     />
-                    <FormInput type="password" id=""
+                    <FormInput type="password" id="i2"
                         // placeholder="password"
                         name="password"
                         label="password"
@@ -62,8 +62,10 @@ class signInComponent extends Component {
                     <br />
                     {/* Google Sign-In with Pop-up : */}
                     <h1>Or Sign-In with my <span> Google account </span>:</h1>
-                    <br />
-                    <CustomButton onClick={signInWithGoogle} value="Validation" name="Submit">
+                    <CustomButton onClick={signInWithGoogle}
+                        value="Validation" name="Submit" 
+                        googleSignIn
+                    >
                         Google Sign-In
                     </CustomButton>
                     <br />
