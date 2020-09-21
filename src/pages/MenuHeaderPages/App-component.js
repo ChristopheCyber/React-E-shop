@@ -21,6 +21,12 @@ class AppComponent extends React.Component {
     fetch(`./local-datas/${this.props.propPageCat}/json-data-items-${this.props.propPageCat}.json`)
       .then(resp1 => resp1.json())
       .then(users1 => this.setState({ cards: users1 }))
+      /* local error message */
+      .catch(error => {
+        console.error('Problem with your fetch operation for '
+        ,this.props.propPageCat,' in the list of items : error ='
+          , error);
+      });
   }
   //*** method perso created as an Arrow Function
   methodHandleChange = (evt) => { // (evt) =>{this.setState ( {searchTxt1:evt.target.value} )

@@ -18,8 +18,9 @@ class Directory extends Component {
       .then(products1 => this.setState({ sections: products1 }))
       /* local error message */
       .catch(error => {
-        console.error('There has been a problem with your fetch operation:'
-          , error);
+        console.error(
+          'Problem with your fetch operation in the directory list of collections:',
+          'error =', error);
       });
     // response status local message
     // .then( response => {
@@ -50,12 +51,12 @@ class Directory extends Component {
         {
           this.state.sections.map(
             //using the REST '...' SPREAD SYNTAX
-            ({ id, ...restOtherParams}) => (
-                <MenuItem
-                  //warning=>necessary key
-                  key={id}
-                  {...restOtherParams}
-                />)
+            ({ id, ...restOtherParams }) => (
+              <MenuItem
+                //warning=>necessary key
+                key={id}
+                {...restOtherParams}
+              />)
             // SAME AS:
             // ({ id, title, imageUrl, imageBack, 
             //   linkUrl, size, image, imageBackOn}) => (

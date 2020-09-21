@@ -14,12 +14,18 @@ $text-shadow-color: rgb(0, 0, 0);
   margin: 0px 0px 15px 0px;
 
   .form-input {
-    background: none;
-    background-color: rgb(189, 189, 189);
+    // background: none;
+    background-color: grey;
+    background: linear-gradient( 
+      to bottom left, 
+      rgb(167, 167, 167) 0%, 
+      rgb(95, 95, 95) 100% 
+      );
     color: $sub-color;
     font-size: 18px;
     padding: 5px 2px 5px 2px;
-    display: block;
+    align-content: center;
+    align-items: center;
     width: 100%;
     border: none;
     border-radius: 15;
@@ -36,7 +42,13 @@ $text-shadow-color: rgb(0, 0, 0);
   }
 
   input[type='password'] {
-    letter-spacing: 0.3em;
+    // letter-spacing: 0.2px;
+    background: linear-gradient( 
+      to bottom left, 
+      grey 0%, 
+      rgb(63, 63, 63) 100% 
+      );
+    width: 100%;
   }
 
   .form-input-label {
@@ -46,6 +58,7 @@ $text-shadow-color: rgb(0, 0, 0);
     font-weight: bold;
     position: absolute;
     pointer-events: none;
+    width: 80%;
     left: 7px;
     top: 28px;
     transition: 300ms ease all;

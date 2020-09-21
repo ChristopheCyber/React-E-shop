@@ -10,7 +10,7 @@ import signInAndUpComponent from './pages/sign-in-and-up/sign-in-and-up.componen
 import contactComponent from './pages/contact/contact.component.jsx';
 import signInComponent from './pages/sign-in-and-up/sign-in/sign-in.component.jsx';
 // Firebase Authentication firebase.auth():
-import { auth } from "./firebase/firebase.utils";
+import { auth, createUserProfileDoc } from "./firebase/firebase.utils";
 //
 /*
 const FashionPage1 = () => (
@@ -52,7 +52,8 @@ class App extends Component {
 
   componentDidMount() {
     this.unsuscribeFromAuth = 
-      auth.onAuthStateChanged((user)=>{
+      auth.onAuthStateChanged( async (user)=>{
+        createUserProfileDoc(user);
         this.setState({currentUser:user}
           // ,()=>{console.log("current User =",this.state.currentUser)}
           );
