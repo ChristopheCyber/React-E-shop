@@ -42,7 +42,7 @@ class App extends Component {
   */
   //methode de classe declaree ici, par defaut nulle. puis definie ds le DidMount
   unsuscribeFromAuth = null;
-  
+
   /*save the unsubscribe reference on the class instance (this.)
    and later just read it from the class instance again: this.unsubscribe()
   */
@@ -51,13 +51,38 @@ class App extends Component {
   // });
 
   componentDidMount() {
-    this.unsuscribeFromAuth = 
-      auth.onAuthStateChanged( async (user)=>{
-        createUserProfileDoc(user);
-        this.setState({currentUser:user}
-          // ,()=>{console.log("current User =",this.state.currentUser)}
-          );
-        console.log("DidMount=>typeof user=",typeof user,"; user =",user);
+    this.unsuscribeFromAuth =
+      auth.onAuthStateChanged(async (user) => {
+        if (user) {
+          // userRef=firestore.doc(`/users/${user.uid}`) returned by 
+          // fct createUserProfileDoc in firebase.utils.js
+          // createUserProfileDoc(user) => check if user exists in DB, if not=>create it (set)
+          const userRef = await createUserProfileDoc(user);
+          // listener onSnapshot for checking if DB has updated with new datas 
+          // ie if user-snapshot changed (when sign-in again or new sign-up)
+          userRef.onSnapshot((snap) => {
+            //doc-props/fields got by method .data()
+            console.log("onSnapshot.data() =>", snap.data()); 
+            // user props/fields saved in state of App
+            // previously : this.setState({ currentUser: user });
+            this.setState({ 
+              currentUser: { 
+                id: snap.id, //adding the id taken from user-snapshot
+                ...snap.data() // all other props/fields of user-doc got by .data()
+              } 
+            }
+              ,()=>{console.log("user !=null=>current User =",this.state.currentUser)}
+            );
+          }
+          )
+        } else {
+          // if user is null (when logging out) we update the state too
+          this.setState({ currentUser: user }
+            ,()=>{console.log("user null=>current User =",this.state.currentUser)}
+            );
+        }
+
+        console.log("DidMount=>typeof user=", typeof user, "; user =", user);
         // console.log("User photoURL =",user.photoURL);
 
         // console.log("DidMount=>typeof this.unsuscribeFromAuth=",typeof this.unsuscribeFromAuth,
@@ -66,7 +91,7 @@ class App extends Component {
   }
 
   componentWillUnmount() {
-    console.log("WillUnMount this.unsuscribeFromAuth =",this.unsuscribeFromAuth);
+    console.log("WillUnMount this.unsuscribeFromAuth =", this.unsuscribeFromAuth);
     this.unsuscribeFromAuth();
     // this.unsubscribe();
     console.log("componentWillUnmount triggered");
@@ -77,7 +102,7 @@ class App extends Component {
       <div className="App bigLow">
         {/*<h1>&lt; E-Shop &gt;</h1>*/}
         {/*<h1> E-Shop demo </h1>*/}
-        <HeaderComponent currentUser={this.state.currentUser}/>
+        <HeaderComponent currentUser={this.state.currentUser} />
         <div className="DflexRow">
           <nav className="MenuNav">
             <ul>

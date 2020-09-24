@@ -22,18 +22,7 @@ export const createUserProfileDoc = async (user, ...addData2) => {
   // else we check if user aleady exists
   console.log("Firestore existing collection;    QueryReference =>",
     firestore.collection('/users'));
-  //** NO existing user */
-  console.log("Firestore NO existing user; QueryReference =>",
-    firestore.doc("/users/123456abcdef"));
-  // verif if exists
-  const userRefKO = firestore.doc('/users/123456abcdef');
-  const snapShotuserRefKO = await userRefKO.get();
-  console.log("Firestore NO existing user;    snapShot userRefKO =>",
-    snapShotuserRefKO);
-  //** existing user */
-  console.log("Firestore existing user;    QueryReference =>",
-    firestore.doc('/users/bpiTsk94k2H4dzZJJMqt'));
-  // verif if test user exists
+  // verif if user-test exists
   const userRefOK = firestore.doc('/users/bpiTsk94k2H4dzZJJMqt');
   const snapShotuserRefOK = await userRefOK.get();
   console.log("Firestore existing user;    snapShot userRefOK =>",
@@ -47,25 +36,25 @@ export const createUserProfileDoc = async (user, ...addData2) => {
     snapShotuserRef);
   console.log("=> userRef.get().exists =",
     snapShotuserRef.exists);
+  // If NOT EXISTING USER => creation in DB by .set() method
   if (!snapShotuserRef.exists) {
     const { displayName, email } = user;
     // saving the timestamp of creation
     const createdDate = new Date();
     try {
-      // creating user in Firestore
+      // creating USER DOCUMENT in Firestore with FIELDs we want
       await userRef.set(
-        {
-          displayName, email, createdDate, ...addData2
-        }
+        { displayName, email, createdDate, ...addData2 }
       )
     } catch (err) {
-      console.log("Error during user creation, Error message=", err.message);
+      console.log("Error during creation of user:",user.uid,"; Error message=", err.message);
       console.log("Error =", err);
     }
   }
   else {
     console.log("User ", user.uid, " already existing in Firestore");
   }
+  // in case of need
   return userRef;
 }
 
