@@ -7,15 +7,72 @@
   justify-content: space-around;
   text-align: left;
 
+  h1 {
+    padding: 0 8px 8px 8px;
+  }
+
+  .bloc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px 25px 20px;
+    margin-top: 10px;
+    background: linear-gradient(
+      to bottom right,
+      rgba(75, 1, 109, 0.808) 0%,
+      rgba(4, 126, 163, 0.829) 100%
+    );
+    h1 {
+      color: rgb(43, 245, 31);
+      color: rgb(167, 167, 167);
+      text-shadow: 4px 4px 1px rgb(0, 0, 0);
+      padding: 0 8px 10px 8px;
+    }
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgb(0, 0, 0);
+
+    .sub-bloc {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 15px 10px 15px 10px;
+      background: linear-gradient(
+        to bottom right,
+        rgba(75, 1, 109, 0.808) 0%,
+        rgba(22, 120, 199, 0.829) 100%
+      );
+      h1 {
+        padding: 0 8px 0 8px;
+      }
+      border: 1px solid rgb(0, 0, 0);
+      border-radius: 10px;
+      box-shadow: 1px 1px 1px rgb(0, 0, 0);
+    }
+  }
+
   .link {
     font-size: 34px;
-    // text-decoration: none;
-    color: rgba(20, 245, 31, 0.829);
-    text-shadow: 2px 2px 2px rgba(19, 17, 17, 0.658);
+    text-decoration: none;
+    color: rgba(53, 248, 46, 0.808);
+    text-shadow: 2px 2px 0.5px rgb(0, 0, 0);
+    border: 0.5px solid rgb(0, 0, 0);
+    box-shadow: 1px 1px 1px rgb(43, 245, 31);
+    border-radius: 10px;
+    padding: 0 8px 0 8px;
+    margin-top: 6px;
+    background: linear-gradient(
+      to bottom right,
+      rgba(75, 1, 109, 0.808) 0%,
+      rgba(48, 179, 231, 0.829) 100%
+    );
 
     &:hover {
       font-size: 36px;
       color: rgb(43, 245, 31);
+      text-shadow: 4px 3px 1px rgb(243, 44, 44);
       text-shadow: 3px 1px 4px rgb(53, 157, 255);
       cursor: pointer;
       margin: auto;
