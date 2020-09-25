@@ -9,6 +9,7 @@ import HeaderComponent from './components/MainHeader/header.component';
 import signInAndUpComponent from './pages/sign-in-and-up/sign-in-and-up.component.jsx';
 import contactComponent from './pages/contact/contact.component.jsx';
 import signInComponent from './pages/sign-in-and-up/sign-in/sign-in.component.jsx';
+import signUpComponent from './pages/sign-in-and-up/sign-up/sign-up.component.jsx';
 // Firebase Authentication firebase.auth():
 import { auth, createUserProfileDoc } from "./firebase/firebase.utils";
 //
@@ -169,6 +170,7 @@ class App extends Component {
           <Route exact={true} path='/contact' component={contactComponent} />
           <Route exact={true} path='/signinandup' component={signInAndUpComponent} />
           <Route exact={true} path='/signin' component={signInComponent} />
+          <Route exact={true} path='/signup' component={signUpComponent} />
           <Route exact={true} path='/' component={HomePage} />
           {/* same as:
           <Route exact path='/'>

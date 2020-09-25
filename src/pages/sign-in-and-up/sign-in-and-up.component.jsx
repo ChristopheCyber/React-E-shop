@@ -13,7 +13,9 @@ const signInAndUpComponent = () => {
             </Link>
             <br />
             <span>I need to create an account :</span>       
-            <h1>Sign-Up</h1>
+            <Link to="./signup" className="link">
+                Sign-Up
+            </Link>
         </div>
     );
 }
