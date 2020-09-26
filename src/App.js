@@ -55,6 +55,7 @@ class App extends Component {
     this.unsuscribeFromAuth =
       auth.onAuthStateChanged(async (user) => {
         if (user) {
+          console.log("componentDidMount()=>user !=null =",user);
           // userRef=firestore.doc(`/users/${user.uid}`) returned by 
           // fct createUserProfileDoc in firebase.utils.js
           // createUserProfileDoc(user) => check if user exists in DB, if not=>create it (set)
@@ -83,7 +84,7 @@ class App extends Component {
             );
         }
 
-        console.log("DidMount=>typeof user=", typeof user, "; user =", user);
+        // console.log("DidMount=>typeof user=", typeof user, "; user =", user);
         // console.log("User photoURL =",user.photoURL);
 
         // console.log("DidMount=>typeof this.unsuscribeFromAuth=",typeof this.unsuscribeFromAuth,

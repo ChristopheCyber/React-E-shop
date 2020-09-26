@@ -32,6 +32,7 @@ class signUpComponent extends Component {
                 email, password
             );
             //then
+            
             await createUserProfileDoc(user, { displayName });
             //then put empty fields again /clearing the form
             this.setState({
@@ -45,7 +46,7 @@ class signUpComponent extends Component {
             var errorCode = error.code;
             var errorMessage = error.message;
             if (errorCode === 'auth/weak-password') {
-                alert('The password is too weak.');
+                alert('The password is too weak.(at least 6 caracteres needed)');
             } else {
                 alert(errorMessage);
             }
@@ -86,7 +87,7 @@ class signUpComponent extends Component {
                     <FormInput type="email" id="i1"
                         // placeholder="email@web.ext"
                         name="email"
-                        label="email"
+                        label="Email"
                         value={email}
                         handleChange={this.fctHandleChange}
                         required
@@ -94,7 +95,7 @@ class signUpComponent extends Component {
                     <FormInput type="password" id="i2"
                         // placeholder="password"
                         name="password"
-                        label="password"
+                        label="Password"
                         value={password}
                         handleChange={this.fctHandleChange}
                         required
@@ -102,7 +103,7 @@ class signUpComponent extends Component {
                     <FormInput type="password" id="i3"
                         // placeholder="confirmPassword"
                         name="confirmPassword"
-                        label="password confirmation"
+                        label="Password confirmation"
                         value={confirmPassword}
                         handleChange={this.fctHandleChange}
                         required
