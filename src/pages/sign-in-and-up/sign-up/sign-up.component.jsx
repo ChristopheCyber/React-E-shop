@@ -22,19 +22,20 @@ class signUpComponent extends Component {
         e.preventDefault();
         // destructuring vals from state (avoiding to have to write 'this.state.email')
         const { displayName, email, password, confirmPassword } = this.state;
-        // checking password conf
+        // checking Password matching Password confirmation 
         if (password !== confirmPassword) {
             alert("Passwords don't match !, please correct them");
             return;
         }
+        //create User With Email And Password
         try {
             const { user } = await auth.createUserWithEmailAndPassword(
                 email, password
             );
             //then
-            
-            await createUserProfileDoc(user, { displayName });
-            //then put empty fields again /clearing the form
+            //await createUserProfileDoc(user, displayName, addField, {addFieldMap:"value"});
+            await createUserProfileDoc(user, displayName, );
+            //then put empty fields again / clearing the form
             this.setState({
                 displayName: '',
                 email: '',
@@ -52,8 +53,6 @@ class signUpComponent extends Component {
             }
             console.log(error);
         }
-
-        // this.setState({ email: 'valid-email@foo.bar', password: '123', confirmPassword: '123' })
     }
 
     fctHandleChange = (e) => {

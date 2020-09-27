@@ -14,21 +14,30 @@ const config = {
 };
 
 //to call an API is asyncronous (API Firestore ASYNC)
-export const createUserProfileDoc = async (user,...addData2) => {
+export const createUserProfileDoc = async (user, displayName, ...addData2) => {
+  if (!displayName) {
+    /* for avoiding Error when 'displayName' is undefined (before being affected) :
+       <Function DocumentReference.set() called with invalid data. 
+       Unsupported field value: undefined> */
+    displayName ="";
+  }
+  // if new field passed as object in ...Rest :
+  // if (addData2.length > 0) {
+  //   newField = addData2[0].newField;
+  // } 
+
   //we update DB only if user != null ie if Signed In
   if (!user) { // <=> if (user === null)
     return;
   }
+    
   // else we check if user aleady exists
-  console.log("Firestore existing collection;    QueryReference =>",
-    firestore.collection('/users'));
   // verif if user (passed by auth.onAuthStateChanged in componentDidMount in App.jsx)
   // exists in Firestore DB
-  console.log("firebase.utils.js => user passed =", user)
   console.log("firebase.utils.js =>Checking Firestore for user.uid =", user.uid)
   const userRef = firestore.doc(`/users/${user.uid}`);
   const snapShotuserRef = await userRef.get();
-  console.log("Firestore existing user?; snapShot userRef =>",
+  console.log("firebase.utils.js =>Firestore existing user?; snapShot userRef =>",
     snapShotuserRef);
   console.log("=> userRef.get().exists =",
     snapShotuserRef.exists);
@@ -36,25 +45,12 @@ export const createUserProfileDoc = async (user,...addData2) => {
   if (!snapShotuserRef.exists) {
     // const { displayName, email } = user;
     const email = user.email;
-    // const displayName = user.displayName;
-    var displayName = "";
-    if (user.displayName === null) {
-      console.log("user.displayName === null");
-      if (addData2.length > 0) {
-        displayName = addData2[0].displayName;
-      } 
-    } else {
-      // console.log("user.displayName !== null = ",user.displayName);
-      displayName = user.displayName;
-    }
-
     // saving the timestamp of creation
     const createdDate = new Date();
     try {
       // creating USER DOCUMENT in Firestore with FIELDs we want
       console.log("creating USER DOCUMENT in Firestore with FIELDs we want: ");
       console.log("displayName=",displayName," ;email=", email," ;createdDate=",createdDate);
-      // console.log("displayName2 =",displayName2);
       console.log("user=",user);
       await userRef.set(
         { displayName, email, createdDate, ...addData2 }

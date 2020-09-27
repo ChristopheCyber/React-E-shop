@@ -3,7 +3,7 @@ import './sign-in.styles.scss'
 import FormInput from "../../../components/reusable-components/form-input/form-input.component";
 import CustomButton from '../../../components/reusable-components/custom-button/custom-button.component'
 // Google auth Sign-In
-import { signInWithGoogle } from '../../../firebase/firebase.utils.js';
+import { auth, signInWithGoogle } from '../../../firebase/firebase.utils.js';
 
 class signInComponent extends Component {
     constructor(props) {
@@ -14,9 +14,31 @@ class signInComponent extends Component {
         };
     }
 
-    fctHandleSubmit = (e) => {
+    fctHandleSubmit = async (e) => {
+        // preventing default form submit-action
         e.preventDefault();
-        this.setState({ email: 'valid-email@foo.bar', password: '123' })
+        // destructuring vals from state (avoiding to have to write 'this.state.email')
+        const { email, password} = this.state;
+        //check User With Email And Password
+        try {
+            await auth.signInWithEmailAndPassword (
+                email, password
+            );
+            //then put empty fields again / clearing the form
+            this.setState({
+                email: '',
+                password: '',
+            });
+        } catch (error) {// Handle Errors 
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            if (errorCode === 'auth/wrong-password') {
+                alert('Wrong Password.');
+              } else {
+                alert(errorMessage);
+              }
+              console.log(error);
+        }
     }
 
     fctHandleChange = (e) => {
