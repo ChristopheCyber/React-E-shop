@@ -21,6 +21,7 @@ class signInComponent extends Component {
         const { email, password} = this.state;
         //check User With Email And Password
         try {
+            // signIn With Email And Password
             await auth.signInWithEmailAndPassword (
                 email, password
             );
@@ -85,6 +86,14 @@ class signInComponent extends Component {
                     {/* Google Sign-In with Pop-up : */}
                     <h1>Or Sign-In with my <span> Google account </span>:</h1>
                     <CustomButton onClick={signInWithGoogle}
+                        /* put type="button"
+                        because any buttons inside of a form element 
+                        will cause the form to treat 
+                        the button as type="submit" by default 
+                        and then trigger asking the user to fill other fields 
+                        present in the form (email and password)
+                        */
+                        type="button" 
                         value="Validation" name="Submit" 
                         googleSignIn
                     >
