@@ -12,6 +12,9 @@ import signInComponent from './pages/sign-in-and-up/sign-in/sign-in.component.js
 import signUpComponent from './pages/sign-in-and-up/sign-up/sign-up.component.jsx';
 // Firebase Authentication firebase.auth():
 import { auth, createUserProfileDoc } from "./firebase/firebase.utils";
+// for Redux use
+import { connect } from 'react-redux';
+import { setCurrentUser } from './redux/user/user-actions';
 //
 /*
 const FashionPage1 = () => (
@@ -30,12 +33,16 @@ function Paintings() {
 }*/
 //
 class App extends Component {
+  /*We don't need anymore CONSTRUCTOR+THIS.STATE
+    We don't need anymore passing the currentUser to <HeaderComponent>
+    because REDUX manages it 
   constructor(props) {
     super(props);
     this.state = {
       currentUser: null
     }
-  }
+  }*/
+
   /*methode indicatrice pour stopper listening/subscription apres un unmount 
     afin de stopper un eventuel Memory Leaks occasionne ainsi
    use ComponentWillUnmount to stop listening from Firebase fct .onAuthStateChanged
@@ -51,11 +58,13 @@ class App extends Component {
   //   console.log("unsuscribe method")
   // });
 
+  fct1 = (arg) =>{console.log("Hi ",arg," !!")}
+
   componentDidMount() {
     this.unsuscribeFromAuth =
       auth.onAuthStateChanged(async (user) => {
         if (user) {
-          console.log("componentDidMount()=>user !=null =",user);
+          console.log("componentDidMount()=>user !=null =", user);
           // userRef=firestore.doc(`/users/${user.uid}`) returned by 
           // fct createUserProfileDoc in firebase.utils.js
           // createUserProfileDoc(user) => check if user exists in DB, if not=>create it (set)
@@ -64,25 +73,47 @@ class App extends Component {
           // ie if user-snapshot changed (when sign-in again or new sign-up)
           userRef.onSnapshot((snap) => {
             //doc-props/fields got by method .data()
-            console.log("onSnapshot.data() =>", snap.data()); 
+            console.log("onSnapshot.data() =>", snap.data());
             // user props/fields saved in state of App
             // previously : this.setState({ currentUser: user });
-            this.setState({ 
-              currentUser: { 
+
+            /*this.setState({
+              currentUser: {
                 id: snap.id, //adding the id taken from user-snapshot
                 ...snap.data() // all other props/fields of user-doc got by .data()
-              } 
+              }
             }
-              ,()=>{console.log("user !=null=>current User =",this.state.currentUser)}
+              , () => { console.log("user !=null=>current User =", this.state.currentUser) }
+            );*/
+            this.props.currentUser(
+              //sending all that as user.payload in setCurrentUser action:
+              //type: 'SET_CURRENT_USER',payload: user
+              {
+                id: snap.id, //adding the id taken from user-snapshot
+                ...snap.data() // all other props/fields of user-doc got by .data()
+              }
             );
+            console.log("user !=null; this.props.setCurrentUser=> current User =",
+              this.props.currentUser);
           }
           )
-        } else {
+        }
+        else {
+          console.log("user null; this.props.setCurrentUser=> this.props =",
+          this.fct1("Me"));
+          console.log("user null; this.props.setCurrentUser=> this.props =",
+          this.props);
+          // if user is null (when logging out) we update the state too
+          this.props.currentUser(user);
+        }
+        /*
+        else {
           // if user is null (when logging out) we update the state too
           this.setState({ currentUser: user }
-            ,()=>{console.log("user null=>current User =",this.state.currentUser)}
-            );
+            , () => { console.log("user null=>current User =", this.state.currentUser) }
+          );
         }
+        */
 
         // console.log("DidMount=>typeof user=", typeof user, "; user =", user);
         // console.log("User photoURL =",user.photoURL);
@@ -102,9 +133,13 @@ class App extends Component {
   render() {
     return (
       <div className="App bigLow">
-        {/*<h1>&lt; E-Shop &gt;</h1>*/}
-        {/*<h1> E-Shop demo </h1>*/}
-        <HeaderComponent currentUser={this.state.currentUser} />
+        {/*
+          We don't need anymore passing the currentUser to <HeaderComponent>
+          because REDUX manages it 
+          <HeaderComponent currentUser={this.state.currentUser} />
+        */}
+        <HeaderComponent />
+
         <div className="DflexRow">
           <nav className="MenuNav">
             <ul>
@@ -186,4 +221,14 @@ class App extends Component {
     );
   }
 }
-export default App;
+const mapDispatchToProps = dispatch => ({
+  //defining the fct currentUser()
+  currentUser: user => dispatch(setCurrentUser(user))
+});
+
+/*export default App;
+*/
+export default connect(
+  null,
+  mapDispatchToProps
+)(App);

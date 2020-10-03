@@ -12,7 +12,7 @@ const userReducer = (state = INITIAL_STATE, action) => {
             return {
                 ...state, //everything else in the state
                 currentUser: action.payload //<=our PAYLOAD, what is updated
-            }
+            };
         default: return state; //in case no actions matching here
     }
 }
