@@ -9,7 +9,7 @@ import { auth } from "../../firebase/firebase.utils.js";
 import { connect } from 'react-redux';
 
 const HeaderComponent = ({ currentUser }) => {
-    console.log("HeaderComponent => currentUser=",currentUser);
+    console.log("HeaderComponent => currentUser=", currentUser);
     return (
         <div /*className="options"*/>
             <nav className="MenuNavHeader">
@@ -26,34 +26,34 @@ const HeaderComponent = ({ currentUser }) => {
                      <li>
                          <Link to="./signinandup" className="link">Sign in</Link>
                      </li>
-  */}
+                    */}
                     <li>
                         <Link to="./contact" className="link">Contact</Link>
                     </li>
                     <li>
-                    {console.log("HeaderComponent => currentUser !== null =",currentUser)}
-{/*
-                     {console.log("HeaderComponent => currentUser.user =",currentUser.user)}
-  */}
-                        
-                        {(currentUser) ?
-                            (
-                                console.log("HeaderComponent ? => currentUser !== null =",currentUser),
-                                <div className="link" onClick={ ()=>
-                                {auth.signOut().then(function() {
+                        {/* {console.log("HeaderComponent => currentUser.user =",currentUser.user)}
+                     */}
+                        {(currentUser) ? (
+                            console.log("HeaderComponent ? => currentUser !== null =",
+                                currentUser),
+                            <div className="link" onClick={() => {
+                                auth.signOut().then(function () {
                                     console.log('Signed Out');
-                                  }, function(error) {
+                                }, function (error) {
                                     console.error('Sign Out Error', error);
-                                  }); 
-                                }
-                                }>
-                                    Sign-Out
-                                </div>
-                            )
-                            :
-                            <Link to="./signinandup" className="link">
-                                Sign in
+                                });
+                            }
+                            }>
+                                Sign-Out
+                            </div>
+                        )
+                            : (
+                                console.log("HeaderComponent ? => currentUser === null =",
+                                    currentUser),
+                                <Link to="./signinandup" className="link">
+                                    Sign in
                             </Link>
+                            )
                         }
                     </li>
                 </ul>
@@ -65,6 +65,6 @@ const HeaderComponent = ({ currentUser }) => {
 //fct accessing the state props through the Root-Reducer
 const mapStateToProps = state => ({
     currentUser: state.user.currentUser
-  });
+});
 
 export default connect(mapStateToProps)(HeaderComponent);

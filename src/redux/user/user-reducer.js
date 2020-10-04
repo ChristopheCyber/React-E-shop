@@ -1,3 +1,5 @@
+import { UserActionsTypes } from './user-actions-types';
+
 //defining a no-empty Reducer's initial state :
 const INITIAL_STATE = {
     currentUser: null
@@ -7,7 +9,7 @@ const INITIAL_STATE = {
 const userReducer = (state = INITIAL_STATE, action) => {
     switch (action.type) {
         // TYPE=> "SET_CURRENT_USER"
-        case "SET_CURRENT_USER":
+        case UserActionsTypes.SET_CURRENT_USER:
             //rendering when 'action fired'
             return {
                 ...state, //everything else in the state

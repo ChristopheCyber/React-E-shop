@@ -2,7 +2,7 @@ import React from 'react';
 import './sign-in-and-up.styles.scss';
 import { Link } from "react-router-dom";
 
-const signInAndUpComponent = () => {
+const SignInAndUpComponent = () => {
     return (
         <div className="sign-in-and-up">
             <div className="bloc">
@@ -26,4 +26,4 @@ const signInAndUpComponent = () => {
     );
 }
 
-export default signInAndUpComponent;
+export default SignInAndUpComponent;

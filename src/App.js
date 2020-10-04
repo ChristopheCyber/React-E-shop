@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, Switch, Link } from 'react-router-dom';
+import { Route, Switch, Link, Redirect } from 'react-router-dom';
 // components:
 import { HomePage } from './pages/homepage/homepage.component.jsx';
 import AppComponent from './pages/MenuHeaderPages/App-component';
 import ShopComponent from './pages/shop/shop.component.jsx';
 import HeaderComponent from './components/MainHeader/header.component';
-import signInAndUpComponent from './pages/sign-in-and-up/sign-in-and-up.component.jsx';
-import contactComponent from './pages/contact/contact.component.jsx';
-import signInComponent from './pages/sign-in-and-up/sign-in/sign-in.component.jsx';
-import signUpComponent from './pages/sign-in-and-up/sign-up/sign-up.component.jsx';
+import SignInAndUpComponent from './pages/sign-in-and-up/sign-in-and-up.component.jsx';
+import ContactComponent from './pages/contact/contact.component.jsx';
+import SignInComponent from './pages/sign-in-and-up/sign-in/sign-in.component.jsx';
+import SignUpComponent from './pages/sign-in-and-up/sign-up/sign-up.component.jsx';
 // Firebase Authentication firebase.auth():
 import { auth, createUserProfileDoc } from "./firebase/firebase.utils";
 // for Redux use
@@ -58,8 +58,6 @@ class App extends Component {
   //   console.log("unsuscribe method")
   // });
 
-  fct1 = (arg) =>{console.log("Hi ",arg," !!")}
-
   componentDidMount() {
     this.unsuscribeFromAuth =
       auth.onAuthStateChanged(async (user) => {
@@ -85,7 +83,7 @@ class App extends Component {
             }
               , () => { console.log("user !=null=>current User =", this.state.currentUser) }
             );*/
-            this.props.currentUser(
+            this.props.fctCurrentUser(
               //sending all that as user.payload in setCurrentUser action:
               //type: 'SET_CURRENT_USER',payload: user
               {
@@ -93,18 +91,18 @@ class App extends Component {
                 ...snap.data() // all other props/fields of user-doc got by .data()
               }
             );
-            console.log("user !=null; this.props.setCurrentUser=> current User =",
+            console.log("user !=null; this.props.setCurrentUser=> current User: Id =",
+              snap.id, "; snapshot=", snap.data());
+            console.log("mapStateToProps => this.props.currentUser =",
               this.props.currentUser);
           }
           )
         }
         else {
           console.log("user null; this.props.setCurrentUser=> this.props =",
-          this.fct1("Me"));
-          console.log("user null; this.props.setCurrentUser=> this.props =",
-          this.props);
+            this.props);
           // if user is null (when logging out) we update the state too
-          this.props.currentUser(user);
+          this.props.fctCurrentUser(user);
         }
         /*
         else {
@@ -203,10 +201,16 @@ class App extends Component {
             component={() =>
               (<ShopComponent />)} />*/}
           <Route exact={true} path='/shop' component={ShopComponent} />
-          <Route exact={true} path='/contact' component={contactComponent} />
-          <Route exact={true} path='/signinandup' component={signInAndUpComponent} />
-          <Route exact={true} path='/signin' component={signInComponent} />
-          <Route exact={true} path='/signup' component={signUpComponent} />
+          <Route exact={true} path='/contact' component={ContactComponent} />
+          <Route exact={true} path='/signinandup' component={SignInAndUpComponent} />
+          {/*
+          <Route exact={true} path='/signin' component={SignInComponent} />
+          replaced for Redirecting on Home page when already Signed-In      */}
+          <Route exact={true} path='/signin'
+            render={() => (this.props.currentUser) ?
+              (<Redirect to='/' />) : (<SignInComponent />)}
+          />
+          <Route exact={true} path='/signup' component={SignUpComponent} />
           <Route exact={true} path='/' component={HomePage} />
           {/* same as:
           <Route exact path='/'>
@@ -221,14 +225,23 @@ class App extends Component {
     );
   }
 }
-const mapDispatchToProps = dispatch => ({
-  //defining the fct currentUser()
-  currentUser: user => dispatch(setCurrentUser(user))
+//Read user from Redux-state for Redirect to Home when already signed-in
+//fct accessing the state props through the Root-Reducer
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser
 });
+/* equivalent as Destructuring as: 
+const mapStateToProps = ({user}) => ({
+  currentUser: user.currentUser
+});*/
 
-/*export default App;
-*/
+
+const mapDispatchToProps = dispatch => ({
+  //defining the fct fctCurrentUser()
+  fctCurrentUser: user => dispatch(setCurrentUser(user))
+});
+/*export default App;*/
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(App);

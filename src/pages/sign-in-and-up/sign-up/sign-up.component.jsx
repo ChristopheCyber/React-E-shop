@@ -5,7 +5,7 @@ import CustomButton from '../../../components/reusable-components/custom-button/
 // Google auth Sign-In
 import { auth, createUserProfileDoc } from '../../../firebase/firebase.utils.js';
 
-class signUpComponent extends Component {
+class SignUpComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -137,4 +137,4 @@ class signUpComponent extends Component {
     }
 }
 
-export default signUpComponent;
+export default SignUpComponent;

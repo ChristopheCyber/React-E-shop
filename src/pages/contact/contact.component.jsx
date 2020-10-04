@@ -1,7 +1,7 @@
 import React from 'react';
 import './contact.styles.scss';
 
-const contactComponent = () => {
+const ContactComponent = () => {
     return (
         <div className="contact">
         <h5>Front End Developer :</h5>
@@ -12,4 +12,4 @@ const contactComponent = () => {
     );
 }
 
-export default contactComponent;
+export default ContactComponent;
