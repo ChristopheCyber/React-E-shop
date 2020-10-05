@@ -69,6 +69,7 @@ em{
   text-shadow: 2px 4px 1px rgb(253, 30, 14);
   cursor: pointer;
   margin: auto;
+  -webkit-transition: all 0.3s ease-out;
 }
 .link2:hover {
   font-size: 33px;

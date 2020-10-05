@@ -1,5 +1,7 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
+//component with Icon for shopping cart:
+import CartIcon from '../cart-icon/cart-icon.component'
 import './header.styles.menunav.css';
 import './header.styles.scss';
 import { Link } from 'react-router-dom';
@@ -13,8 +15,8 @@ const HeaderComponent = ({ currentUser }) => {
     return (
         <div /*className="options"*/>
             <nav className="MenuNavHeader">
-                <Link to='./' className="link3" /*className="logo-container"*/>
-                    <Logo className="logo" />
+                <Link to='./' className="link3 logo" /*className="logo-container"*/>
+                    <Logo  />
                     Home
                 </Link>
                 <h1> E-Shop demo </h1>
@@ -55,6 +57,9 @@ const HeaderComponent = ({ currentUser }) => {
                             </Link>
                             )
                         }
+                    </li>
+                    <li>
+                        <CartIcon />
                     </li>
                 </ul>
             </nav>
