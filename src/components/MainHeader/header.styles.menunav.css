@@ -66,29 +66,53 @@
   box-shadow: 2px 4px 4px rgba(47, 221, 221, 0.61);
   border-radius: 10px;
   padding: 0px 9px 6px 9px;
-  /* -webkit-transition: all 3s ease-out; */
+  /* 
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 3s ease-out; 
+  */
 }
-
 .link3:hover {
   font-size: 29px;
   /* color: rgb(196, 134, 0); */
   text-shadow: 2px 4px 1px rgb(72, 73, 73);
   cursor: pointer;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  animation: animate-golden-bands 1s linear 0s infinite alternate forwards;
 }
+@keyframes animate-golden-bands {
+  0%   { background-image: linear-gradient(150deg,black 50%,  orange 60%,  black 70%,  orange 80%  ,black 90% ); }
+  5%   { background-image: linear-gradient(150deg,black 47.5%,orange 57.5%,black 67.5%,orange 77.5%,black 87.5%); }
+  10%  { background-image: linear-gradient(150deg,black 45%,  orange 55%,  black 65%,  orange 75%,  black 85% ); }
+  15%  { background-image: linear-gradient(150deg,black 42.5%,orange 52.5%,black 62.5%,orange 72.5%,black 82.5%); }
+  20%  { background-image: linear-gradient(150deg,black 40%,  orange 50%,  black 60%,  orange 70%,  black 80% ); }
+  25%  { background-image: linear-gradient(150deg,black 37.5%,orange 47.5%,black 57.5%,orange 67.5%,black 77.5%); }
+  30%  { background-image: linear-gradient(150deg,black 35%,  orange 45%,  black 55%,  orange 65%,  black 75% ); }
+  35%  { background-image: linear-gradient(150deg,black 32.5%,orange 42.5%,black 52.5%,orange 62.5%,black 72.5%); }
+  40%  { background-image: linear-gradient(150deg,black 30%,  orange 40%,  black 50%,  orange 60%,  black 70% ); }
+  45%  { background-image: linear-gradient(150deg,black 27.5%,orange 37.5%,black 47.5%,orange 57.5%,black 67.5%); }
+  50%  { background-image: linear-gradient(150deg,black 25%,  orange 35%,  black 45%,  orange 55%,  black 65% ); }
+  55%  { background-image: linear-gradient(150deg,black 22.5%,orange 32.5%,black 42.5%,orange 52.5%,black 62.5%); }
+  60%  { background-image: linear-gradient(150deg,black 20%,  orange 30%,  black 40%,  orange 50%,  black 60% ); }
+  65%  { background-image: linear-gradient(150deg,black 17.5%,orange 27.5%,black 37.5%,orange 47.5%,black 57.5%); }
+  70%  { background-image: linear-gradient(150deg,black 15%,  orange 25%,  black 35%,  orange 45%,  black 55% ); }
+  75%  { background-image: linear-gradient(150deg,black 12.5%,orange 22.5%,black 32.5%,orange 42.5%,black 52.5%); }
+  80%  { background-image: linear-gradient(150deg,black 10%,  orange 20%,  black 30%,  orange 40%,  black 50% ); }
+  85%  { background-image: linear-gradient(150deg,black 07.5%,orange 17.5%,black 27.5%,orange 37.5%,black 47.5%); }
+  90%  { background-image: linear-gradient(150deg,black 05%,  orange 15%,  black 25%,  orange 35%,  black 45% ); }
+  95%  { background-image: linear-gradient(150deg,black 02.5%,orange 12.5%,black 22.5%,orange 32.5%,black 42.5%); }
+  100% { background-image: linear-gradient(150deg,black 00%,  orange 10%,  black 20%,  orange 30%,  black 40% ); }
+  }  
 .logo {
+  margin-top: 6px;
   padding-top: 4px;
   font-size: 25px;
   color: rgb(65, 236, 22);
   background-image: linear-gradient(
     150deg,
     /* to bottom right, */
-    black 50%,
-    orange,
-    black,
-    orange,
-    black,
-    orange
+    black 50%,  orange 60%,  black 70%,  orange 80%  ,black 90% 
   );
+  transition: all 0.3s ease-out;
   -webkit-transition: all 0.3s ease-out;
   display: flex;
   flex-direction: column;

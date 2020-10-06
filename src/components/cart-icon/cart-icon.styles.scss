@@ -1,5 +1,5 @@
 .cart-icon {
-    width: 35px;
+    width: 26px;
     height: 45px;
     position: relative;
     display: flex;
@@ -8,19 +8,17 @@
     cursor: pointer;
   
     .shopping-icon {
-      width: 33px;
-      height: 33px;
+      width: 28px;
+    //   height: 33px;
     }
   
     .item-count {
-      color: rgb(86, 255, 0);
-      text-shadow: 2px 1px 1px rgb(123, 248, 248);
-      color: rgb(22, 228, 255);
-      text-shadow: 2px 1px 1px rgb(124, 8, 116);
+      color: rgb(123, 240, 255);
+      text-shadow: 2px 1px 1px rgb(0, 0, 0);
       position: absolute;
-      font-size: 23.5px;
+      font-size: 19px;
       font-weight: bold;
-      bottom: 4px;
+      bottom: 7.5px;
     }
   }
   

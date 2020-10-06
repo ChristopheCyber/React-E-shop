@@ -2,6 +2,9 @@ import React from 'react';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
 //component with Icon for shopping cart:
 import CartIcon from '../cart-icon/cart-icon.component'
+//component for shopping cart pre-Checkout:
+import CartDropdown from '../cart-dropdown/cart-dropdown.component'
+
 import './header.styles.menunav.css';
 import './header.styles.scss';
 import { Link } from 'react-router-dom';
@@ -10,7 +13,7 @@ import { auth } from "../../firebase/firebase.utils.js";
 // for Redux use
 import { connect } from 'react-redux';
 
-const HeaderComponent = ({ currentUser }) => {
+const HeaderComponent = ({ currentUser, hidden }) => {
     console.log("HeaderComponent => currentUser=", currentUser);
     return (
         <div /*className="options"*/>
@@ -62,6 +65,8 @@ const HeaderComponent = ({ currentUser }) => {
                         <CartIcon />
                     </li>
                 </ul>
+                {/*hiding or not Cart Dropdown pre-checkout comp*/}
+                {hidden ? null : <CartDropdown />}
             </nav>
         </div>
     );
@@ -69,7 +74,8 @@ const HeaderComponent = ({ currentUser }) => {
 
 //fct accessing the state props through the Root-Reducer
 const mapStateToProps = state => ({
-    currentUser: state.user.currentUser
+    currentUser: state.user.currentUser,
+    hidden: state.cart.hidden
 });
 
 export default connect(mapStateToProps)(HeaderComponent);
