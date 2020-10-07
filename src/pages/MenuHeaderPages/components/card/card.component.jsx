@@ -2,6 +2,8 @@ import React from 'react';
 import './card.styles.css';
 //import img01 from './img/img01.jpg' // relative path to image 
 
+import CustomButton from '../../../../components/reusable-components/custom-button/custom-button.component';
+
 export const Card = (prop1) => (
     <div className={'card-container ' + prop1.cardProp3 + '-card'}>
         {/*<div className='card-container'> */}
@@ -11,21 +13,29 @@ export const Card = (prop1) => (
             , 'prop1.cardProp3=>', prop1.cardProp3)}
         {/* ---my pics--- */}
         <a href={require(`./img/${prop1.cardProp2.category}/img${prop1.cardProp2.id}.jpg`)}
-        target="_blank" rel="noopener noreferrer">
+            target="_blank" rel="noopener noreferrer">
             <img src={require(`./img/${prop1.cardProp2.category}/img${prop1.cardProp2.id}.jpg`)}
                 alt={`Pic ${prop1.cardProp2.id}`}
-                /* title={`Image ${prop1.cardProp2.id}`} */
-                /* className={`${prop1.cardProp3}`} */
+            /* title={`Image ${prop1.cardProp2.id}`} */
+            /* className={`${prop1.cardProp3}`} */
             />
         </a>
-        <strong> email: </strong>
-        <span>{prop1.cardProp2.email}</span>
+        <span>
+            <strong> Seller contact: </strong>
+            <span>{prop1.cardProp2.email}</span>
+        </span>
         <span className="PriceLib">
-            Price : 
-            <span className="PriceVal"> 
+            Price :
+            <span className="PriceVal">
                 {' $ '}{prop1.cardProp2.price}
             </span>
         </span>
+        <CustomButton 
+            type="button" value="Validation" name="Submit"
+            classAdd
+        >
+            Add to cart
+        </CustomButton>
         {/* 
         {/*---origin pics---
         <img src={ require(`./img/img${prop1.cardProp2.id}.jpg`)} 

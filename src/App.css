@@ -63,20 +63,18 @@ em{
   text-decoration: underline;
 }
 
-.link:hover{
-  font-size: 28px;
-  color:rgb(43, 202, 51) ;
-  text-shadow: 2px 4px 1px rgb(253, 30, 14);
-  cursor: pointer;
-  margin: auto;
-  -webkit-transition: all 0.3s ease-out;
-}
-.link2:hover {
+.link:hover, .link2:hover {
   font-size: 33px;
   color:#48ff00 ;
   text-shadow: 2px 3px 1px rgb(243, 25, 25);
   cursor: pointer;
   margin: auto;
+  transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+}
+.link, .link2{
+  transition: all .5s ease-out;
+  -webkit-transition: all .5s ease-out;
 }
 h1 > span{
   color:#15ff00 ;

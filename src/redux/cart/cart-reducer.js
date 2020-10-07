@@ -9,6 +9,7 @@ const cartReducer = (state = INITIAL_STATE, action) => {
     case CartActionTypes.TOGGLE_CART_HIDDEN:
       return {
         ...state,
+        //not passing a value, just switching boolean
         hidden: !state.hidden
       };
     default:

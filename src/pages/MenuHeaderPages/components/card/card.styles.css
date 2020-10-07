@@ -4,6 +4,8 @@
   color: #0ccac4;*/
   display: flex;
   flex-direction: column;
+  position: relative;
+  align-items: center;
   /*background-color: #95dada;*/
   background: linear-gradient(
     to bottom left,
@@ -33,7 +35,7 @@
 .card-container strong:first-of-type {
   font-family: "Bigelow Rules";
   font-size: 26px;
-  font-weight: lighter;
+  /* font-weight: lighter; */
   color: rgb(62, 216, 82);
   text-shadow: 3px 6px 8px rgb(13, 11, 119);
 }
@@ -47,7 +49,7 @@
 
 .card-container strong:nth-last-of-type(1) {
   font-family: "Bigelow Rules";
-  font-size: 20px;
+  /* font-size: 20px; */
   color: rgb(124, 25, 124);
   text-shadow: 2px 2px 8px rgb(43, 228, 52);
   text-decoration: underline 1px;
@@ -64,6 +66,10 @@
     rgb(22, 82, 7) 0%,
     rgb(96, 196, 30) 100%
   );
+  transition: transform 2.5s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+.card-container .custom-button-add {
+  display: none;
 }
 .card-container img:hover {
   border-radius: 8px;
@@ -73,6 +79,14 @@
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  display: flex;
+  opacity: 1;
+}
+.card-container:hover .custom-button-add{
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  opacity: .65;
 }
 
 .PriceLib {

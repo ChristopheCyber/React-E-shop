@@ -19,7 +19,7 @@ const HeaderComponent = ({ currentUser, hidden }) => {
         <div /*className="options"*/>
             <nav className="MenuNavHeader">
                 <Link to='./' className="link3 logo" /*className="logo-container"*/>
-                    <Logo  />
+                    <Logo />
                     Home
                 </Link>
                 <h1> E-Shop demo </h1>
@@ -77,5 +77,11 @@ const mapStateToProps = state => ({
     currentUser: state.user.currentUser,
     hidden: state.cart.hidden
 });
+/*Equivalent to destructuring nested value {currentUser} of user as:
+    const mapStateToProps = ( { user: {currentUser} },{ cart: {hidden} } ) => ({
+    currentUser,
+    hidden
+});
+*/
 
 export default connect(mapStateToProps)(HeaderComponent);

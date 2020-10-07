@@ -23,10 +23,10 @@ const MenuItem = (item) => {
                     {/*item.title.toLowerCase()*/}
                     {item.title}
                 </h1>
-                <span className="subtitle link" 
-                    onClick={()=>(
+                <span className="subtitle link"
+                    onClick={() => (
                         item.history.push(`${item.match.url}${item.title.toLowerCase()}`)
-                        )}
+                    )}
                 >
                     {item.linkUrl}
                     {/*if using Link instead of HOC withRouter :

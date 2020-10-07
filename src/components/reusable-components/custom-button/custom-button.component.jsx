@@ -1,11 +1,14 @@
 import React from 'react';
-import './custom-button..styles.scss'
+import './custom-button..styles.scss';
 
-const CustomButton = ({children,googleSignIn,...restProps}) => {
-    // console.log("SignIn comp=>  googleSignIn ? :=", googleSignIn?"button-for-sign-out":"");
+const CustomButton = ({ children, googleSignIn, classAdd, ...restProps }) => {
+    // console.log("CustomButton => googleSignIn =",googleSignIn,"; classAdd =", classAdd);
     return (
         <button className={`
-            ${googleSignIn?"button-google-sign-in":""} custom-button`} 
+        ${classAdd ? "custom-button-add class-add-hover" : ""} 
+        ${googleSignIn ? "button-google-sign-in" : ""} 
+        custom-button
+        `}
             {...restProps}
         >
             {children}
