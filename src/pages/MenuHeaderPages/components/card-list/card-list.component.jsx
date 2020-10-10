@@ -1,6 +1,6 @@
 import React from 'react';
 import './card-list.styles.css';
-import { Card } from '../card/card.component.jsx';
+import Card from '../card/card.component.jsx';
 
 function fctCalc(a) {
     //console.log("a.cardsProp1.length=",a.cardsProp1.length);
@@ -19,7 +19,7 @@ export const CardList = (prop1) => (
             {/*console.log('In Card-list prop1.cardsListLength=>', prop1.cardsListLength)*/}
             {prop1.cardsProp1.filter( (cardElt,idx) => ( idx < fctCalc(prop1) ) ).map(
                 cardElt => (
-                    <Card key={cardElt.id} cardProp2={cardElt}
+                    <Card key={cardElt.id} item={cardElt}
                         cardProp3={prop1.cardsPropImg} />
                 )
             )}

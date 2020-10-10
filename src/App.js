@@ -12,7 +12,7 @@ import SignInComponent from './pages/sign-in-and-up/sign-in/sign-in.component.js
 import SignUpComponent from './pages/sign-in-and-up/sign-up/sign-up.component.jsx';
 // Firebase Authentication firebase.auth():
 import { auth, createUserProfileDoc } from "./firebase/firebase.utils";
-// for Redux use
+// for Redux use :
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user-actions';
 //

@@ -5,7 +5,7 @@ const CustomButton = ({ children, googleSignIn, classAdd, ...restProps }) => {
     // console.log("CustomButton => googleSignIn =",googleSignIn,"; classAdd =", classAdd);
     return (
         <button className={`
-        ${classAdd ? "custom-button-add class-add-hover" : ""} 
+        ${classAdd ? "custom-button-add " : ""} 
         ${googleSignIn ? "button-google-sign-in" : ""} 
         custom-button
         `}
