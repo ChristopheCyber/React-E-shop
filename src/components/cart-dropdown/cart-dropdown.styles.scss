@@ -1,7 +1,7 @@
 .cart-dropdown {
   position: absolute;
-  width: 240px;
-  height: 340px;
+  width: 250px;
+  height: 405px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,6 +9,7 @@
 
   padding: 20px 15px 15px 20px;
   border: 1px solid black;
+  border-radius : 10px;
   background-color: white;
   top: 90px;
   right: 40px;
@@ -26,10 +27,20 @@
      );
 
   .cart-items {
-    height: 260px;
+    height: 325px;
     display: flex;
     flex-direction: column;
     overflow: scroll;
+    padding-top: 5px;
+    .cart-items-title {
+      font-size: 21px;
+      width: 190px;
+      text-decoration: wavy;
+      text-shadow: 6px 3px 2px rgb(0, 0, 0);
+      letter-spacing: .8px;
+      position: relative;
+      top: -9px;
+    }
   }
 
   button {
