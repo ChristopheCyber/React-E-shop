@@ -8,13 +8,20 @@ import { connect } from 'react-redux';
 //Redux Selector fct :
 import { selectCartItems } from '../../redux/cart/cart.selectors.js';
 
-const CartDropdown = ( {cartItems} ) => (
+const CartDropdown = ({ cartItems }) => (
   <div className='cart-dropdown'>
-  <div className='cart-items'>
-    <span className='cart-items-title'>Your Cart :</span>
-      {cartItems.map(cartItem => (
-        <CartDropdownItem key={cartItem.id} item={cartItem} />
-      ))}
+    <div className='cart-items'>
+      {cartItems.length ?
+        (
+          <span className='cart-items-title'>Your Cart :</span>,
+          cartItems.map(cartItem => (
+            <CartDropdownItem key={cartItem.id} item={cartItem} />))
+        ) : (
+          <span className='cart-items-title'>
+            Your Cart: <br/> <br/> Empty !
+          </span>
+        )
+      }
     </div>
     <CustomButton> Checkout </CustomButton>
   </div>
