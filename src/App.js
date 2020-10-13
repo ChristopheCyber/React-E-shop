@@ -10,6 +10,7 @@ import SignInAndUpComponent from './pages/sign-in-and-up/sign-in-and-up.componen
 import ContactComponent from './pages/contact/contact.component.jsx';
 import SignInComponent from './pages/sign-in-and-up/sign-in/sign-in.component.jsx';
 import SignUpComponent from './pages/sign-in-and-up/sign-up/sign-up.component.jsx';
+import CheckoutPage from './pages/checkout/checkoutPage.component';
 // Firebase Authentication firebase.auth():
 import { auth, createUserProfileDoc } from "./firebase/firebase.utils";
 // for Redux use :
@@ -201,6 +202,7 @@ class App extends Component {
             component={() =>
               (<ShopComponent />)} />*/}
           <Route exact={true} path='/shop' component={ShopComponent} />
+          <Route exact={true} path='/checkout' component={CheckoutPage} />
           <Route exact={true} path='/contact' component={ContactComponent} />
           <Route exact={true} path='/signinandup' component={SignInAndUpComponent} />
           {/*

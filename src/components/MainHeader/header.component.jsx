@@ -10,8 +10,12 @@ import './header.styles.scss';
 import { Link } from 'react-router-dom';
 // Firebase Authentication firebase.auth(): imported for sign-out 
 import { auth } from "../../firebase/firebase.utils.js";
-// for Redux use
+// for REDUX use
 import { connect } from 'react-redux';
+//for REDUX / Selectors
+import { createStructuredSelector } from 'reselect';
+import { selectCartHidden } from '../../redux/cart/cart.selectors.js';
+import { selectCurrentUser } from '../../redux/user/user.selectors.js';
 
 const HeaderComponent = ({ currentUser, hidden }) => {
     console.log("HeaderComponent => currentUser=", currentUser);
@@ -71,8 +75,20 @@ const HeaderComponent = ({ currentUser, hidden }) => {
         </div>
     );
 }
+/*
+//createStructuredSelector used for replacing REDUCERs simple callings 
+//to avoid to have a long list of functions ..(state) as:
+const mapStateToProps = (state) => ({
+    currentUser: selectCurrentUser(state),
+    hidden: selectCartHidden(state)
+}); */
+const mapStateToProps = createStructuredSelector({
+    currentUser: selectCurrentUser,
+    hidden: selectCartHidden
+});
 
-//fct accessing the state props through the Root-Reducer
+/*
+//before Selectors: fct accessing the state props through the Root-Reducer
 const mapStateToProps = state => ({
     currentUser: state.user.currentUser,
     hidden: state.cart.hidden

@@ -40,6 +40,5 @@ const MenuItem = (item) => {
     );
 }
 
-//export default withRouter(MenuItem);
 export default withRouter(MenuItem);
 
