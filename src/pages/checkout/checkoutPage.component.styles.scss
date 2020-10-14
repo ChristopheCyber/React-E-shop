@@ -16,7 +16,14 @@
       .header-block {
         text-transform: capitalize;
         width: 23%;
-  
+        &:nth-child(3) {
+          width: 19%;
+          padding-left: 3px;
+        }
+        &:nth-child(4) {
+          width: 26%;
+          padding-left: 15px;
+        }
         &:last-child {
           width: 8%;
         }
@@ -24,9 +31,13 @@
     }
   
     .total {
-      margin-top: 30px;
+      margin-top: 6px;
+      margin-right: 10%;
+      margin-bottom: 30px;
       margin-left: auto;
-      font-size: 36px;
+      font-size: 33px;
+      color: #41ec16;
+      text-shadow: 2px 3px 2px #fa1111;
     }
   }
   
