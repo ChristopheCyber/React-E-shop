@@ -3,8 +3,12 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 //Provider class component giving access to Store & Providers, wrapping all App
 import { Provider } from 'react-redux';
-//store create from all Reducers combined + Middlewares
-import store from './redux/store';
+
+//for Redux Peristance:
+import { PersistGate } from 'redux-persist/integration/react';
+//store created from all Reducers combined + Middlewares
+//persistor for Redux Peristance: =persistStore(store)
+import { store, persistor } from './redux/store';
 
 import './index.css';
 import App from './App';
@@ -13,13 +17,16 @@ ReactDOM.render(
 
   <Provider store={store}> {/*store dispatched on all App*/}
     <BrowserRouter>
-      <React.StrictMode>
-        <App />
-      </React.StrictMode>
+      <PersistGate persistor={persistor}>
+      {/*persistor = cached version of store, created in store.js*/}
+        <React.StrictMode>
+          <App />
+        </React.StrictMode>
+      </PersistGate>
     </BrowserRouter>
   </Provider>
 
- , document.getElementById('root')
+  , document.getElementById('root')
 
 );
 

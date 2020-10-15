@@ -19,13 +19,11 @@ const CheckoutItem = ({ cartItem, clearItem, addItem, removeItem  }) => {
             <span className='name'>{name}</span>
             {/* quantity with arrows for decrease/increase : */}
             <div className='quantity'>
-                <div className='arrow' onClick={() => removeItem(cartItem)}>
+                <div className='arrow arrow-minus' onClick={() => removeItem(cartItem)}>
                     &#10094;
-                    {"-"}
                 </div>
                 <span className='quantity-number'>{quantity}</span>
-                <div className='arrow' onClick={() => addItem(cartItem)}>
-                    {"+"}
+                <div className='arrow arrow-plus' onClick={() => addItem(cartItem)}>
                     &#10095;
                 </div>
             </div>
