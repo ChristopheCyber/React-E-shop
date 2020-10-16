@@ -14,9 +14,9 @@ const Card = ({item,cardProp3,fctAddItemInCart}) => {
     <div className={'card-container ' + cardProp3 + '-card'}>
         {/*<div className='card-container'> */}
         <strong> {name} </strong>
-        {console.log('In Card id=', id
+        {/* console.log('In Card id=', id
             , '=>', name
-            , 'cardProp3=>', cardProp3)}
+            , 'cardProp3=>', cardProp3) */}
         {/* ---my pics--- */}
         <a href={require(`./img/${category}/img${id}.jpg`)}
             target="_blank" rel="noopener noreferrer">
@@ -39,8 +39,8 @@ const Card = ({item,cardProp3,fctAddItemInCart}) => {
         <CustomButton
             onClick={()=>
                 {
-                console.log("typeof fctAddItemInCart =", typeof fctAddItemInCart,
-                    "; fctAddItemInCart =", fctAddItemInCart);
+                /* console.log("typeof fctAddItemInCart =", typeof fctAddItemInCart,
+                    "; fctAddItemInCart =", fctAddItemInCart); */
                 //sending 1 item as user.payload in addItemInCart action:
                 //type: 'ADD_ITEM',payload: item
                 fctAddItemInCart(item)
