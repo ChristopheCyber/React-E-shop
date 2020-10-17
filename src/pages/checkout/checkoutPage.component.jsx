@@ -36,8 +36,6 @@ const CheckoutPage = ({ cartItems, total }) => (
       <CheckoutItem key={[cartItem.id, cartItem.category]} cartItem={cartItem} />
     ))}
     <div className='total'>TOTAL = ${total}</div>
-    {/*Stripe payment checkout button*/}
-    <StripeCheckoutButton price={total} />
     <div className='demo-warning'>
       *** Please use the following <span>demo Credit Card</span> for Payment tests : ***
       <br />
@@ -45,9 +43,11 @@ const CheckoutPage = ({ cartItems, total }) => (
       <span> 5555 5555 5555 4444 </span>
       -Exp: <span>12/34 </span> (any future date) 
       -CVV: <span>123 </span> (any 3 digits)
-      <br />
     </div>
-  </div>
+    {/*Stripe payment checkout button*/}
+    <StripeCheckoutButton price={total} />
+    <br />
+    </div>
 );
 
 const mapStateToProps = createStructuredSelector({

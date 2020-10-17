@@ -8,9 +8,9 @@ const StripeCheckoutButton = ({ price }) => {
   const publishableKey = 'pk_test_51HcvKtLSFw3FSj4wwxSrljZ3Z5feiZzAW3RrgRMKl4rQwgGJS0TxybzaJbR32WMPNCc7Mlz3ExpjMw2wYe9OWFRj00a6o02mBA';
   
   //setting the outcome after successful payment : 
-  //(in real production => pass the price to the BackEnd for charging it)
+  //(in real production => an API passes the price to BackEnd for charging it)
   const onToken = token => {
-    console.log(token);
+    console.log("Successful payment => token object passed to BackEnd =",token); 
     alert('Your (demo) Payment was Succesful !');
   };
 

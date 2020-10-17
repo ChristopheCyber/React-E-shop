@@ -15,7 +15,7 @@ function fctCalc(a) {
 export const CardList = (prop1) => (
     <div>
         <div className={'card-list-divStyle ' + prop1.cardsPropImg + '-list'}>
-            {console.log('In Card-list prop1.cardsPropImg=>', prop1.cardsPropImg)}
+            {/* console.log('In Card-list prop1.cardsPropImg=>', prop1.cardsPropImg) */}
             {/*console.log('In Card-list prop1.cardsListLength=>', prop1.cardsListLength)*/}
             {prop1.cardsProp1.filter( (cardElt,idx) => ( idx < fctCalc(prop1) ) ).map(
                 cardElt => (
