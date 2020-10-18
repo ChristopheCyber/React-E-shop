@@ -6,4 +6,40 @@
   align-items: center;
   justify-content: space-around;
   text-align: left;
+  letter-spacing: .5px;
+
+  h5{
+    color: #053efc;
+    text-shadow: 2px 3px 2px #000000;
+  }
+  
+  .link-logo{
+    font-size: 26px;
+    letter-spacing: .3px;
+    cursor: pointer;
+    color: #41ec16;
+    text-decoration: none;
+    text-shadow: 2px 3px 2px #000000;
+    transition: all 0.45s ease-out;
+    -webkit-transition: all 0.45s ease-out; 
+    .link-logo-img{
+      height: 30px;
+      margin: 0 10px 0 10px;
+      background-image: linear-gradient( 
+        150deg, /* to bottom right, */
+         black 25%, #41ec16 30%, 
+         black 40%, #41ec16 45%,black 55%,black 100% 
+         );
+      border: 1.5px solid #000000;
+      border-radius: 8px;
+      box-shadow: 2px 2px 2px #144907;
+      position: relative;
+      top: 4px;
+      transition: all 0.45s ease-out;
+      -webkit-transition: all 0.45s ease-out; 
+      &:hover {
+        height: 32px;
+      }
+    }
+  }
 }
