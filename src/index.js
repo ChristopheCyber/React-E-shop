@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 //for Redux Peristance:
 import { PersistGate } from 'redux-persist/integration/react';
 //store created from all Reducers combined + Middlewares
-//persistor for Redux Peristance: =persistStore(store)
+//persistor for Redux Persistance: =persistStore(store)
 import { store, persistor } from './redux/store';
 
 import './index.css';

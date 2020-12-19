@@ -11,7 +11,7 @@ const StripeCheckoutButton = ({ price }) => {
   //(in real production => an API passes the price to BackEnd for charging it)
   const onToken = token => {
     console.log("Successful payment => token object passed to BackEnd =",token); 
-    alert('Your (demo) Payment was Succesful !');
+    alert('Your (demo) Payment was Successful !');
   };
 
   return (

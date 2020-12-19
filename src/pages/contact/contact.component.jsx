@@ -7,7 +7,7 @@ const ContactComponent = () => {
         <h5>Front End Developer :</h5>
             <h1>Schlienger Christophe</h1>
             <br/>
-            <h1>( France / Czech Republic )</h1>
+            <h1>( France / Czech Republic / International )</h1>
             <br/>
             <br/>
             <div>

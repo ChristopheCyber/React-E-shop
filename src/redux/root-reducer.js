@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 
 import userReducer from './user/user-reducer';
 import cartReducer from './cart/cart-reducer';
-//for Redux Peristance :
+//for Redux Persistance :
 import { persistReducer } from 'redux-persist';
 // storage = local-Storage on Window browser : (=>persists untill page close)
 // (sessionStorage=>persists always untill history cleaned, not used here )

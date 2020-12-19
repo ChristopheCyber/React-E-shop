@@ -3,7 +3,7 @@ import { UserActionsTypes } from './user-actions-types';
 //defining a no-empty Reducer's initial state :
 const INITIAL_STATE = {
     currentUser: null
-}
+};
 // passing INITIAL_STATE as 'default-parameter value' of state (JS6)
 // in case state is Undefined/Not set => will b set as value='null'
 const userReducer = (state = INITIAL_STATE, action) => {
@@ -17,6 +17,6 @@ const userReducer = (state = INITIAL_STATE, action) => {
             };
         default: return state; //in case no actions matching here
     }
-}
+};
 
 export default userReducer;
