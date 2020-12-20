@@ -17,22 +17,6 @@ import { auth, createUserProfileDoc } from "./firebase/firebase.utils";
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/user-actions';
 //
-/*
-const FashionPage1 = () => (
-  <div>
-    <h1>Fashion Page</h1>
-    <h2>Fashion elements:</h2>
-    <em>
-      Unavailable ! <br /> =&gt; Under construction . . .
-    </em>
-  </div>
-)*/
-
-/* other way to write the fct:
-function Paintings() {
-  return <h2>Paintings</h2>;
-}*/
-//
 class App extends Component {
   /*We don't need anymore CONSTRUCTOR+THIS.STATE
     We don't need anymore passing the currentUser to <HeaderComponent>
@@ -130,6 +114,7 @@ class App extends Component {
   }
 
   render() {
+
     return (
       <div className="App bigLow">
         {/*

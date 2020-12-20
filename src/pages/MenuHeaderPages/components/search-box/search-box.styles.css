@@ -6,6 +6,7 @@
     padding: 1px;
     outline: none;
     margin-bottom: 10px;
+    font-size: medium;
   }
   ::placeholder, input{
     color: #5ef01a;
