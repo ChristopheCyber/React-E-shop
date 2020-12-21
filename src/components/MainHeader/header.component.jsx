@@ -1,9 +1,12 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../../assets/crown.svg';
+// import { ReactComponent as Icon } from '../../assets/diamond0.png';
 //component with Icon for shopping cart:
 import CartIcon from '../cart-icon/cart-icon.component'
 //component for shopping cart pre-Checkout:
 import CartDropdown from '../cart-dropdown/cart-dropdown.component'
+//component for API Snow button:
+import CustomButton2 from '../../components/reusable-components/custom-button2/custom-button2.component'
 
 import './header.styles.menunav.css';
 import './header.styles.scss';
@@ -26,6 +29,12 @@ const HeaderComponent = ({ currentUser, hidden }) => {
                     <Logo />
                     Home
                 </Link>
+                
+                <CustomButton2 classOn={"ON"} children="diamond0" >
+                    {/*<img  className="letItSnowPic"
+                        src={require(`../../assets/diamond0.png`)} alt="Diamond clipart" 
+                    />*/}
+                </CustomButton2>
                 <h1> E-Shop demo </h1>
                 <ul>
                     <li>

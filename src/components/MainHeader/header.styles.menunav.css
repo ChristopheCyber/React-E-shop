@@ -1,6 +1,11 @@
 /*-----------------------------------------------------*/
 /* Header Nav
 /*-----------------------------------------------------*/
+.letItSnowPic{
+  height: 50px;
+  width: 50px;
+}
+
 .MenuNavHeader {
   font-size: 25px;
   font-weight: bold;
