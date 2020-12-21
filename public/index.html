@@ -11,8 +11,11 @@
       content="Web site created using create-react-app"
     />
     <!-- police from Google fonts 'Parisienne' -->
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Parisienne&display=swap" rel="stylesheet">
-    
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Parisienne&display=swap"
+      rel="stylesheet"
+    />
+
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
       manifest.json provides metadata used when your web app is installed on a
@@ -32,51 +35,53 @@
     <!-- for API let It Snow : -->
     <link rel="stylesheet" href="./let-it-snow-master/css/normalize.css" />
     <link rel="stylesheet" href="./let-it-snow-master/css/letitsnow.css" />
-    <link rel="stylesheet" href="css/letitsnow.css">
-    
-    
+
     <title>King E-Shop React App</title>
   </head>
-  <body >
+  <body>
+    <div
+      id="snowfall"
+      style="
+        z-index: 0;
+        background: transparent;
+        height: 0;
+        width: 100%;
+        position: fixed;
+      "
+    ></div>
+    <div id="root"></div>
+
+    <noscript>You need to enable JavaScript to run this app.</noscript>
 
     <script src="./let-it-snow-master/js/modernizr.min.js"></script>
     <script src="./let-it-snow-master/js/prefixfree.min.js"></script>
-<!-- importing JQuery for let-it-snow plugin -->
+    <!-- importing JQuery for let-it-snow plugin -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="./let-it-snow-master/js/letitsnow.js"></script>
     <script src="./let-it-snow-master/js/letitsnow.min.js"></script>
-
-<!--     <script>
-      (function () {
+    <script>
+      // launching LetItSnow jQuery API :
+      $(document).ready(function () {
+        $("#snowfall").letItSnow({
+          // amount: 500//Amount of particles
+        });
+      });
+      /* 
+      // working also 1 :
+      $(function() {
+        // $('body').letItSnow();
+        $('#snowfall').letItSnow();
+      });
+      // working also 2 :
+      (
+        function () {
           $(window).load(function () {
-              letItSnow();
+            $('#snowfall').letItSnow();
           });
-      })();
+        }
+      )();
+      */
     </script>
-     -->
-     <div id="snowfall" 
-      style="z-index: 0; background: transparent;
-      height:0; width:100%;
-      position: fixed; 
-     ">
-    </div>
-     <script>
-        $(function() {
-          // $('body').letItSnow();
-          $('#snowfall').letItSnow();
-        });
-        /*
-        $(document).ready(function() {
-          $("#root").Snowfall({
-          amount: 500//Amount of particles
-          });
-        });
-        */
-      </script>
-    
-  
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
