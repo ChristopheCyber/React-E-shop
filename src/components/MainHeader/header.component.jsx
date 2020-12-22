@@ -25,16 +25,16 @@ const HeaderComponent = ({ currentUser, hidden }) => {
     return (
         <div /*className="options"*/>
             <nav className="MenuNavHeader">
-                <Link to='./' className="link3 logo" /*className="logo-container"*/>
-                    <Logo />
-                    Home
-                </Link>
-                
-                <CustomButton2 classOn={"ON"} children="diamond0" >
-                    {/*<img  className="letItSnowPic"
-                        src={require(`../../assets/diamond0.png`)} alt="Diamond clipart" 
-                    />*/}
-                </CustomButton2>
+                <div className="left-header">
+                    <Link to='./' className="link3 logo" /*className="logo-container"*/>
+                        <Logo />
+                        Home
+                    </Link>
+                    <div className="snow-buttons-container">
+                        <CustomButton2 classOn={"ON"} children="snowflake0" /*snowflake0 snowflake snowflakeB*//>
+                    </div>
+                </div>
+
                 <h1> E-Shop demo </h1>
                 <ul>
                     <li>

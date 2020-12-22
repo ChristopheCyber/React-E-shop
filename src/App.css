@@ -5,6 +5,11 @@
 *{
   box-sizing: border-box;
 }
+/* preventing borders visible when elements focused: */
+*:focus{
+  outline: none;
+}
+
 .DflexRow {
   display: flex;
   flex-direction: row;

@@ -20,6 +20,24 @@
   /* width: 90%; */
   padding: 0 10px 0 10px;
 }
+.left-header{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.snow-buttons-container{
+  padding: 0 0 0 10px;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  width: auto;
+  position: relative;
+  /* left: -10px;   */
+}
+
 .MenuNavHeader ul {
   display: flex;
   flex-direction: row;
