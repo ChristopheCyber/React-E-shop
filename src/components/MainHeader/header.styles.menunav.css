@@ -26,6 +26,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+/* preventing borders visible when elements focused: */
+.left-header a:focus{
+  outline: none;
+}
 .snow-buttons-container{
   padding: 0 0 0 10px;
   background: transparent;
