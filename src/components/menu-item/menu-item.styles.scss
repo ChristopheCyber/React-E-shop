@@ -10,7 +10,22 @@
     border-radius: 20px;
     margin: 0 7.5px 15px;
     overflow: hidden;
-  
+
+    &.showPopUp{
+      overflow:visible;
+      // height: 30%;
+      .carousel-wrapper-local{
+        // height:600px;
+        position: absolute;
+        left: 50%;
+        top: 0%;
+        transform: translate(-50%, 25%);
+        z-index: 10;
+        height: 30%;
+        width:50%;
+      }
+    }
+      
     &.large1 {
       height: 270px;
       //width: 150px;

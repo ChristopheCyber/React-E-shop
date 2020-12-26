@@ -1,0 +1,40 @@
+.carousel-wrapper-local {
+  overflow: visible;
+
+  height: 45%;
+  .carousel{
+      .slide{
+          height: 20%;
+      }
+  }
+  .carousel-root {
+    height: 100%;
+    .carousel {
+      &.carousel-slider {
+        height: 100%;
+        overflow: visible;
+        .slider {
+          overflow: visible;
+          // height:100%;
+        }
+      }
+      .thumbs-wrapper {
+        overflow: visible;
+      }
+    //   .carousel-wrapper {
+    //     height: 400px;
+    //   }
+      .slider-wrapper {
+        height: 200%;
+        &.axis-horizontal {
+            overflow: visible;
+            img{
+              overflow: visible;
+              height: 500px;
+            //   width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
