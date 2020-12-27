@@ -3,7 +3,7 @@ import './App.css';
 import { Route, Switch, Link, Redirect } from 'react-router-dom';
 // components:
 import { HomePage } from './pages/homepage/homepage.component.jsx';
-import AppComponent from './pages/MenuHeaderPages/App-component';
+import SubAppComponent from './pages/MenuHeaderPages/SubApp-component';
 import ShopComponent from './pages/shop/shop.component.jsx';
 import HeaderComponent from './components/MainHeader/header.component';
 import SignInAndUpComponent from './pages/sign-in-and-up/sign-in-and-up.component.jsx';
@@ -146,7 +146,7 @@ class App extends Component {
               renders the first one that matches the current URL. */}
         <Switch>
           {/* Method 1=> if no parameters passed necessary
-          <Route path="/paintings" component={AppComponent}/> */}
+          <Route path="/paintings" component={SubAppComponent}/> */}
 
           {/* Method 2a=>passing params with a fct as a RENDER PROP 
             => just updating component without re-creating/re-MOUNTing it 
@@ -154,13 +154,13 @@ class App extends Component {
             => but NO-TRIGGERING componentDidMount/Fetch
           <Route path="/paintings"
             render={ (props) => (
-              <AppComponent {...props} propPageCat={`paintings`} /> ) }
+              <SubAppComponent {...props} propPageCat={`paintings`} /> ) }
           /> */}
 
           {/* Method 2b<=>2a=>passing params
             =>but NO-TRIGGERING mount componentDidMount/Fetch
           <Route path="/paintings">
-            <AppComponent propPageCat="paintings"/>
+            <SubAppComponent propPageCat="paintings"/>
           </Route> */}
 
           {/* Method 3=>passing params with a fct as COMPONENT PROP 
@@ -168,21 +168,21 @@ class App extends Component {
             => TRIGGERING componentDidMount/Fetch :) */}
           <Route path="/paintings"
             component={() =>
-              (<AppComponent propPageCat={`paintings`} />)} />
+              (<SubAppComponent propPageCat={`paintings`} />)} />
 
           <Route path="/jewerly"
             component={() =>
-              (<AppComponent propPageCat={`jewerly`} />)} />
+              (<SubAppComponent propPageCat={`jewerly`} />)} />
           <Route path="/fashion"
             component={() =>
-              (<AppComponent propPageCat={`fashion`} />)} />
+              (<SubAppComponent propPageCat={`fashion`} />)} />
           {/*<Route path='/fashion' component={FashionPage1} />*/}
           <Route path="/women"
             component={() =>
-              (<AppComponent propPageCat={`women`} />)} />
+              (<SubAppComponent propPageCat={`women`} />)} />
           <Route path="/men"
             component={() =>
-              (<AppComponent propPageCat={`men`} />)} />
+              (<SubAppComponent propPageCat={`men`} />)} />
           {/*<Route exact={true} path='/shop'  
             component={() =>
               (<ShopComponent />)} />*/}

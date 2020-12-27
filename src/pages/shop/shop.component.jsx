@@ -1,20 +1,20 @@
 import React from 'react';
-import '../MenuHeaderPages/App-component.css'
-import AppComponent from '../MenuHeaderPages/App-component';
+import '../MenuHeaderPages/SubApp-component.css'
+import SubAppComponent from '../MenuHeaderPages/SubApp-component';
 
 const shopComponent = () => {
     return (
         <div className="App-Component img-class">
             Collections Previews ( 4 samples by collection )
-            <AppComponent propPageCat={`paintings`} propSbox={`hideSearchBox`}
+            <SubAppComponent propPageCat={`paintings`} propSbox={`hideSearchBox`}
             propListLength={4}/>
-            <AppComponent propPageCat={`jewerly`} propSbox={`hideSearchBox`}
+            <SubAppComponent propPageCat={`jewerly`} propSbox={`hideSearchBox`}
             propListLength={4}/>
-            <AppComponent propPageCat={`fashion`} propSbox={`hideSearchBox`}
+            <SubAppComponent propPageCat={`fashion`} propSbox={`hideSearchBox`}
             propListLength={4}/>
-            <AppComponent propPageCat={`women`} propSbox={`hideSearchBox`}
+            <SubAppComponent propPageCat={`women`} propSbox={`hideSearchBox`}
             propListLength={4}/>
-            <AppComponent propPageCat={`men`} propSbox={`hideSearchBox`}
+            <SubAppComponent propPageCat={`men`} propSbox={`hideSearchBox`}
             propListLength={4}/>
         </div>
     );

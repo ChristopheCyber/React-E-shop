@@ -11,7 +11,7 @@ class CarouselComponent extends Component {
         return (
             <div className="carousel-wrapper carousel-wrapper-local">
             <span className="close" onClick={this.handleClick}>&times; Close</span>
-            <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs axis={"horizontal"} onClickItem={this.handleClick}>
+            <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs axis={"horizontal"} onClickItem={this.handleClick} swipeable={false}>
                 <div>
                     <img src={require(`../../menu-item/img/FashionBack.jpg`)} alt="" />
                 </div>

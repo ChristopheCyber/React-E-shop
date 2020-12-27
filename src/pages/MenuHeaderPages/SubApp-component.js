@@ -1,11 +1,11 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 
-import './App-component.css';
+import './SubApp-component.css';
 import { CardList } from './components/card-list/card-list.component.jsx';
 import { SearchBox } from './components/search-box/search-box.component.jsx';
 
-class AppComponent extends React.Component {
+class SubAppComponent extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -126,4 +126,4 @@ class AppComponent extends React.Component {
     );
   }
 }
-export default withRouter(AppComponent);
+export default withRouter(SubAppComponent);
