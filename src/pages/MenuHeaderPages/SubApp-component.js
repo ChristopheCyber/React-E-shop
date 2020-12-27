@@ -4,6 +4,10 @@ import { withRouter } from 'react-router-dom';
 import './SubApp-component.css';
 import { CardList } from './components/card-list/card-list.component.jsx';
 import { SearchBox } from './components/search-box/search-box.component.jsx';
+// for Redux use :
+import { connect } from 'react-redux';
+// for carousel :
+import CarouselComponent from "../../components/reusable-components/carousel/carousel.component.jsx";
 
 class SubAppComponent extends React.Component {
   constructor(props) {
@@ -14,6 +18,7 @@ class SubAppComponent extends React.Component {
       imgSize1: "img-class"
     };
   }
+
   //*** Life Cycle method componentDidMount() {}
   componentDidMount() {
     console.log("this.props.propPageCat=", this.props.propPageCat);
@@ -112,6 +117,12 @@ class SubAppComponent extends React.Component {
             <i className={"bigLow " + filterBigLowNumber}>&nbsp; {nbrCards}</i>
           </label>
         </div>
+
+        {/* Carousel PopUp : */}
+        {this.props.triggerPopUp 
+          ? <CarouselComponent className="CarouselComponent" /> 
+          : null}
+
         {/*<CardList cardsProp1={this.state.cards} />*/}
         <CardList cardsProp1={filteredCards} cardsPropImg={constImgSize1}
           cardsListLength={this.props.propListLength}
@@ -126,4 +137,14 @@ class SubAppComponent extends React.Component {
     );
   }
 }
-export default withRouter(SubAppComponent);
+//fct accessing the state props through the Root-Reducer
+const mapStateToProps = state => ({
+  triggerPopUp: state.cart.triggerPopUp
+});
+
+// export default withRouter(SubAppComponent);
+/*export default App;*/
+export default connect(
+  mapStateToProps,
+  null
+)(withRouter(SubAppComponent));

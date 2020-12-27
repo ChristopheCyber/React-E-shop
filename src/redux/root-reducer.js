@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 
 import userReducer from './user/user-reducer';
 import cartReducer from './cart/cart-reducer';
+import menuItemReducer from './menu-item/menu-item-reducer';
 //for Redux Persistance :
 import { persistReducer } from 'redux-persist';
 // storage = local-Storage on Window browser : (=>persists untill page close)
@@ -27,7 +28,8 @@ export default combineReducers({
 //for Redux Peristance :
 const rootReducer = combineReducers({
     user: userReducer,
-    cart: cartReducer
+    cart: cartReducer,
+    menuItemKey: menuItemReducer
 });// all the JSON full state object
 
 export default persistReducer(persistConfig, rootReducer);

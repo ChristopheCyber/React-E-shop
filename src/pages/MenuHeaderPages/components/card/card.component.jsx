@@ -3,55 +3,56 @@ import './card.styles.css';
 //import img01 from './img/img01.jpg' // relative path to image 
 // for Redux use :
 import { connect } from 'react-redux';
-import { addItemInCart } from '../../../../redux/cart/cart-actions';
+import { addItemInCart, updateTriggerPopUp } from '../../../../redux/cart/cart-actions';
 
 import CustomButton from '../../../../components/reusable-components/custom-button/custom-button.component';
 
-const Card = ({item,cardProp3,fctAddItemInCart}) => {
+const Card = ({ item, cardProp3, fctAddItemInCart, fctUpdateTriggerPopUp }) => {
     //destruct item useful fields:
     const { id, name, category, email, price } = item;
+
     return (
-    <div className={'card-container ' + cardProp3 + '-card'}>
-        {/*<div className='card-container'> */}
-        <strong> {name} </strong>
-        {/* console.log('In Card id=', id
+        <div className={'card-container ' + cardProp3 + '-card'}>
+            {/*<div className='card-container'> */}
+            <strong> {name} </strong>
+            {/* console.log('In Card id=', id
             , '=>', name
             , 'cardProp3=>', cardProp3) */}
-        {/* ---my pics--- */}
-        <a href={require(`./img/${category}/img${id}.jpg`)}
-            target="_blank" rel="noopener noreferrer">
+            {/* ---my pics--- */}
+
             <img src={require(`./img/${category}/img${id}.jpg`)}
                 alt={`Pic ${id}`}
-            /* title={`Image ${id}`} */
-            /* className={`${cardProp3}`} */
+                /* title={`Image ${id}`} */
+                /* className={`${cardProp3}`} */
+                /* no payload passed to Redux, just a call triggering a toggle of triggerPopUp value in cart state: */
+                onClick={() => fctUpdateTriggerPopUp()}
             />
-        </a>
-        <span>
-            <strong>Seller contact: </strong>
-            <span>{email}</span>
-        </span>
-        <span className="PriceLib">
-            Price :
-            <span className="PriceVal">
-                {' $ '}{price}
+
+            <span>
+                <strong>Seller contact: </strong>
+                <span>{email}</span>
             </span>
-        </span>
-        <CustomButton
-            onClick={()=>
-                {
-                /* console.log("typeof fctAddItemInCart =", typeof fctAddItemInCart,
-                    "; fctAddItemInCart =", fctAddItemInCart); */
-                //sending 1 item as user.payload in addItemInCart action:
-                //type: 'ADD_ITEM',payload: item
-                fctAddItemInCart(item)
+            <span className="PriceLib">
+                Price :
+            <span className="PriceVal">
+                    {' $ '}{price}
+                </span>
+            </span>
+            <CustomButton
+                onClick={() => {
+                    /* console.log("typeof fctAddItemInCart =", typeof fctAddItemInCart,
+                        "; fctAddItemInCart =", fctAddItemInCart); */
+                    //sending 1 item as user.payload in addItemInCart action:
+                    //type: 'ADD_ITEM',payload: item
+                    fctAddItemInCart(item)
                 }
-            }
-            type="button" value="Validation" name="Submit"
-            classAdd
-        >
-            Add to cart
+                }
+                type="button" value="Validation" name="Submit"
+                classAdd
+            >
+                Add to cart
         </CustomButton>
-        {/* 
+            {/* 
         {/*---origin pics---
         <img src={ require(`./img/img${id}.jpg`)} 
             alt={`Pic ${id}`} 
@@ -62,13 +63,14 @@ const Card = ({item,cardProp3,fctAddItemInCart}) => {
         <img title={"Image 01"} src={img01} alt={"pic 01"} />
         <img src={`https://robohash.org/${id}?set=set3`} alt="pic 03"/>
         */}
-    </div>
-);
+        </div>
+    );
 };
 
 //REDUX:
 const mapDispatchToProps = dispatch => ({
-    fctAddItemInCart: (item) => dispatch(addItemInCart(item))
+    fctAddItemInCart: (item) => dispatch(addItemInCart(item)),
+    fctUpdateTriggerPopUp: (togglePopUp) => dispatch(updateTriggerPopUp(togglePopUp))
 });
 
 export default connect(

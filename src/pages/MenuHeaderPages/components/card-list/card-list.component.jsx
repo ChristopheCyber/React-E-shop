@@ -20,7 +20,8 @@ export const CardList = (prop1) => (
             {prop1.cardsProp1.filter( (cardElt,idx) => ( idx < fctCalc(prop1) ) ).map(
                 cardElt => (
                     <Card key={cardElt.id} item={cardElt}
-                        cardProp3={prop1.cardsPropImg} />
+                        cardProp3={prop1.cardsPropImg} 
+                        />
                 )
             )}
 

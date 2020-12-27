@@ -19,3 +19,9 @@ export const clearItemFromCart = item => ({
   type: CartActionTypes.CLEAR_ITEM_FROM_CART,
   payload: item
 });
+
+export const updateTriggerPopUp = triggerPopUp => ({
+  type: CartActionTypes.TOGGLE_POPUP_CAROUSEL,
+  /*don't need a payload here, just switching boolean, payload is optional*/
+  payload: triggerPopUp
+});

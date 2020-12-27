@@ -4,11 +4,18 @@ import { addItemToCart, removeItemFromCart } from './cart-utils';
 
 const INITIAL_STATE = {
   hidden: true,
-  cartItems: []
+  cartItems: [],
+  triggerPopUp: false
 };
 
 const cartReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
+    case CartActionTypes.TOGGLE_POPUP_CAROUSEL:
+      return {
+        ...state,
+        //not passing a value, just switching boolean
+        triggerPopUp: !state.triggerPopUp
+      };
     case CartActionTypes.TOGGLE_CART_HIDDEN:
       return {
         ...state,

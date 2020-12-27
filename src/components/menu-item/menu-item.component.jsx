@@ -2,38 +2,27 @@ import React, { Component } from 'react';
 import './menu-item.styles.scss';
 
 import { withRouter } from 'react-router-dom';
-// for carousel :
-import CarouselComponent from "../../components/reusable-components/carousel/carousel.component.jsx";
+// for Redux use :
+import { connect } from 'react-redux';
+import { updateTriggerPopUpHome } from '../../redux/menu-item/menu-item-actions';
 
 class MenuItem extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            showPopUp: false
-        };
-    }
-    togglePop = () => {
-        this.setState({
-            showPopUp: !this.state.showPopUp
-        });
-    };
     render() {
         return (
-            <div className={`menu-item ${this.props.size} 
-                ${this.state.showPopUp ? 'showPopUp' : ''}` } >
+            <div className={`menu-item ${this.props.size}`} >
                 <div className={`background-image ${this.props.imageBackOn}`}
                     style={{ //dynamic CSS
                         // <img src={ require(`./img/img${prop1.cardProp2.id}.jpg`)} 
                         // alt={`Pic ${prop1.cardProp2.id}`} 
                         // title={`Image ${prop1.cardProp2.id}`}
                         backgroundImage: `url(${require(`./img/${this.props.imageBack}`)})`
-                    }} onClick={this.togglePop}
+                    }} onClick={() => this.props.fctUpdateTriggerPopUpHome()}
                 >
                     <img className="image"
                         src={require(`./img/${this.props.image}`)}
-                        alt={`Pic ${this.props.image}`} />
+                        alt={`Pic ${this.props.image}`} 
+                    />
                 </div>
-                {this.state.showPopUp ? <CarouselComponent className="CarouselComponent" toggle={this.togglePop} /> : null}
                 <div className="content">
                     <h1 className="title">
                         {/*this.props.title.toLowerCase()*/}
@@ -57,5 +46,13 @@ class MenuItem extends Component {
     }
 }
 
-export default withRouter(MenuItem);
+// export default withRouter(MenuItem);
+//REDUX:
+const mapDispatchToProps = dispatch => ({
+    fctUpdateTriggerPopUpHome: (togglePopUp) => dispatch(updateTriggerPopUpHome(togglePopUp))
+});
 
+export default connect(
+    null,
+    mapDispatchToProps
+)(withRouter(MenuItem));

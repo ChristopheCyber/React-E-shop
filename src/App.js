@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import { Route, Switch, Link, Redirect } from 'react-router-dom';
 // components:
-import { HomePage } from './pages/homepage/homepage.component.jsx';
+import HomePage from './pages/homepage/homepage.component.jsx';
 import SubAppComponent from './pages/MenuHeaderPages/SubApp-component';
 import ShopComponent from './pages/shop/shop.component.jsx';
 import HeaderComponent from './components/MainHeader/header.component';
