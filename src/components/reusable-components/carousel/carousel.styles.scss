@@ -7,7 +7,9 @@
   top: 0%;
   transform: translate(-50%, 0%);
   z-index: 0;
-
+  &:hover {
+    cursor: grab;
+  }
   .carousel-root {
     height: 100%;
     .carousel {
@@ -22,20 +24,40 @@
       .thumbs-wrapper {
         overflow: visible;
       }
-    //   .carousel-wrapper {
-    //     height: 400px;
-    //   }
+      //   .carousel-wrapper {
+      //     height: 400px;
+      //   }
       .slider-wrapper {
         height: 200%;
         &.axis-horizontal {
+          overflow: visible;
+          img {
             overflow: visible;
-            img{
-              overflow: visible;
-              height: 500px;
+            height: 500px;
             //   width: 50%;
           }
         }
       }
+    }
+  }
+  button:first-of-type {
+    color: rgb(233, 36, 223);
+    font-size: 16px;
+    cursor: pointer;
+    min-width: 20px;
+    // width: auto;
+    width: auto;
+    height: 20px;
+    padding: 0px 0px 0px 0px;
+    background: transparent;
+    border: 1.5px solid  rgb(20, 223, 37);
+    transition: all 0.5s;
+    z-index: 2;
+    &:hover {
+      // transform: scale(1.05);
+      transition: all 0.65s;
+      transform: translate3d(2px, -3px, 0px) scale3d(1.1, 1.1, 1.15) rotateX(0deg)
+        rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     }
   }
 }
