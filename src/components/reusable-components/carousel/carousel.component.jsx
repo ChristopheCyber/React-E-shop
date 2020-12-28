@@ -38,7 +38,7 @@ class CarouselComponent extends Component {
             <div className="carousel-wrapper carousel-wrapper-local">
                 {/*<span className="close" onClick={this.handleClick}>&times; Close</span>*/}
                 <button className="close" onClick={this.handleClick}>&times; Close Gallery</button>
-                <Carousel infiniteLoop useKeyboardArrows /* autoPlay */ showThumbs axis={"horizontal"}
+                <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs axis={"horizontal"}
                     // onClickItem={this.handleClick} 
                     onSwipeEnd={(e) => this.onSwipeEnd(e)}
                     /*
