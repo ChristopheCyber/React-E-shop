@@ -7,11 +7,11 @@ import { connect } from 'react-redux';
 import CarouselComponent from "../../components/reusable-components/carousel/carousel.component.jsx";
 
 // functionnal component
-const HomePage = ({triggerPopUpHome}) => {
+const HomePage = ({ triggerPopUpHome }) => {
     return (
         <div>
             {/* Carousel PopUp : */}
-            {triggerPopUpHome ? <CarouselComponent className="CarouselComponent" source="Home"/> : null}
+            {triggerPopUpHome ? <CarouselComponent className="CarouselComponent" source="Home" /> : null}
             <Directory className="homepage"
             />
         </div>);

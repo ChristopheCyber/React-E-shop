@@ -1,12 +1,13 @@
 .carousel-wrapper-local {
-  overflow: visible;
+  overflow: hidden;
+  // overflow: visible;
+  width: 60%;
+  position: relative;
+  left: 50%;
+  top: 0%;
+  transform: translate(-50%, 0%);
+  z-index: 0;
 
-  height: 45%;
-  .carousel{
-      .slide{
-          height: 20%;
-      }
-  }
   .carousel-root {
     height: 100%;
     .carousel {
