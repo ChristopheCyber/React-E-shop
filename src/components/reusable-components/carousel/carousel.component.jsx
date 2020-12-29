@@ -16,10 +16,28 @@ class CarouselComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isDraging: false
+            isDraging: false,
+            imagesTable2: [
+                { id:1, name:'WOMEN' },
+                { id:2, name:'MEN' },
+            ],
+            imagesTable: []
         }
     }
-
+    //*** Life Cycle method componentDidMount() {}
+    componentDidMount() {
+        console.log("this.props.imagesJSON=", this.props.imagesJSON);
+        // fetch(`./local-datas/jewerly/json-data-items-jewerly.json`)
+        fetch(`./local-datas/${this.props.imagesJSON}/json-data-items-${this.props.imagesJSON}.json`)
+            .then(resp1 => resp1.json())
+            .then(images1 => this.setState({ imagesTable: images1 }))
+            /* local error message */
+            .catch(error => {
+                console.error('Problem with your fetch operation for '
+                    , this.props.imagesJSON, ' in the list of items : error ='
+                    , error);
+            });
+    };
     // handleClick = () => {
     //     this.props.toggle();
     //    };
@@ -53,14 +71,46 @@ class CarouselComponent extends Component {
                     emulateTouch={true}
                 >
                     {/*
-             {
-                 imageList && imageList.map(images => (
-                     <div>
-                     <img  src={images} alt={images.asset._id} key={images.asset._id} className="sliderimg"/>
-                     </div>
-                     ))
-             }          
-  */}
+                    {
+                        imageList && imageList.map(images => (
+                            <div>
+                                <img src={images} alt={images.asset._id} key={images.asset._id} className="sliderimg" />
+                            </div>
+                        ))
+                    }
+                    */}
+                    {this.state.imagesTable2.map(
+                        images => (
+                            <div key={images.id}>
+                                <img src={require(`../../menu-item/img/${images.name}.jpg`)} alt="" />
+                            </div>
+                        )
+                    )
+                    }
+                    <div>
+                        <img src={require(`../../menu-item/img/Fashion.jpg`)} alt="" />
+                    </div>
+                    {/*<div>
+                    mapping imgs sent : */}
+                        {this.props.imagesJSON ? 
+                            ( console.log('Json file present for mapping'),
+                            console.log('this.state.imagesTable =', this.state.imagesTable),
+                            this.state.imagesTable.map(
+                            images => (
+                        <div>
+                                <img key={images.id} 
+                                src={require(`../../../datas/pictures/_WOMEN/img${images.id}.jpg`)} 
+                                alt="" />
+                        </div> )
+                        ) ) : 
+                        (console.log('No Json file to map'),
+                        <div>
+                            <img src={require(`../../menu-item/img/WOMEN.jpg`)} alt="" />
+                        </div>
+                        )
+                        }
+                    {/*</div>*/}
+{/*
                     <div>
                         <img src={require(`../../menu-item/img/FashionBack.jpg`)} alt="" />
                     </div>
@@ -73,6 +123,7 @@ class CarouselComponent extends Component {
                     <div>
                         <img src={require(`../../menu-item/img/WomenBack.jpg`)} alt="" />
                     </div>
+                    */}
                 </Carousel>
             </div>
         );
