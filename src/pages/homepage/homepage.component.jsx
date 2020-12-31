@@ -11,7 +11,7 @@ const HomePage = ({ triggerPopUpHome }) => {
     return (
         <div>
             {/* Carousel PopUp : */}
-            {triggerPopUpHome ? <CarouselComponent className="CarouselComponent" source="Home" imagesJSON="women"/> : null}
+            {triggerPopUpHome ? <CarouselComponent className="CarouselComponent" source="Home" imagesJSON="home"/> : null}
             <Directory className="homepage"
             />
         </div>);

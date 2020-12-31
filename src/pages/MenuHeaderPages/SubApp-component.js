@@ -120,7 +120,7 @@ class SubAppComponent extends React.Component {
 
         {/* Carousel PopUp : */}
         {this.props.triggerPopUp 
-          ? <CarouselComponent className="CarouselComponent" /> 
+          ? <CarouselComponent className="CarouselComponent" imagesJSON={this.props.propPageCat}/> 
           : null}
 
         {/*<CardList cardsProp1={this.state.cards} />*/}

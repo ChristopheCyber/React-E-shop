@@ -17,10 +17,6 @@ class CarouselComponent extends Component {
         super(props);
         this.state = {
             isDraging: false,
-            imagesTable2: [
-                { id:1, name:'WOMEN' },
-                { id:2, name:'MEN' },
-            ],
             imagesTable: []
         }
     }
@@ -46,19 +42,20 @@ class CarouselComponent extends Component {
             ? this.props.fctUpdateTriggerPopUpHome()
             : this.props.fctUpdateTriggerPopUp()
     };
-    onSwipeEnd(event) {
-        console.log('End swiping bef...', event);
-        event.preventDefault()
-        event.stopPropagation()
-    }
+    // onSwipeEnd(event) {
+    //     console.log('End swiping bef...', event);
+    //     event.preventDefault()
+    //     event.stopPropagation()
+    // }
     render() {
         return (
             <div className="carousel-wrapper carousel-wrapper-local">
                 {/*<span className="close" onClick={this.handleClick}>&times; Close</span>*/}
                 <button className="close" onClick={this.handleClick}>&times; Close Gallery</button>
-                <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs axis={"horizontal"}
+                <Carousel infiniteLoop useKeyboardArrows autoPlay 
+                    showThumbs axis={"horizontal"}
                     // onClickItem={this.handleClick} 
-                    onSwipeEnd={(e) => this.onSwipeEnd(e)}
+                    // onSwipeEnd={(e) => this.onSwipeEnd(e)}
                     /*
                     onClickItem={() => {
                         this.props.source === "Home"
@@ -79,51 +76,37 @@ class CarouselComponent extends Component {
                         ))
                     }
                     */}
-                    {this.state.imagesTable2.map(
-                        images => (
-                            <div key={images.id}>
-                                <img src={require(`../../menu-item/img/${images.name}.jpg`)} alt="" />
-                            </div>
-                        )
-                    )
-                    }
+                    {/*mapping imgs sent : */}
                     <div>
-                        <img src={require(`../../menu-item/img/Fashion.jpg`)} alt="" />
+                         <img 
+                         src={require(`../../../assets/pictures/carousel-galleries-sized/DEFAULT/carousel.jpg`)}
+                         alt="" />
                     </div>
-                    {/*<div>
-                    mapping imgs sent : */}
-                        {this.props.imagesJSON ? 
-                            ( console.log('Json file present for mapping'),
+                    <div>
+                         <img 
+                         src={require(`../../../assets/pictures/carousel-galleries-sized/DEFAULT/carousel1.jpg`)}
+                         alt="" />
+                    </div>
+
+                    {this.props.imagesJSON ?
+                        (console.log('Json file present for mapping'),
                             console.log('this.state.imagesTable =', this.state.imagesTable),
                             this.state.imagesTable.map(
-                            images => (
-                        <div>
-                                <img key={images.id} 
-                                src={require(`../../../datas/pictures/_WOMEN/img${images.id}.jpg`)} 
-                                alt="" />
-                        </div> )
-                        ) ) : 
+                                images => (
+                                    <div key={images.id}>
+                                        <img 
+                                            src={require(`../../../assets/pictures/carousel-galleries-sized/${images.category.toUpperCase()}/img${images.id}.jpg`)}
+                                            alt="" />
+                                    </div>)
+                            )) :
                         (console.log('No Json file to map'),
-                        <div>
-                            <img src={require(`../../menu-item/img/WOMEN.jpg`)} alt="" />
-                        </div>
+                            <div>
+                                <img 
+                                    src={require(`../../../assets/pictures/carousel-galleries-sized/DEFAULT/carousel.jpg`)}
+                                    alt="" />
+                            </div>
                         )
-                        }
-                    {/*</div>*/}
-{/*
-                    <div>
-                        <img src={require(`../../menu-item/img/FashionBack.jpg`)} alt="" />
-                    </div>
-                    <div>
-                        <img src={require(`../../menu-item/img/PaintingsBack.jpg`)} alt="" />
-                    </div>
-                    <div>
-                        <img src={require(`../../menu-item/img/MenBack.jpg`)} alt="" />
-                    </div>
-                    <div>
-                        <img src={require(`../../menu-item/img/WomenBack.jpg`)} alt="" />
-                    </div>
-                    */}
+                    }
                 </Carousel>
             </div>
         );
