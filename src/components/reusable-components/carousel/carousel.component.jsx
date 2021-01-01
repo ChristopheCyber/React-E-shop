@@ -23,7 +23,6 @@ class CarouselComponent extends Component {
     //*** Life Cycle method componentDidMount() {}
     componentDidMount() {
         console.log("this.props.imagesJSON=", this.props.imagesJSON);
-        // fetch(`./local-datas/jewerly/json-data-items-jewerly.json`)
         fetch(`./local-datas/${this.props.imagesJSON}/json-data-items-${this.props.imagesJSON}.json`)
             .then(resp1 => resp1.json())
             .then(images1 => this.setState({ imagesTable: images1 }))
@@ -42,66 +41,49 @@ class CarouselComponent extends Component {
             ? this.props.fctUpdateTriggerPopUpHome()
             : this.props.fctUpdateTriggerPopUp()
     };
-    // onSwipeEnd(event) {
-    //     console.log('End swiping bef...', event);
-    //     event.preventDefault()
-    //     event.stopPropagation()
-    // }
     render() {
         return (
             <div className="carousel-wrapper carousel-wrapper-local">
                 {/*<span className="close" onClick={this.handleClick}>&times; Close</span>*/}
                 <button className="close" onClick={this.handleClick}>&times; Close Gallery</button>
-                <Carousel infiniteLoop useKeyboardArrows autoPlay 
-                    showThumbs axis={"horizontal"}
-                    // onClickItem={this.handleClick} 
-                    // onSwipeEnd={(e) => this.onSwipeEnd(e)}
-                    /*
-                    onClickItem={() => {
-                        this.props.source === "Home"
-                            ? this.props.fctUpdateTriggerPopUpHome()
-                            : this.props.fctUpdateTriggerPopUp()
-                    }
-                    }
-                    */
-                    swipeable={true}
-                    emulateTouch={true}
+                <Carousel infiniteLoop useKeyboardArrows autoPlay showThumbs axis={"horizontal"}
+                    /* onClickItem={this.handleClick} */
+                    swipeable={true} emulateTouch={true} //for graning with mouse
                 >
-                    {/*
-                    {
-                        imageList && imageList.map(images => (
-                            <div>
-                                <img src={images} alt={images.asset._id} key={images.asset._id} className="sliderimg" />
-                            </div>
-                        ))
-                    }
-                    */}
-                    {/*mapping imgs sent : */}
+                    {/* 2 blocks <div/> first for triggering auto start of Autoplay of carousel: */}
                     <div>
-                         <img 
-                         src={require(`../../../assets/pictures/carousel-galleries-sized/DEFAULT/carousel.jpg`)}
-                         alt="" />
+                        {this.props.imagesJSON && this.state.imagesTable.length > 0 && this.state.imagesTable.filter(e => e.id === 1).map(
+                            images => (
+                                <img key={images.id}
+                                    src={require(`../../../assets/pictures/carousel-galleries-sized/${images.category.toUpperCase()}/img${images.id}.jpg`)}
+                                    alt="" />
+                            )
+                        )}
                     </div>
                     <div>
-                         <img 
-                         src={require(`../../../assets/pictures/carousel-galleries-sized/DEFAULT/carousel1.jpg`)}
-                         alt="" />
+                        {this.props.imagesJSON && this.state.imagesTable.length > 1 && this.state.imagesTable.filter(e => e.id === 2).map(
+                            images => (
+                                <img key={images.id}
+                                    src={require(`../../../assets/pictures/carousel-galleries-sized/${images.category.toUpperCase()}/img${images.id}.jpg`)}
+                                    alt="" />
+                            )
+                        )}
                     </div>
-
-                    {this.props.imagesJSON ?
-                        (console.log('Json file present for mapping'),
-                            console.log('this.state.imagesTable =', this.state.imagesTable),
-                            this.state.imagesTable.map(
-                                images => (
-                                    <div key={images.id}>
-                                        <img 
-                                            src={require(`../../../assets/pictures/carousel-galleries-sized/${images.category.toUpperCase()}/img${images.id}.jpg`)}
-                                            alt="" />
-                                    </div>)
-                            )) :
-                        (console.log('No Json file to map'),
+                    {/* then .map for rest of pics: */}
+                    {this.props.imagesJSON && this.state.imagesTable.length > 2 ? (
+                        // console.log('Json file present for mapping'),
+                        this.state.imagesTable.filter(e => e.id > 2).map(
+                            images => (
+                                <div key={images.id}>
+                                    <img
+                                        src={require(`../../../assets/pictures/carousel-galleries-sized/${images.category.toUpperCase()}/img${images.id}.jpg`)}
+                                        alt="" />
+                                </div>)
+                        )) :
+                        (
+                            // console.log('No Json file to map'),
                             <div>
-                                <img 
+                                <img
                                     src={require(`../../../assets/pictures/carousel-galleries-sized/DEFAULT/carousel.jpg`)}
                                     alt="" />
                             </div>
