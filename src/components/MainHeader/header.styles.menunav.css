@@ -134,6 +134,8 @@
   padding-top: 4px;
   letter-spacing: 0.7px;
   font-size: 25px;
+  max-height: 75px;
+  max-width: 54px;
   color: rgb(65, 236, 22);
   background-image: linear-gradient(
     150deg,

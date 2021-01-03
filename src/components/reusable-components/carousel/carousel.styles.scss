@@ -13,6 +13,9 @@
   &:hover {
     cursor: grab;
   }
+  @media all and (max-width:809px) {
+    width: 100%;
+  }
   .carousel-root {
     height: 100%;
     .carousel {
