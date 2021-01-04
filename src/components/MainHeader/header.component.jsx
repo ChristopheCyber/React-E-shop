@@ -30,8 +30,29 @@ const HeaderComponent = ({ currentUser, hidden }) => {
                         <Logo />
                         Home
                     </Link>
+                    <span>
+                        {'\u00A0'}{'\u00A0'}{'\u00A0'}{'\u00A0'}
+                    </span>
                     <div className="snow-buttons-container">
-                        <CustomButton2 classOn={"ON"} children="snowflake0" /*snowflake0 snowflake snowflakeB*//>
+                        <CustomButton2 classOn={"ON"} children="snowflake0" />
+                    </div>
+                    <span>
+                        {'\u00A0'}{'\u00A0'}
+                    </span>
+                    <div className="snow-buttons-container">
+                        <CustomButton2 classOn={"ON"} children="GoldEggV" />
+                    </div>
+                    <span>
+                        {'\u00A0'}{'\u00A0'}
+                    </span>
+                    <div className="snow-buttons-container">
+                        <CustomButton2 classOn={"ON"} children="Diamond" />
+                    </div>
+                    <span>
+                        {'\u00A0'}{'\u00A0'}
+                    </span>
+                    <div className="snow-buttons-container">
+                        <CustomButton2 classOn={"ON"} children="GoldRing" />
                     </div>
                 </div>
 

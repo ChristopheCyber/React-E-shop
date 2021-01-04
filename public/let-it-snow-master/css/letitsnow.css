@@ -9,18 +9,39 @@
 
 .let_it_snow.snow_type_1 {
 	background: transparent url(../images/snow1.png) center center no-repeat;
-	/* background: transparent url(../images/diamond2a.png) center center no-repeat; */
+	/* background: transparent url(../images/diamond1.png) center center no-repeat; */
 	/* background: transparent url(../images/GoldEgg1.png) center center no-repeat; */
-	/* background: transparent url(../images/GoldHeartB1.png) center center no-repeat; */
+	/* background: transparent url(../images/GoldHeart1.png) center center no-repeat; */
 	/* background: transparent url(../images/GoldRing1.png) center center no-repeat; */
 }
 
 .let_it_snow.snow_type_2 {
 	background: transparent url(../images/snow2.png) center center no-repeat;
-	/* background: transparent url(../images/diamond2a2.png) center center no-repeat; */
+	/* background: transparent url(../images/diamond2.png) center center no-repeat; */
 	/* background: transparent url(../images/GoldEgg2.png) center center no-repeat; */
-	/* background: transparent url(../images/GoldHeartB2.png) center center no-repeat; */
+	/* background: transparent url(../images/GoldHeart2.png) center center no-repeat; */
 	/* background: transparent url(../images/GoldRing2.png) center center no-repeat; */
+}
+
+.snow_type_1_Egg div.snow_type_1 {
+	background: transparent url(../images/GoldEgg1.png) center center no-repeat;
+}
+.snow_type_2_Egg div.snow_type_2 {
+	background: transparent url(../images/GoldEgg2.png) center center no-repeat;
+}
+
+.snow_type_1_Ring div.snow_type_1 {
+	background: transparent url(../images/GoldRing1.png) center center no-repeat;
+}
+.snow_type_2_Ring div.snow_type_2 {
+	background: transparent url(../images/GoldRing2.png) center center no-repeat;
+}
+
+.snow_type_1_Diamond div.snow_type_1 {
+	background: transparent url(../images/Diamond1.png) center center no-repeat;
+}
+.snow_type_2_Diamond div.snow_type_2 {
+	background: transparent url(../images/Diamond2.png) center center no-repeat;
 }
 
 .let_it_snow.snow_duration_1 {

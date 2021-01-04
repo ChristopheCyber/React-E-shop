@@ -8,9 +8,21 @@ class CustomButton2 extends Component {
         /* eslint-disable no-unused-expressions */
         e.preventDefault;
         var element = document.getElementsByClassName("snowfallClass")[0];
-
-        // console.log("element.id=", element.id);
-
+        element.classList.remove("snow_type_1_Egg","snow_type_2_Egg","snow_type_1_Ring","snow_type_2_Ring","snow_type_1_Diamond","snow_type_2_Diamond");
+        switch (this.props.children) {
+            case "GoldEggV": 
+                element.classList.add("snow_type_1_Egg","snow_type_2_Egg");
+                break;
+            case "GoldRing": 
+                element.classList.add("snow_type_1_Ring","snow_type_2_Ring");
+                break;
+            case "Diamond": 
+                element.classList.add("snow_type_1_Diamond","snow_type_2_Diamond");
+                break;
+            default:
+                break;
+        }
+        
         // Keep this next /* line */ for preventing 'Expected an assignment or function call 
         // and instead saw an expression no-unused-expressions' error if using null... :
         /* eslint-disable no-unused-expressions */
@@ -25,7 +37,7 @@ class CustomButton2 extends Component {
                 console.log("Snow ON : display=\"", element.style.display, "\""))
 
         // BOUNCING effect:
-        var elementToBounce = document.getElementsByClassName("letItSnowPic")[0];
+        var elementToBounce = document.getElementById(this.props.children);
         // -> removing the class
         elementToBounce.classList.add("bounce");
         // -> triggering reflow
@@ -33,9 +45,8 @@ class CustomButton2 extends Component {
         elementToBounce.offsetWidth;
         // -> and re-adding the class
         // elementToBounce.classList.remove("bounce");
-        setTimeout(function () {
-            elementToBounce.classList.remove('bounce');
-        }, 1200);
+        /* eslint-disable no-loop-func */
+        setTimeout(function () { elementToBounce.classList.remove('bounce'); }, 1200);
     };
     render() {
         return (
@@ -45,7 +56,7 @@ class CustomButton2 extends Component {
                 `}
                 onClick={(e) => { this.handleToggle(e); }}
             >
-                <img className="letItSnowPic"
+                <img className="letItSnowPic" id={`${this.props.children}`}
                     src={require(`../../../assets/${this.props.children}.png`)} alt={`${this.props.children} clipart`}
                 />
             </button>
