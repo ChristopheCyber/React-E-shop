@@ -11,6 +11,8 @@ import ContactComponent from './pages/contact/contact.component.jsx';
 import SignInComponent from './pages/sign-in-and-up/sign-in/sign-in.component.jsx';
 import SignUpComponent from './pages/sign-in-and-up/sign-up/sign-up.component.jsx';
 import CheckoutPage from './pages/checkout/checkoutPage.component';
+// testing HOOKS:
+import HooksComp from './components/hooks-comp/hooks-comp.component.jsx';
 // Firebase Authentication firebase.auth():
 import { auth, createUserProfileDoc } from "./firebase/firebase.utils";
 // for Redux use :
@@ -198,6 +200,13 @@ class App extends Component {
               (<Redirect to='/' />) : (<SignInComponent />)}
           />
           <Route exact={true} path='/signup' component={SignUpComponent} />
+
+          {/*HOOKS testing:*/}
+          <Route path="/hooksTests"
+            render={ () => (
+              <HooksComp propHook1={`Hello my world !`} /> ) }
+          />
+
           <Route exact={true} path='/' component={HomePage} />
           {/* same as:
           <Route exact path='/'>

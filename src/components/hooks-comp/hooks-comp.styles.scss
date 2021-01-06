@@ -1,0 +1,16 @@
+.div-container-button {
+  width: 90%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  border: 1px solid rgb(52, 245, 213);
+  flex-direction: column;
+  margin: 25px;
+  .div-button {
+    .button1 {
+      background-color: grey;
+      border: 2.5px solid black;
+    }
+  }
+}

@@ -54,6 +54,15 @@ const HeaderComponent = ({ currentUser, hidden }) => {
                     <div className="snow-buttons-container">
                         <CustomButton2 classOn={"ON"} children="GoldRing" />
                     </div>
+                    {/* for testing HOOKS: */}
+                    <span>
+                        {'\u00A0'}{'\u00A0'}
+                    </span>
+                    <div>
+                        <Link to='./hooksTests' className="link3">
+                            HOOKS test Component
+                        </Link>
+                    </div>
                 </div>
 
                 <h1> E-Shop demo </h1>
