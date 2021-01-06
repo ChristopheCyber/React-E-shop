@@ -38,15 +38,15 @@ class CustomButton2 extends Component {
 
         // BOUNCING effect:
         var elementToBounce = document.getElementById(this.props.children);
-        // -> removing the class
+        // -> adding the class:
         elementToBounce.classList.add("bounce");
-        // -> triggering reflow
+        // -> triggering reflow:
         /* eslint-disable no-self-assign */
         elementToBounce.offsetWidth;
-        // -> and re-adding the class
+        // -> and removing the class after 1s (when CSS animation finishes):
         // elementToBounce.classList.remove("bounce");
         /* eslint-disable no-loop-func */
-        setTimeout(function () { elementToBounce.classList.remove('bounce'); }, 1200);
+        setTimeout(function () { elementToBounce.classList.remove('bounce'); }, 1000);
     };
     render() {
         return (
