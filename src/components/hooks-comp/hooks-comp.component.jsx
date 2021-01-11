@@ -4,7 +4,7 @@ import CardHooks from "./card-hooks/card-hooks.component";
 
 const HooksComp = () => {
     // const [user, setUser] = useState(null);
-    const [user, setUser] = useState({ username: 'Bret', address: 'add origin' });
+    const [user, setUser] = useState({ username: 'Username origin 0', address: {street:'add street origin 0'} });
     const [searchQuery, setSearchQuery] = useState('Kamren');
     const [usersTable, setUsersTable] = useState([]);
     /*
