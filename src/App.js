@@ -28,11 +28,6 @@ class App extends Component {
     }
   }*/
 
-  /*methode indicatrice pour stopper listening/subscription apres un unmount 
-    afin de stopper un eventuel Memory Leaks occasionne ainsi
-   use ComponentWillUnmount to stop listening from Firebase fct .onAuthStateChanged
-   Stop Memory Leaks with componentWillUnmount Lifecycle Method in React
-  */
   //methode de classe declaree ici, par defaut nulle. puis definie ds le DidMount
   unsuscribeFromAuth = null;
 
@@ -44,6 +39,7 @@ class App extends Component {
   // });
 
   componentDidMount() {
+    // unsuscribeFromAuth storing the unsuscribe function sent back by onSnapshot for cleaning listener (listening subscription by Firebase fct .onAuthStateChanged) when WillUnmount (in componentWillUnmount Lifecycle Method) for avoiding Memory Leaks :
     this.unsuscribeFromAuth =
       auth.onAuthStateChanged(async (user) => {
         if (user) {
@@ -107,6 +103,8 @@ class App extends Component {
   }
 
   componentWillUnmount() {
+    // cleaning listener:
+    // unsuscribeFromAuth storing the unsuscribe function sent back by onSnapshot for cleaning listener (listening subscription by Firebase fct .onAuthStateChanged) when component Will Unmount for avoiding Memory Leaks :
     console.log("WillUnMount this.unsuscribeFromAuth =", this.unsuscribeFromAuth);
     this.unsuscribeFromAuth();
     // this.unsubscribe();
