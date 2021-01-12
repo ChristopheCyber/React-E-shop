@@ -46,7 +46,9 @@ class App extends Component {
   // });
 
   componentDidMount() {
+    // unsuscribeFromAuth storing the unsuscribe function sent back by onSnapshot for cleaning listener when WillUnmount for avoiding memory leaks :
     this.unsuscribeFromAuth =
+
       auth.onAuthStateChanged(async (user) => {
         if (user) {
           console.log("componentDidMount()=>user !=null =", user);
@@ -109,9 +111,9 @@ class App extends Component {
   }
 
   componentWillUnmount() {
+    // unsuscribeFromAuth storing the unsuscribe function sent back by onSnapshot for cleaning listener when WillUnmount for avoiding memory leaks :
     console.log("WillUnMount this.unsuscribeFromAuth =", this.unsuscribeFromAuth);
     this.unsuscribeFromAuth();
-    // this.unsubscribe();
     console.log("componentWillUnmount triggered");
   }
 
@@ -203,8 +205,8 @@ class App extends Component {
 
           {/*HOOKS testing:*/}
           <Route path="/hooksTests"
-            render={ () => (
-              <HooksComp propHook1={`Hello my world !`} /> ) }
+            render={() => (
+              <HooksComp propHook1={`Hello my world !`} />)}
           />
 
           <Route exact={true} path='/' component={HomePage} />
